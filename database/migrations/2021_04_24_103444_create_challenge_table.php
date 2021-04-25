@@ -14,12 +14,12 @@ class CreateChallengeTable extends Migration
     public function up()
     {
         Schema::create('challenge', function (Blueprint $table) {
-            $table->id('Challenge_ID');
-            $table->foreignId('SportsType_ID');
-            $table->foreignId('CreatorUser_ID');
-            $table->string('ChallengeName', 50);
-            $table->dateTime('BeginDate');
-            $table->dateTime('EndDate');
+            $table->id('challenge_ID');
+            $table->foreignId('sportsType_ID');
+            $table->foreignId('creatorUser_ID');
+            $table->string('challengeName', 50);
+            $table->dateTime('beginDate');
+            $table->dateTime('endDate');
             $table->boolean('isPublic')->default('1');
             $table->timestamps();
         });

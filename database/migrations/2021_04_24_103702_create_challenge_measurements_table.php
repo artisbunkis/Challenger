@@ -14,11 +14,11 @@ class CreateChallengeMeasurementsTable extends Migration
     public function up()
     {
         Schema::create('challenge_measurements', function (Blueprint $table) {
-            $table->id('ChallengeMeasurement_ID');
-            $table->foreignId('Challenge_ID')->constrained();
-            $table->foreignId('Unit_ID')->constrained();
-            $table->double('GoalValue');
-            $table->foreignId('Comparison_ID');
+            $table->id('challengeMeasurement_ID');
+            $table->foreignId('challenge_ID')->constrained();
+            $table->foreignId('unit_ID')->constrained();
+            $table->double('goalValue');
+            $table->foreignId('comparison_ID');
             $table->timestamps();
         });
     }

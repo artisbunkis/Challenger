@@ -14,10 +14,10 @@ class CreateWeatherTable extends Migration
     public function up()
     {
         Schema::create('weather', function (Blueprint $table) {
-            $table->id('Weather_ID');
-            $table->date('Date');
-            $table->double('AvgDayWindSpeed_kph');
-            $table->double('AvgDayTemperature_c');
+            $table->id('weather_ID');
+            $table->date('date');
+            $table->double('avgDayWindSpeed_kph');
+            $table->double('avgDayTemperature_c');
             $table->boolean('isPrecipitation')->default('0');
             $table->timestamps();
         });

@@ -15,24 +15,31 @@ class CreateGenderTable extends Migration
     public function up()
     {
         Schema::create('gender', function (Blueprint $table) {
-            $table->id('Gender_ID');
-            $table->string('GenderName', 7);
+            $table->id('gender_ID');
+            $table->string('genderName', 7);
             $table->timestamps();
         });
 
         // Insert some stuff
         DB::table('gender')->insert(
             array(
-                'Gender_ID' => 1,
-                'GenderName' => 'Male'
+                'gender_ID' => 1,
+                'genderName' => 'Male'
             )
         );
         DB::table('gender')->insert(
             array(
-                'Gender_ID' => 2,
-                'GenderName' => 'Female'
+                'gender_ID' => 2,
+                'genderName' => 'Female'
             )
         );
+        DB::table('gender')->insert(
+            array(
+                'gender_ID' => 3,
+                'genderName' => 'Unknown'
+            )
+        );
+        
 
     }
 
