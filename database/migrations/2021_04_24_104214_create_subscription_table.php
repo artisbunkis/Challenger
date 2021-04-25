@@ -14,11 +14,11 @@ class CreateSubscriptionTable extends Migration
     public function up()
     {
         Schema::create('subscription', function (Blueprint $table) {
-            $table->id('Subscription_ID');
-            $table->foreignId('Challenge_ID')->constrained();
-            $table->foreignId('User_ID');
+            $table->id('subscription_ID');
+            $table->foreignId('challenge_ID')->constrained();
+            $table->foreignId('user_ID');
             $table->boolean('isDone')->default('0');
-            $table->date('SubscriptionDate');
+            $table->date('subscriptionDate');
             $table->timestamps();
         });
     }

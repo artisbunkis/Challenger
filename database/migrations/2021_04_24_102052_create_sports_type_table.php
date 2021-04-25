@@ -15,25 +15,25 @@ class CreateSportsTypeTable extends Migration
     public function up()
     {
         Schema::create('sports_type', function (Blueprint $table) {
-            $table->id('SportsType_ID');
-            $table->foreignId('Unit_ID');
-            $table->string('SportsTypeName', 30);
+            $table->id('sportsType_ID');
+            $table->foreignId('unit_ID');
+            $table->string('sportsTypeName', 30);
             $table->timestamps();
         });
 
         $data = [
-            ['SportsType_ID' => 1, 'Unit_ID'=> 1, 'SportsTypeName'=> 'Running'],
-            ['SportsType_ID' => 2, 'Unit_ID'=> 1, 'SportsTypeName'=> 'Road Cycling'],
-            ['SportsType_ID' => 3, 'Unit_ID'=> 1, 'SportsTypeName'=> 'Mountain Biking'],
-            ['SportsType_ID' => 4, 'Unit_ID'=> 1, 'SportsTypeName'=> 'Walking'],
-            ['SportsType_ID' => 5, 'Unit_ID'=> 1, 'SportsTypeName'=> 'Orienteering'],
-            ['SportsType_ID' => 6, 'Unit_ID'=> 9, 'SportsTypeName'=> 'Basketball'],
-            ['SportsType_ID' => 7, 'Unit_ID'=> 9, 'SportsTypeName'=> 'Soccer'],
-            ['SportsType_ID' => 8, 'Unit_ID'=> 9, 'SportsTypeName'=> 'Hockey'],
-            ['SportsType_ID' => 9, 'Unit_ID'=> 9, 'SportsTypeName'=> 'Tennis'],
-            ['SportsType_ID' => 10, 'Unit_ID'=> 1, 'SportsTypeName'=> 'Swimming'],
-            ['SportsType_ID' => 11, 'Unit_ID'=> 9, 'SportsTypeName'=> 'Gymnastics'],
-            ['SportsType_ID' => 12, 'Unit_ID'=> 9, 'SportsTypeName'=> 'Weight Lifting'],
+            ['sportsType_ID' => 1, 'unit_ID'=> 1, 'sportsTypeName'=> 'Running'],
+            ['sportsType_ID' => 2, 'unit_ID'=> 1, 'sportsTypeName'=> 'Road Cycling'],
+            ['sportsType_ID' => 3, 'unit_ID'=> 1, 'sportsTypeName'=> 'Mountain Biking'],
+            ['sportsType_ID' => 4, 'unit_ID'=> 1, 'sportsTypeName'=> 'Walking'],
+            ['sportsType_ID' => 5, 'unit_ID'=> 1, 'sportsTypeName'=> 'Orienteering'],
+            ['sportsType_ID' => 6, 'unit_ID'=> 9, 'sportsTypeName'=> 'Basketball'],
+            ['sportsType_ID' => 7, 'unit_ID'=> 9, 'sportsTypeName'=> 'Soccer'],
+            ['sportsType_ID' => 8, 'unit_ID'=> 9, 'sportsTypeName'=> 'Hockey'],
+            ['sportsType_ID' => 9, 'unit_ID'=> 9, 'sportsTypeName'=> 'Tennis'],
+            ['sportsType_ID' => 10, 'unit_ID'=> 1, 'sportsTypeName'=> 'Swimming'],
+            ['sportsType_ID' => 11, 'unit_ID'=> 9, 'sportsTypeName'=> 'Gymnastics'],
+            ['sportsType_ID' => 12, 'unit_ID'=> 9, 'sportsTypeName'=> 'Weight Lifting'],
             //...
         ];
 
