@@ -6,6 +6,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticable;
 
+use App\Models\Challenge;
+use App\Models\Activity;
+
+
+
 class User extends Authenticable
 {
     use HasFactory;
@@ -33,6 +38,19 @@ class User extends Authenticable
     public function detail() {
         return $this->hasOne('App\Models\\'.ucfirst($this->user_type));
     }
+
+
+    public function challenges(){//FK
+        return $this->morphToMany(Challenge::class);//Challenge has users, user can have multiple challenges
+    }
+
+    public function activities(){//FK
+        return $this->HasMany(Activity::class);
+    }
+
+
+
+
 
 }
 
