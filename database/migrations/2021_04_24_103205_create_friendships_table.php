@@ -14,9 +14,9 @@ class CreateFriendshipsTable extends Migration
     public function up()
     {
         Schema::create('friendships', function (Blueprint $table) {
-            $table->id('friendship_ID');
-            $table->foreignId('invitatorUser_ID')->constrained();
-            $table->foreignId('acceptorUser_ID')->constrained();
+            $table->id('Friendship_ID');
+            $table->foreignId('InvitatorUser_ID')->constrained();
+            $table->foreignId('AcceptorUser_ID')->constrained();
             $table->timestamps();
         });
     }

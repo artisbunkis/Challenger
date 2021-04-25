@@ -15,23 +15,23 @@ class CreateUnitTable extends Migration
     public function up()
     {
         Schema::create('unit', function (Blueprint $table) {
-            $table->id('unit_ID');
-            $table->string('unitName', 40);
-            $table->string('unitCode', 8);
+            $table->id('Unit_ID');
+            $table->string('UnitName', 40);
+            $table->string('UnitCode', 8);
             $table->timestamps();
         });
     
         $data = [
-            ['unit_ID' => 1, 'unitName'=> 'Kilometres', 'UnitCode'=> 'km'],
-            ['unit_ID' => 2, 'unitName'=> 'Kilometres per hour', 'UnitCode'=> 'kph'],
-            ['unit_ID' => 3, 'unitName'=> 'Max Kilometres per hour', 'UnitCode'=> 'kph'],
-            ['unit_ID' => 4, 'unitName'=> 'Average kilometres per hour', 'UnitCode'=> 'kph'],
-            ['unit_ID' => 5, 'unitName'=> 'Heartbeats per minute', 'UnitCode'=> 'bpm'],
-            ['unit_ID' => 6, 'unitName'=> 'Average Heartbeats per minute', 'UnitCode'=> 'bpm'],
-            ['unit_ID' => 7, 'unitName'=> 'Elevation gain', 'UnitCode'=> 'm'],
-            ['unit_ID' => 8, 'unitName'=> 'Calories', 'UnitCode'=> 'cal'],
-            ['unit_ID' => 9, 'unitName'=> 'Minutes', 'UnitCode'=> 'min'],
-            ['unit_ID' => 10, 'unitName'=> 'Times', 'UnitCode'=> 'times'],
+            ['Unit_ID' => 1, 'UnitName'=> 'Kilometres', 'UnitCode'=> 'km'],
+            ['Unit_ID' => 2, 'UnitName'=> 'Kilometres per hour', 'UnitCode'=> 'kph'],
+            ['Unit_ID' => 3, 'UnitName'=> 'Max Kilometres per hour', 'UnitCode'=> 'kph'],
+            ['Unit_ID' => 4, 'UnitName'=> 'Average kilometres per hour', 'UnitCode'=> 'kph'],
+            ['Unit_ID' => 5, 'UnitName'=> 'Heartbeats per minute', 'UnitCode'=> 'bpm'],
+            ['Unit_ID' => 6, 'UnitName'=> 'Average Heartbeats per minute', 'UnitCode'=> 'bpm'],
+            ['Unit_ID' => 7, 'UnitName'=> 'Elevation gain', 'UnitCode'=> 'm'],
+            ['Unit_ID' => 8, 'UnitName'=> 'Calories', 'UnitCode'=> 'cal'],
+            ['Unit_ID' => 9, 'UnitName'=> 'Minutes', 'UnitCode'=> 'min'],
+            ['Unit_ID' => 10, 'UnitName'=> 'Times', 'UnitCode'=> 'times'],
 
             //...
         ];

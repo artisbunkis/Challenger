@@ -14,10 +14,10 @@ class CreateActivityMeasurementsTable extends Migration
     public function up()
     {
         Schema::create('activity_measurements', function (Blueprint $table) {
-            $table->id('activityMeasurement_ID');
-            $table->foreignId('unit_ID');
-            $table->foreignId('activity_ID');
-            $table->double('value');
+            $table->id('ActivityMeasurement_ID');
+            $table->foreignId('Unit_ID');
+            $table->foreignId('Activity_ID');
+            $table->double('Value');
             $table->timestamps();
         });
     }

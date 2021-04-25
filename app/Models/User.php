@@ -2,37 +2,42 @@
 
 namespace App\Models;
 
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Foundation\Auth\User as Authenticable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticable
+class User extends Authenticatable
 {
-    use HasFactory;
+    use HasFactory, Notifiable;
 
-    protected $table = "users";
-
-    protected $primaryKey = 'user_ID';
-
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
     protected $fillable = [
-        'username',
+        'name',
         'email',
-        'password'
+        'password',
     ];
 
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
     protected $hidden = [
         'password',
-        'remember_token'
+        'remember_token',
     ];
 
-    protected $username = 'username';
-    
-
-
-    // Ambil data dari field yang bersangkutan
-    public function detail() {
-        return $this->hasOne('App\Models\\'.ucfirst($this->user_type));
-    }
-
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
 }
-

@@ -14,10 +14,10 @@ class CreateActivitiesTable extends Migration
     public function up()
     {
         Schema::create('activities', function (Blueprint $table) {
-            $table->id('activity_ID');
-            $table->dateTime('startTime');
-            $table->foreignId('sportsType_ID');
-            $table->foreignId('user_ID');
+            $table->id('Activity_ID');
+            $table->dateTime('StartTime');
+            $table->foreignId('SportsType_ID');
+            $table->foreignId('User_ID');
             $table->timestamps();
         });
     }
