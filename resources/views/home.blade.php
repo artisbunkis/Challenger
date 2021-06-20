@@ -10,6 +10,9 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
+            @guest
+                <h1>WELCOME</h1>
+            @else
                 <div class="card">
                     <div class="card-header">Create challenge</div>
 
@@ -73,11 +76,9 @@
                         </form>
                     
                     </div>
-
-                    
-
                 </div>
             </div>
+            @endguest
         </div>
     </div>
 </body>
