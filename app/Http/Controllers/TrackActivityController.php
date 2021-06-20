@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Activity;
 
 class TrackActivityController extends Controller
 {
@@ -35,7 +36,17 @@ class TrackActivityController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $id = Auth::id(); 
+        if(is_null($id)){
+            return redirect('login');
+        }
+        $activity = new Activity();
+        $activity->id = $request->id; 
+        $activity->StartTime = $request->StartTime; 
+        $activity->SportsType_ID = $request->SportsType_ID; 
+        $activity->User_ID = $id; 
+        $challenge->save();
+        return redirect('trackactivity'); //redirects pectam janomaina
     }
 
     /**

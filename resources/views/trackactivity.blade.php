@@ -13,14 +13,11 @@
                 <div class="card">
                     <div class="card-header text-center"><h2>Track Activity</h2></div>
                         <div class="form text-center">
-                            <form method="POST" action="{{ action([App\Http\Controllers\ChallengeController::class, 'store']) }}"> @csrf
-                            {{-- <input type="hidden" name="challenge_ID" value="{{ $challenge->id }}">   
-
-                            <input type="hidden" name="sportsType_ID" value="{{ $challenge->foreignId }}">
-                            <input type="hidden" name="creatorUser_ID" value="{{ $challenge->foreignId }}">  --}}
-                            <br><br>
-                            <label for="challengeName">Chellenge Name: </label>
-                            <input type="text" name="challengeName" id="challengeName"><br>
+                            <form method="POST" action="{{ action([App\Http\Controllers\TrackActivityController::class, 'store']) }}"> @csrf
+                            {{-- 
+                                SPORTSNAME TABULA
+                                
+                             --}}
                             <br><br>
                             <label for="beginDate">Begin Date:</label>
                             <input type="date" name="beginDate" id="beginDate">
