@@ -14,12 +14,14 @@
                 </div>
             </div>
             <br>
+{{-- RUNNING TOTALS CARD --}}
             <div class="col-md-6">
                 <div class="card">
                     <h1>Running totals</h1>
                 </div>
             </div>
             <br>
+{{-- FIND CHALLENGES CARD --}}
             <div class="col-md-3">
                 <div class="card">
                     <h1>Find Challenges</h1>
@@ -58,15 +60,13 @@
 
 
             <br>
+            {{-- TRACK ACTIVITY  --}}
                 <div class="card">
                     <div class="card-header">Track Activity</div>
-
+                   
                     <div class="form">
-                        {{--aizkomenteto atkomentet kad izveidots lidz galam kontroleris un parejais--}}
-
                         
-                    
-                        <form method="POST"  > @csrf
+                        <form method="POST" action="{{ action([App\Http\Controllers\ChallengeController::class, 'store']) }}"> @csrf
                         {{-- <input type="hidden" name="challenge_ID" value="{{ $challenge->id }}">   
 
 

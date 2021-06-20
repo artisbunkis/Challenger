@@ -36,8 +36,21 @@
                         @guest
                         @else    
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('home')}}">Home</a>
+                                <a class="nav-link" href="{{ url('home')}}">User Profile</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('findchallenges')}}">Challenges</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('createchallenge')}}">Create Challenge</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('trackactivity')}}">Track Activity</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('runningtotals')}}">Running Totals</a>
+                            </li>
+                            
                         @endguest
                     </ul>
 
