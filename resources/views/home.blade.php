@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
 <!DOCTYPE html>    
 <html>  
@@ -9,20 +8,34 @@
 <body>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-sm-12">
+                <div class="card">
+                    <h1>Challenger profile</h1>
+                </div>
+            </div>
+            <br>
+            <div class="col-md-6">
+                <div class="card">
+                    <h1>Running totals</h1>
+                </div>
+            </div>
+            <br>
+            <div class="col-md-3">
+                <div class="card">
+                    <h1>Find Challenges</h1>
+                </div>
+            </div>
+            <br>
+            <div class="col-md-3">
             @guest
                 <h1>WELCOME</h1>
             @else
                 <div class="card">
                     <div class="card-header">Create challenge</div>
-
                     <div class="form"> 
-                        {{--nezinu kaa pareizi fk padot--}}
-
                         <form method="POST" action="{{ action([App\Http\Controllers\ChallengeController::class, 'store']) }}"> @csrf
-                      {{--  <input type="hidden" name="challenge_ID" value="{{ $challenge }}"> 
-                        <input type="hidden" name="sportsType_ID" value="{{ $challenge->sportsType_ID }}"> // te vajag
-                        <input type="hidden" name="creatorUser_ID" value="{{ $challenge->creatorUser_ID}}">  
+                        {{--
+                        <input type="hidden" name="sportsType_ID" value="{{ $challenge->sportsType_ID }}"> // te vajag fk sataisit pareizi 
                         --}} 
                         <label for="challengeName">Chellenge Name: </label>
                         <input type="text" name="challengeName" id="challengeName"><br>
@@ -40,10 +53,10 @@
                         </form>
                     
                     </div>
-
-                    
-
                 </div>
+
+
+
             <br>
                 <div class="card">
                     <div class="card-header">Track Activity</div>
@@ -78,8 +91,17 @@
                     </div>
                 </div>
             </div>
+
+            <br>
+
+            
             @endguest
         </div>
+
+       
+
+
+
     </div>
 </body>
 </html>
