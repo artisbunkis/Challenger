@@ -45,7 +45,7 @@ class TrackActivityController extends Controller
         $activity->StartTime = $request->StartTime; 
         $activity->SportsType_ID = $request->SportsType_ID; 
         $activity->User_ID = $id; 
-        $challenge->save();
+        $activity->save();
         return redirect('trackactivity'); //redirects pectam janomaina
     }
 

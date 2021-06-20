@@ -19,10 +19,10 @@
                                 
                              --}}
                             <br><br>
-                            <label for="beginDate">Begin Date:</label>
-                            <input type="date" name="beginDate" id="beginDate">
+                            <label for="StartTime">Start Time</label>
+                            <input type="datetime" name="StartTime" id="StartTime">
                             <br><br>
-                            <label for="endDate">End Date:</label>
+                            <label for="Duration">Duration:</label>
                             <input type="date" name="endDate" id="endDate"><br>
                             <br><br>
                             <label for="isPublic">Public: </label>
