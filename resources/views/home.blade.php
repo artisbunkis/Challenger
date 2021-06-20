@@ -30,6 +30,13 @@
             @guest
                 <h1>WELCOME</h1>
             @else
+
+
+            
+
+
+
+            {{-- CREATE CHALLENGE --}}
                 <div class="card">
                     <div class="card-header">Create challenge</div>
                     <div class="form"> 
@@ -54,6 +61,9 @@
                     
                     </div>
                 </div>
+
+
+
 
 
 
