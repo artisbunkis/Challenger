@@ -10,6 +10,8 @@ use App\Models\Activity;
 
 class Challenge extends Model
 {
+    protected $table = "challenge";
+
     use HasFactory;
     public function activities(){//FK
         return $this->hasMany(Activity::class);//Challenge has many activities
