@@ -14,7 +14,7 @@ class CreateChallengeController extends Controller
      */
     public function index()
     {
-        //
+        return view('createchallenge');
     }
 
     /**

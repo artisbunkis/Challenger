@@ -14,7 +14,7 @@ class RunningTotalsController extends Controller
      */
     public function index()
     {
-        //
+        return view('runningtotals');
     }
 
     /**

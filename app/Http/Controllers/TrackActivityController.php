@@ -14,7 +14,7 @@ class TrackActivityController extends Controller
      */
     public function index()
     {
-        //
+        return view('trackactivity');
     }
 
     /**
