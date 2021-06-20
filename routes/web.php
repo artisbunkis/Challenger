@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Challenge;
+use App\Http\Controllers\ChallengeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,5 +25,9 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/', function () {
-    return view('/home');
+    return view('welcome');
 });
+
+
+
+Route::post('/home', [App\Http\Controllers\ChallengeController::class, 'store'])->name('challenge');
