@@ -32,13 +32,6 @@
             @guest
                 <h1>WELCOME</h1>
             @else
-
-
-            
-
-
-
-            {{-- CREATE CHALLENGE --}}
                 <div class="card">
                     <div class="card-header">Create challenge</div>
                     <div class="form"> 
@@ -66,17 +59,17 @@
 
 
 
-
-
-
             <br>
             {{-- TRACK ACTIVITY  --}}
                 <div class="card">
                     <div class="card-header">Track Activity</div>
-                   
+
                     <div class="form">
+                        {{--aizkomenteto atkomentet kad izveidots lidz galam kontroleris un parejais--}}
+
                         
-                        <form method="POST" action="{{ action([App\Http\Controllers\ChallengeController::class, 'store']) }}"> @csrf
+                    
+                        <form method="POST"  > @csrf
                         {{-- <input type="hidden" name="challenge_ID" value="{{ $challenge->id }}">   
 
 
