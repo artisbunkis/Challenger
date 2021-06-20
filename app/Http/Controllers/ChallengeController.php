@@ -19,7 +19,7 @@ class ChallengeController extends Controller
         $id = Auth::id();
         if(is_null($id)){
             return redirect('login');
-        }
+        } 
     }
 
     /**
