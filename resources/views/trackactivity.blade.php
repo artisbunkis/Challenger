@@ -30,16 +30,11 @@
                             <div class="form text-center">
                                 <form method="POST" action="{{ action([App\Http\Controllers\TrackActivityController::class, 'store']) }}"> @csrf
                                     <label for="SportysType">Sports Type:</label>
-                                    <div id="sportaTipi" onload="sportsTypes()">
-                                    
+                                    <div id="sportaTipi">
                                     </div>
 
 
-                                    <select name="SportysType" id="SportysType">
-                                        <option value="running">Running</option>
-                                        <option value="running">Running</option>
-                                        <option value="running">Running</option>
-                                    </select>
+                                    
                                     <br><br>
                                     <label for="StartTime">Start Time</label>
                                     <input type="datetime-local" name="StartTime" id="StartTime">
@@ -71,26 +66,26 @@
 
 <script type='text/javascript'>
     
-    window.onload=function(){
-        inputs = document.getElementByID("sportaTipi");
-        var sportsType = document.cerateElement("SELECT")
-        sportsType.setAttribute("placeholder", "SportsType");
-        sportsType.setAttribute("id", "SportsType1");
-        
-        var sportsTypes = {!! json_encode($sportsTypes->toArray()) !!};
-        var length = sportsTypes.length;
+    window.onload = function(){
+        input = document.getElementById("sportaTipi");
+        var sportsType = document.createElement("SELECT");
+        sportsType.setAttribute("placeholder", "sportsType");
+        sportsType.setAttribute("id", "sportsType1");
 
-        sportsTypes.forEach(function (oneSport){
+        var sportsTypes =  {!! json_encode($sportsTypes->toArray()) !!}; 
+
+        sportsTypes.forEach(function(oneSport){
             var yy = oneSport.SportsTypeName;
             option = document.createElement("option");
             option.text = yy;
             option.value = yy;
             sportsType.appendChild(option);
-        });
-        
-        var 
-    }
+            console.log(yy);
 
+        });
+        input.appendChild(sportsType);
+
+    };   
 
     function add() {
         inputs = document.getElementById("uniti");
@@ -111,7 +106,7 @@
             option.value = xx;
             unit.appendChild(option);
         });
-
+        
         var y = document.createElement("INPUT");
         y.setAttribute("type", "text");
         y.setAttribute("placeholder", "Goal value");
@@ -122,6 +117,7 @@
         inputs.appendChild(y);
         inputs.appendChild(unit);
         inputs.appendChild(document.createElement("br"));
+        
     }
 </script>
 </html>
