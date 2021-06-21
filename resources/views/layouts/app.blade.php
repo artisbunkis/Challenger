@@ -36,7 +36,7 @@
                         @guest
                         @else    
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('home')}}">User Profile</a>
+                                <a class="nav-link" href="{{ url('profile')}}">User Profile</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('findchallenges')}}">Challenges</a>

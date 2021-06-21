@@ -29,7 +29,7 @@ Route::resource('findchallenges', FindChallengesController::class);
 Route::resource('trackactivity', TrackActivityController::class);
 Route::resource('runningtotals', RunningTotalsController::class);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/profile', [App\Http\Controllers\HomeController::class, 'index'])->name('profile');
 
 Route::get('/', function () {
     return view('welcome');
@@ -37,4 +37,4 @@ Route::get('/', function () {
 
 
 
-Route::post('/home', [App\Http\Controllers\ChallengeController::class, 'store'])->name('challenge');
+Route::post('/profile', [App\Http\Controllers\ChallengeController::class, 'store'])->name('challenge');
