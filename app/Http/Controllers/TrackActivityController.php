@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Activity;
+use App\Models\Unit;
 
 class TrackActivityController extends Controller
 {
@@ -15,7 +16,8 @@ class TrackActivityController extends Controller
      */
     public function index()
     {
-        return view('trackactivity');
+        $units = Unit::all();
+        return view('trackactivity', compact('units'));
     }
 
     /**
