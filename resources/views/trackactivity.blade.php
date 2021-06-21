@@ -20,6 +20,7 @@
                                     <select name="sportsType" id="sportsType">
                                         <option selected="selected">Sports Type</option>
                                         <?php
+                                        
                                             foreach($sportsType as $sport) { ?>
                                             <option value="<?= $sport->sportsTypeName ?>"><?= $sport->sportsTypeName ?></option>
                                         <?php
@@ -28,14 +29,12 @@
 
                                     <br><br><br>
                                     <label for="startTime">Start Time</label>
-<<<<<<< HEAD
-                                    <input type="datetime" name="startTime" id="startTime">
-=======
+
+                                
+
                                     <input type="datetime-local" name="startTime" id="startTime" require>
->>>>>>> 7f40c39d223e796280ae7544547aeee7d5c6a11d
-                                    <br><br><br>
-                                    <label for="Duration">Duration(seconds):</label>
-                                    <input type="number" name="Duration" id="Duration"><br>
+
+                                    
                                     <br><br>
                                     <button type="button" class="btn btn-dark" onclick="add(); showSaveButton()">Add Units</button>
                                     <br><br>
