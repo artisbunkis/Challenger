@@ -21,7 +21,7 @@
                                     </div>
                                     <br><br>
                                     <label for="startTime">Start Time</label>
-                                    <input type="datetime-local" name="startTime" id="startTime">
+                                    <input type="datetime" name="startTime" id="startTime">
                                     <br><br><br>
                                     <label for="Duration">Duration(seconds):</label>
                                     <input type="number" name="Duration" id="Duration"><br>

@@ -13,7 +13,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-10">
                     <div class="card">
-                        <div class="card-header text-center"><h2>Track Activity</h2></div>
+                        <div class="card-header text-center"><h2>Create Challenge</h2></div>
                             <div class="form text-center">
                                 <form method="POST" id="forma" action="{{ action([App\Http\Controllers\CreateChallengeController::class, 'store']) }}"> @csrf
                                     {{--
