@@ -1,14 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\Auth;
+
+use App\Models\SportsType;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Activity;
-use App\Models\Unit;
-use App\Models\SportsType;
 
-class TrackActivityController extends Controller
+class SportsTypeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,11 +15,7 @@ class TrackActivityController extends Controller
      */
     public function index()
     {
-        $units = Unit::all();
-        
-
-        $sportsTypes = SportsType::all();
-        return view('trackactivity', compact('units', 'sportsTypes'));
+        //
     }
 
     /**
@@ -42,26 +36,16 @@ class TrackActivityController extends Controller
      */
     public function store(Request $request)
     {
-        $id = Auth::id(); 
-        if(is_null($id)){
-            return redirect('login');
-        }
-        $activity = new Activity();
-        $activity->id = $request->id; 
-        $activity->StartTime = $request->StartTime; 
-        $activity->SportsType_ID = $request->SportsType_ID; 
-        $activity->User_ID = $id; 
-        $activity->save();
-        return redirect('trackactivity'); //redirects pectam janomaina
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\SportsType  $sportsType
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(SportsType $sportsType)
     {
         //
     }
@@ -69,10 +53,10 @@ class TrackActivityController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\SportsType  $sportsType
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(SportsType $sportsType)
     {
         //
     }
@@ -81,10 +65,10 @@ class TrackActivityController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\SportsType  $sportsType
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, SportsType $sportsType)
     {
         //
     }
@@ -92,10 +76,10 @@ class TrackActivityController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\SportsType  $sportsType
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(SportsType $sportsType)
     {
         //
     }

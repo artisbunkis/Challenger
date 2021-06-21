@@ -8,11 +8,17 @@
 <body>
 
     @isset($units)
-            @foreach ( $units as $unit )
-                <h1>{{ $unit->unitName }}</h1>
-            @endforeach
-        @endisset
-        
+        @foreach ( $units as $unit )
+            <h1>{{ $unit->UnitName }}</h1>
+        @endforeach
+    @endisset
+    
+
+    @isset($sportsTypes)
+        @foreach($sportsTypes as $sportsType)
+            <p>{{$sportsType->SportsTypeName}}</p>
+        @endforeach
+    @endisset
 
 <div class="container">
         <div class="row justify-content-center">
@@ -23,10 +29,17 @@
                         <div class="card-body">
                             <div class="form text-center">
                                 <form method="POST" action="{{ action([App\Http\Controllers\TrackActivityController::class, 'store']) }}"> @csrf
-                                    {{-- 
-                                        SPORTSNAME TABULA
-                                        
-                                    --}}
+                                    <label for="SportysType">Sports Type:</label>
+                                    <div id="sportaTipi" onload="sportsTypes()">
+                                    
+                                    </div>
+
+
+                                    <select name="SportysType" id="SportysType">
+                                        <option value="running">Running</option>
+                                        <option value="running">Running</option>
+                                        <option value="running">Running</option>
+                                    </select>
                                     <br><br>
                                     <label for="StartTime">Start Time</label>
                                     <input type="datetime-local" name="StartTime" id="StartTime">
@@ -58,6 +71,27 @@
 
 <script type='text/javascript'>
     
+    window.onload=function(){
+        inputs = document.getElementByID("sportaTipi");
+        var sportsType = document.cerateElement("SELECT")
+        sportsType.setAttribute("placeholder", "SportsType");
+        sportsType.setAttribute("id", "SportsType1");
+        
+        var sportsTypes = {!! json_encode($sportsTypes->toArray()) !!};
+        var length = sportsTypes.length;
+
+        sportsTypes.forEach(function (oneSport){
+            var yy = oneSport.SportsTypeName;
+            option = document.createElement("option");
+            option.text = yy;
+            option.value = yy;
+            sportsType.appendChild(option);
+        });
+        
+        var 
+    }
+
+
     function add() {
         inputs = document.getElementById("uniti");
         var unit = document.createElement("SELECT");
@@ -71,7 +105,7 @@
         
 
         units.forEach(function (oneUnit) {
-            var xx = oneUnit.unitName;
+            var xx = oneUnit.UnitName;
             option = document.createElement("option");
             option.text = xx;
             option.value = xx;
