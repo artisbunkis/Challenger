@@ -13,11 +13,12 @@ class Challenge extends Model
     protected $table = "challenge";
 
     use HasFactory;
+
     public function activities(){//FK
         return $this->hasMany(Activity::class);//Challenge has many activities
     }
-    public function users(){//FK
-        return $this->morphToMany(User::class);//Challenge has users, user can have multiple challenges
-    }
+    // public function users(){//FK
+    //     return $this->morphToMany(User::class);//Challenge has users, user can have multiple challenges
+    // }
     
 }
