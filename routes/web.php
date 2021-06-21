@@ -1,8 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Challenge;
-use App\Http\Controllers\ChallengeController;
+use App\Http\Controllers\FindChallengesController;
+use App\Http\Controllers\CreateChallengeController;
+use App\Http\Controllers\RunningTotalsController;
+use App\Http\Controllers\TrackActivityController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +24,10 @@ use App\Http\Controllers\ChallengeController;
 
 Auth::routes();
 
-
+Route::resource('createchallenge', CreateChallengeController::class);
+Route::resource('findchallenges', FindChallengesController::class);
+Route::resource('trackactivity', TrackActivityController::class);
+Route::resource('runningtotals', RunningTotalsController::class);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

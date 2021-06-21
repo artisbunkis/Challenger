@@ -40,7 +40,7 @@ class User extends Authenticable
     }
 
 
-    public function challenges(){//FK
+    public function challenge(){//FK
         return $this->morphToMany(Challenge::class);//Challenge has users, user can have multiple challenges
     }
 

@@ -1,13 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\Auth;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\User;
-use App\Models\Challenge;
+use App\Models\Unit;
 
-class ChallengeController extends Controller
+class CreateChallengeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,10 +15,8 @@ class ChallengeController extends Controller
      */
     public function index()
     {
-        $id = Auth::id();
-        if(is_null($id)){
-            return redirect('login');
-        } 
+        $units = Unit::all();
+        return view('createchallenge', compact('units'));
     }
 
     /**
@@ -40,22 +37,7 @@ class ChallengeController extends Controller
      */
     public function store(Request $request)
     {
-        $id = Auth::id(); //authorized user id
-        if(is_null($id)){
-            return redirect('login');
-        }
-        else{
-            $challenge = new Challenge();
-            $challenge->id = $request->id; 
-            $challenge->sportsType_ID = $request->sportsType_ID;
-            $challenge->creatorUser_ID = $id;
-            $challenge->challengeName = $request->challengeName;
-            $challenge->beginDate = $request->beginDate;
-            $challenge->endDate = $request->endDate;
-            $challenge->save();
-            return redirect('home'); //redirects pectam janomaina
-
-        }
+        //
     }
 
     /**
@@ -102,5 +84,4 @@ class ChallengeController extends Controller
     {
         //
     }
-
 }

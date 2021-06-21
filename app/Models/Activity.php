@@ -12,7 +12,7 @@ use App\Models\User;
 class Activity extends Model
 {
     use HasFactory;
-    public function challenges(){//FK
+    public function challenge(){//FK
         return $this->belongsTo(Challenge::class);//Challenge has many activities
     }
     public function users(){//FK
