@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Activity;
 use App\Models\Unit;
 use App\Models\SportsType;
+use App\Models\Challenge;
+
 
 class TrackActivityController extends Controller
 {
@@ -18,10 +21,9 @@ class TrackActivityController extends Controller
     public function index()
     {
         $units = Unit::all();
-        
-
-        $sportsTypes = SportsType::all();
-        return view('trackactivity', compact('units', 'sportsTypes'));
+    
+        $sportsType = SportsType::all();
+        return view('trackactivity', compact('units', 'sportsType'));
     }
 
     /**
@@ -42,17 +44,46 @@ class TrackActivityController extends Controller
      */
     public function store(Request $request)
     {
+        $sportsType = SportsType::where('sportsTypeName', '=', $request->sportsType)->value('sportsType_ID');
+
         $id = Auth::id(); 
         if(is_null($id)){
             return redirect('login');
         }
         $activity = new Activity();
-        $activity->id = $request->id; 
-        $activity->StartTime = $request->StartTime; 
-        $activity->SportsType_ID = $request->SportsType_ID; 
+        $activity->activity_ID = $request->id; 
+        $activity->startTime = $request->startTime; 
+        $activity->sportsType_ID = $sportsType;
         $activity->User_ID = $id; 
         $activity->save();
-        return redirect('trackactivity'); //redirects pectam janomaina
+
+        
+        $arr = ($request->arrayOfUnits);
+        var_dump($arr);
+        for($i = 0; $i< count(json_decode($arr)); $i+=1) {
+            //echo (json_decode($arr)[$i]->unit);
+            //echo (json_decode($arr)[$i]->measurement);
+
+            $unitID = Unit::where('unitName', '=', json_decode($arr)[$i]->unit)->value('unit_ID');
+
+            // DB::table('challenge_measurements')->insert([
+            //     'challenge_ID' => $challenge->id,
+            //     'unit_ID' => $unitID,
+            //     'goalValue' => json_decode($arr)[$i]->measurement,
+            //     'comparison_ID' => 1
+            // ]);
+                DB::table('activity_measurements')->insert([
+               'activity_ID' => $activity->id,
+               'unit_ID' => $unitID,
+               'value' => json_decode($arr)[$i]->measurement
+            ]);
+            return view('trackactivity');
+        };
+
+
+       
+
+       
     }
 
     /**
