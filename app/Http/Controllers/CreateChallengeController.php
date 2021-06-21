@@ -7,7 +7,9 @@ use App\Models\Challenge;
 use App\Models\Comparison;
 use App\Models\SportsType;
 use Illuminate\Http\Request;
+use App\Models\Challenge_Measurements;
 use App\Models\Unit;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
@@ -98,9 +100,18 @@ class CreateChallengeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        $id = Auth::id();
+        if(is_null($id)){ 
+            return redirect('login');
+        }
+        $sportsTypes = SportsType::all();
+        $challenges = Challenge::all()->where('isPublic');
+        $measurements = Challenge_Measurements::all();
+        $user_ids = User::all();
+
+        return view('findchallenges', compact('challenges', 'sportsTypes', 'measurements', 'user_ids'));
     }
 
     /**

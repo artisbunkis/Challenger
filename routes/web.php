@@ -38,3 +38,5 @@ Route::get('/', function () {
 
 
 Route::post('/profile', [App\Http\Controllers\ChallengeController::class, 'store'])->name('challenge');
+
+Route::get('/findchallenges', [App\Http\Controllers\CreateChallengeController::class, 'show'])->name('challenge.show'); 

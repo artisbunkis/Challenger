@@ -4,7 +4,7 @@
 <!DOCTYPE html>    
 <html>  
     <head>    
-        <title>Home</title>         
+        <title>Create Challenge</title>         
     </head> 
 <body>
         

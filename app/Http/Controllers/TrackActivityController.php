@@ -66,19 +66,12 @@ class TrackActivityController extends Controller
 
             $unitID = Unit::where('unitName', '=', json_decode($arr)[$i]->unit)->value('unit_ID');
 
-            // DB::table('challenge_measurements')->insert([
-            //     'challenge_ID' => $challenge->id,
-            //     'unit_ID' => $unitID,
-            //     'goalValue' => json_decode($arr)[$i]->measurement,
-            //     'comparison_ID' => 1
-            // ]);
                 DB::table('activity_measurements')->insert([
                'activity_ID' => $activity->id,
                'unit_ID' => $unitID,
                'value' => json_decode($arr)[$i]->measurement
             ]);
             $units = Unit::all();
-    
             $sportsType = SportsType::all();
             return view('trackactivity', compact('units', 'sportsType'));
             
