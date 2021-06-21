@@ -16,12 +16,12 @@
                         <div class="card-body">
                             <div class="form text-center">
                                 <form method="POST" action="{{ action([App\Http\Controllers\TrackActivityController::class, 'store']) }}"> @csrf
-                                    <label for="SportysType">Sports Type:</label>
+                                    <label for="sportsType">Sports Type:</label>
                                     <div id="sportaTipi">
                                     </div>
                                     <br><br>
-                                    <label for="StartTime">Start Time</label>
-                                    <input type="datetime-local" name="StartTime" id="StartTime">
+                                    <label for="startTime">Start Time</label>
+                                    <input type="datetime-local" name="startTime" id="startTime">
                                     <br><br><br>
                                     <label for="Duration">Duration(seconds):</label>
                                     <input type="number" name="Duration" id="Duration"><br>
@@ -59,7 +59,7 @@
         var sportsTypes =  {!! json_encode($sportsTypes->toArray()) !!}; 
 
         sportsTypes.forEach(function(oneSport){
-            var yy = oneSport.SportsTypeName;
+            var yy = oneSport.sportsTypeName;
             option = document.createElement("option");
             option.text = yy;
             option.value = yy;
@@ -84,7 +84,7 @@
         
 
         units.forEach(function (oneUnit) {
-            var xx = oneUnit.UnitName;
+            var xx = oneUnit.unitName;
             option = document.createElement("option");
             option.text = xx;
             option.value = xx;
