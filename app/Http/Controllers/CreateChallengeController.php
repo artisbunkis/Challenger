@@ -91,9 +91,15 @@ class CreateChallengeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        $id = Auth::id();
+        if(is_null($id)){ 
+            return redirect('login');
+        }
+
+        $challenges = Challenge::all()->where('isPublic');
+        return view('findchallenges', compact('challenges'));
     }
 
     /**

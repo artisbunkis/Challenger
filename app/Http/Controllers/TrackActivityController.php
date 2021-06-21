@@ -77,7 +77,10 @@ class TrackActivityController extends Controller
                'unit_ID' => $unitID,
                'value' => json_decode($arr)[$i]->measurement
             ]);
-            return view('trackactivity');
+            $units = Unit::all();
+    
+            $sportsType = SportsType::all();
+            return view('trackactivity', compact('units', 'sportsType'));
         };
 
 
