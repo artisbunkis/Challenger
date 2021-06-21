@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Activity;
+use App\Models\Activity_Measurements;
 use App\Models\Challenge;
 use App\Models\Challenge_Measurements;
 use App\Models\SportsType;
@@ -25,11 +27,6 @@ class RunningTotalsController extends Controller
         $units = Unit::all();
         $runningValues = [];
 
-        // array_push($runningValues, 1);
-        // array_push($runningValues, 4);
-        // array_push($runningValues, 6);
-
-        // echo($runningValues[0]);
         
         $i=0;
         foreach($challenge as $ch) {
@@ -40,19 +37,29 @@ class RunningTotalsController extends Controller
             }
             
             array_push($runningValues, $values);
-            
-            // echo "_\n_";
                 
             $i++;
-            // echo($ch->challenge_ID);
         }
-        echo($runningValues[1][1]);
-        //echo($runningValues[1][1]->goalValue);
+
+        $myActivities = Activity::all()->where('user_ID', '=', Auth::id());
+        echo($myActivities);
+
+        $runningMeasurements = [];
+
+        foreach($myActivities as $activity) {
+            $measurements = Activity_Measurements::all()->where('activity_ID', '=', $activity->activity_ID);
+            
+            array_push($runningMeasurements, $measurements);
+        }
+
         
 
 
-        return view('runningtotals', compact('challenge', 'sportsType', 'runningValues', 'units'));
+        return view('runningtotals', compact('challenge', 'sportsType', 'runningValues', 'units', 'myActivities', 'runningMeasurements' ));
     }
+
+
+
 
     /**
      * Show the form for creating a new resource.
