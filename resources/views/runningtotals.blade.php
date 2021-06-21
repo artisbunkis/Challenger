@@ -1,7 +1,10 @@
 @extends('layouts.app')
 @section('content')
 
-
+<?php
+    $summa = 0;
+    $avgCount = 1;
+?>
 
 <div class="container">
     <div class="row justify-content-center">
@@ -38,12 +41,65 @@
                                                                 @if ($unit->unit_ID == $it->unit_ID) 
                                                                     {{ $unit->unitCode }}
                                                                      ({{ $unit->unitName }})
-                                                                    
+                                                                   
+
+                                                                     
+                                                                    {{-- RUNNING TOTALS --}}
+                                                                    <p>My Running total:
+                                                                    @isset($myActivities)
+                                                                        @foreach ($myActivities as $activity)
+                                                                            @if ($activity->startTime > $chal->beginDate and $activity->startTime < $chal->endDate)
+                                                                                @isset($runningMeasurements)
+                                                                                    @foreach ($runningMeasurements as $rm)
+                                                                                    
+                                                                                        @foreach ($rm as $r)
+                                                                                            
+                                                                                            @if ($r->unit_ID == $unit->unit_ID)
+                                                                                                @if ($r->activity_ID == $activity->activity_ID and $activity->sportsType_ID == $chal->sportsType_ID)
+                                                                                                    
+                                                                                                    <?php
+                                                                                                        //echo ($r);
+                                                                                                        // echo ($r->sportsType_ID);
+                                                                                                        // echo ($activity->sportsType_ID);
+                                                                                                        if (strpos($unit->unitName, 'verage') !== false) {
+                                                                                                            $summa = ($summa += $r->value)/$avgCount;
+                                                                                                            $avgCount += 1;
+                                                                                                        } else {
+                                                                                                            $summa += $r->value;
+                                                                                                        }
+
+                                                                                                        
+                                                                                                    ?> 
+                                                                                                    
+
+                                                                                                @endif
+                                                                                            @endif
+                                                                                            
+                                                                                        @endforeach
+                                                                                    
+                                                                                    @endforeach
+                                                                                @endisset  
+                                                                            @endif
+                                                                            
+                                                                                
+                                                                            
+                                                                            
+                                                                        @endforeach                                                        
+                                                                    @endisset
+                                                                    {{ $summa }} {{ $unit->unitCode }} ({{ $unit->unitName }})
+                                                                </p>
+                                                                <?php
+                                                                    $summa = 0;
+                                                                ?> 
+                                                                ____
                                                                 @endif
                                                             @endforeach
                                                         @endisset
                                                         
                                                     </p>
+
+                                                    
+
                                                 @endif
 
                                             @endforeach
@@ -51,7 +107,7 @@
                                         @endforeach
                                     @endisset
 
-                                    {{-- RUNNING TOTALS --}}
+                                    
 
                                 </div>
                                 <br>
