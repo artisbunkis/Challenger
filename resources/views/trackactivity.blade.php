@@ -6,20 +6,7 @@
         <title>Track Activity</title>         
     </head> 
 <body>
-
-    @isset($units)
-        @foreach ( $units as $unit )
-            <h1>{{ $unit->UnitName }}</h1>
-        @endforeach
-    @endisset
-    
-
-    @isset($sportsTypes)
-        @foreach($sportsTypes as $sportsType)
-            <p>{{$sportsType->SportsTypeName}}</p>
-        @endforeach
-    @endisset
-
+<br><br>
 <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10">
@@ -32,9 +19,6 @@
                                     <label for="SportysType">Sports Type:</label>
                                     <div id="sportaTipi">
                                     </div>
-
-
-                                    
                                     <br><br>
                                     <label for="StartTime">Start Time</label>
                                     <input type="datetime-local" name="StartTime" id="StartTime">
