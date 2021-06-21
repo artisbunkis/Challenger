@@ -49,6 +49,7 @@
                                     <br>
 
                                     <input type="hidden" name="arrayOfUnits" id="arrayOfUnits">
+                                    <input type="hidden" name="arrayOfComparisons" id="arrayOfComparisons">
 
                                     <button type="button" style="display: none" id="saveButton" onclick="saveUnits()">Save Units</button>
 
@@ -76,16 +77,26 @@
     function add() {
         inputs = document.getElementById("uniti");
         var unit = document.createElement("SELECT");
+        var comparison = document.createElement("SELECT");
         unit.setAttribute("placeholder", "Unit");
         unit.setAttribute("name", "unit");
         unit.setAttribute("id", "Unit1");
+        comparison.setAttribute("placeholder", "Comparison");
+        comparison.setAttribute("name", "comparison");
+        comparison.setAttribute("id", "Comparison");
 
 
         var units = {!! json_encode($units->toArray()) !!};
+
+        var comparisons = {!! json_encode($comparisons->toArray()) !!};
+
         var length = units.length;
+        var length2 = comparisons.length;
         var i = 0;
+        var k = 0;
         
         arrayOfUnits = document.getElementById("arrayOfUnits");
+        arrayOfComparisons = document.getElementById("arrayOfComparisons");
 
         units.forEach(function (oneUnit) {
             var xx = oneUnit.unitName;
@@ -97,6 +108,18 @@
             i+=1;
         });
 
+        comparisons.forEach(function (oneComparison) {
+            console.log(oneComparison.comparisonSign);
+            var v = oneComparison.comparisonName;
+            option = document.createElement("option");
+            option.text = v;
+            option.value = oneComparison.comparisonSign;
+            comparison.appendChild(option);
+            arrayOfComparisons[i] = oneComparison.comparisonSign;
+            k+=1;
+        });
+        // comparison.appendChild(document.createElement(">"));
+
         
 
         var y = document.createElement("INPUT");
@@ -104,10 +127,13 @@
         y.setAttribute("placeholder", "Goal value");
         y.setAttribute("id", "Measurement1");
 
-
+        console.log(comparison);
+        console.log(unit);
         inputs.appendChild(document.createElement("br"));
+        
         inputs.appendChild(y);
         inputs.appendChild(unit);
+        inputs.appendChild(comparison);
         inputs.appendChild(document.createElement("br"));
     }
 
@@ -120,12 +146,15 @@
         var inputs = document.getElementById("forma").elements;
         for (i = 0; i < inputs.length; i++) {
             if(inputs[i].type === "number") {
+                
                 var measurement_ = inputs[i].value
                 var unit_ = inputs[i+1].value;
+                var comparison_ = inputs[i+2].value;
                 console.log(measurement_);
                 console.log(unit_);
+                console.log(comparison_);
                 
-                let object = {unit: unit_, measurement: measurement_};
+                let object = {unit: unit_, measurement: measurement_, comparison: comparison_};
                 arrayOfUnits.push(object);
             }
             

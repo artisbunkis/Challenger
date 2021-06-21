@@ -4,6 +4,7 @@
 <?php
     $summa = 0;
     $avgCount = 1;
+    $card = 0;
 ?>
 
 <div class="container">
@@ -18,8 +19,9 @@
                             
                             @isset($challenge)
                                 @foreach ($challenge as $chal)
+                                
 
-                                <div class="card-body" style="background-color: rgb(189, 189, 189)">
+                                <div class="card-body-{{$card}}" style="background-color: rgb(189, 189, 189)">
                                     <h6>{{ $chal->challengeName }}</h6>
 
                                     @isset($sportsType)
@@ -58,9 +60,7 @@
                                                                                                 @if ($r->activity_ID == $activity->activity_ID and $activity->sportsType_ID == $chal->sportsType_ID)
                                                                                                     
                                                                                                     <?php
-                                                                                                        //echo ($r);
-                                                                                                        // echo ($r->sportsType_ID);
-                                                                                                        // echo ($activity->sportsType_ID);
+                                                                                                        
                                                                                                         if (strpos($unit->unitName, 'verage') !== false) {
                                                                                                             $summa = ($summa += $r->value)/$avgCount;
                                                                                                             $avgCount += 1;
@@ -87,8 +87,10 @@
                                                                         @endforeach                                                        
                                                                     @endisset
                                                                     {{ $summa }} {{ $unit->unitCode }} ({{ $unit->unitName }})
+                                                                    
                                                                 </p>
                                                                 <?php
+                                                                    $avgCount = 1;
                                                                     $summa = 0;
                                                                 ?> 
                                                                 ____
@@ -111,7 +113,7 @@
 
                                 </div>
                                 <br>
-                                    
+                                <?php $card += 1 ?>   
                                 @endforeach
                             @endisset
                             

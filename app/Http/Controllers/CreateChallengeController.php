@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Challenge;
+use App\Models\Comparison;
 use App\Models\SportsType;
 use Illuminate\Http\Request;
 use App\Models\Unit;
@@ -21,7 +22,11 @@ class CreateChallengeController extends Controller
     {
         $units = Unit::all();
         $sportsType = SportsType::all();
-        return view('createchallenge', compact('units', 'sportsType'));
+        $comparisons = Comparison::all();
+        // foreach($comparisons as $c) {
+        //     echo($c);
+        // }
+        return view('createchallenge', compact('units', 'sportsType', 'comparisons'));
     }
 
     /**
@@ -58,6 +63,7 @@ class CreateChallengeController extends Controller
         $challenge->beginDate = $beginDate;
         $challenge->endDate = $endDate;
         $challenge->isPublic = $isPublic;
+        $challenge->isPublic = $isPublic;
 
         $challenge->isPublic = ($isPublic=='on')? 1 : 0;
 
@@ -70,12 +76,13 @@ class CreateChallengeController extends Controller
             //echo (json_decode($arr)[$i]->measurement);
 
             $unitID = Unit::where('unitName', '=', json_decode($arr)[$i]->unit)->value('unit_ID');
+            $comparisonID = Comparison::where('comparisonSign', '=', json_decode($arr)[$i]->comparison)->value('comparison_ID');
 
             DB::table('challenge_measurements')->insert([
                 'challenge_ID' => $challenge->id,
                 'unit_ID' => $unitID,
                 'goalValue' => json_decode($arr)[$i]->measurement,
-                'comparison_ID' => 1
+                'comparison_ID' => $comparisonID
             ]);
         }
 
