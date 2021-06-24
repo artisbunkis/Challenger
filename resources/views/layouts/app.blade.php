@@ -71,8 +71,20 @@
                             @endif
                         @else
                             <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="flag-icon flag-icon-{{Config::get('languages')[App::getLocale()]['flag-icon']}}"></span> {{ Config::get('languages')[App::getLocale()]['display'] }}
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    @foreach (Config::get('languages') as $locale => $language)
+                                        @if ($locale != App::getLocale())
+                                                <a class="dropdown-item" href="{{ route('locale.switch', $locale) }}"><span class="flag-icon flag-icon-{{$language['flag-icon']}}"></span> {{$language['display']}}</a>
+                                        @endif
+                                    @endforeach
+                                    </div>
+                            </li>
+                            <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                                    {{ Auth::user()->username }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -88,53 +100,6 @@
                                 </div>
                             </li>
 
-
-
-
-
-                           
-                            <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="flag-icon flag-icon-{{Config::get('languages')[App::getLocale()]['flag-icon']}}"></span> {{ Config::get('languages')[App::getLocale()]['display'] }}
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    @foreach (Config::get('languages') as $locale => $language)
-                                        @if ($locale != App::getLocale())
-                                                <a class="dropdown-item" href="{{ route('locale.switch', $locale) }}"><span class="flag-icon flag-icon-{{$language['flag-icon']}}"></span> {{$language['display']}}</a>
-                                        @endif
-                                    @endforeach
-                                    </div>
-                            </li>
-                            
-
-                            {{--
-                            <div class="collapse navbar-collapse" id="navbarToggler">
-                                <ul class="navbar-nav ml-auto">
-                                @php $locale = session()->get('locale'); @endphp
-                                    <li class="nav-item dropdown">
-                                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                            @switch($locale)
-                                                @case('en')
-                                                    English
-                                                @break
-                                                @case('lv')
-                                                    Latvian
-                                                @break
-                                                
-                                                @default
-                                                    English
-                                            @endswitch
-                                            <span class="caret"></span>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="lang/en"> English</a>
-                                            <a class="dropdown-item" href="lang/lv"> Latvian</a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            --}}
        
                         @endguest
                     </ul>
