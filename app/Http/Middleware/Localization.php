@@ -4,7 +4,8 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use app\Http\Controllers\LocalizationController;
+use Illuminate\Support\Facades\App;
+
 
 class Localization
 {

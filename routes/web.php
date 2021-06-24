@@ -48,34 +48,5 @@ Route::get('/findchallenges', [App\Http\Controllers\CreateChallengeController::c
 
 
 
-//LOCALE ROUTES
-Route::get('/{lang}', function($lang){
-    App:: setLocale($lang);
-    return view('welcome');
-}); 
 
-Route::get('/profile/{lang}', function($lang){
-    App:: setLocale($lang);
-    return view('/profile');
-});
-
-// Route::get('/findchallenges/{lang}', function($lang){
-//     App:: setLocale($lang);
-//     return view('findchallenges', compact('challenges', 'sportsTypes', 'measurements', 'user_ids'));
-// });
-
-// Route::get('/createchallenge/{lang}', function($lang){
-//     App:: setLocale($lang);
-//     return view('createchallenge');
-// });
-
-// Route::get('/trackactivity/{lang}', function($lang){
-//     App:: setLocale($lang);
-//     return view('/trackactivity');
-// });
-
-
-// Route::get('/runningtotals/{lang}', function($lang){
-//     App:: setLocale($lang);
-//     return view('/runningtotals');
-// });
+Route::get('lang/{lang}', ['as' => 'locale.switch', 'uses' => 'App\Http\Controllers\LocalizationController@switchLang']);
