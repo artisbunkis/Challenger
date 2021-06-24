@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class FindChallengesController extends Controller
 {
+
+    public function __construct() {
+        // only Admins have access to the following methods
+        $this->middleware('auth.admin')->only(['destroy']);
+    }
+
     /**
      * Display a listing of the resource.
      *
