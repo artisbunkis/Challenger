@@ -1,5 +1,13 @@
 <?php
 return [
-    'en' => 'English',
-    'lv' => 'Latvian'
+    'en' => [
+        'display' => 'English',
+        'flag-icon' => 'us'
+    ],
+
+    'lv' => [
+        'display' => 'Latviešu',
+        'flag-icon' => 'lv'
+    ]
+    
 ];
