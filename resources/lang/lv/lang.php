@@ -1,10 +1,7 @@
 <?php
 
 return [
-    'Welcome' => 'Sveicināti'
-
-    
-
+    'Welcome' => 'Sveicināts :Name',
 ];
 
 ?>

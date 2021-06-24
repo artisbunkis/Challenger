@@ -24,10 +24,14 @@ use App\Http\Controllers\TrackActivityController;
 
 Auth::routes();
 
+
+
 Route::resource('createchallenge', CreateChallengeController::class);
 Route::resource('findchallenges', FindChallengesController::class);
 Route::resource('trackactivity', TrackActivityController::class);
 Route::resource('runningtotals', RunningTotalsController::class);
+
+
 
 Route::get('/profile', [App\Http\Controllers\HomeController::class, 'index'])->name('profile');
 
@@ -43,7 +47,35 @@ Route::get('/findchallenges', [App\Http\Controllers\CreateChallengeController::c
 
 
 
+
+//LOCALE ROUTES
 Route::get('/{lang}', function($lang){
     App:: setLocale($lang);
     return view('welcome');
 }); 
+
+Route::get('/profile/{lang}', function($lang){
+    App:: setLocale($lang);
+    return view('/profile');
+});
+
+// Route::get('/findchallenges/{lang}', function($lang){
+//     App:: setLocale($lang);
+//     return view('findchallenges', compact('challenges', 'sportsTypes', 'measurements', 'user_ids'));
+// });
+
+// Route::get('/createchallenge/{lang}', function($lang){
+//     App:: setLocale($lang);
+//     return view('createchallenge');
+// });
+
+// Route::get('/trackactivity/{lang}', function($lang){
+//     App:: setLocale($lang);
+//     return view('/trackactivity');
+// });
+
+
+// Route::get('/runningtotals/{lang}', function($lang){
+//     App:: setLocale($lang);
+//     return view('/runningtotals');
+// });
