@@ -1,31 +1,22 @@
 @extends('layouts.app')
 @section('content')
-{{--
-    <!DOCTYPE html>    
-    <html>    
+
+<!DOCTYPE html>    
+<html>    
     <head>    
-        <title>Login Form</title>    
-        <link rel="stylesheet" type="text/css" href="css/style.css">    
+        <title>Login Form</title>   
+        <link rel="stylesheet" type="text/css" href="css/style.css"> 
+        <link href="{{ asset('/css/style.css') }}" rel="stylesheet">    
     </head>    
-    <body>    
-        <h2>Welcome</h2><br>    
-        <div class="login">    
-        <form id="login" method="POST" action="">   
-            @csrf 
-            <label><b>User Name</b></label>    
-            <input type="text" name="Uname" id="Uname" placeholder="Username">    
-            <br><br>    
-            <label><b>Password</b></label>  
-            <input type="Password" name="Pass" id="Pass" placeholder="Password">    
-            <br><br>    
-            <button type="submit">Login</button>       
-            <br><br>    
-            <input type="checkbox" id="check">    
-            <span>Remember me</span>    
-            <br><br>    
-            Forgot <a href="#">Password</a>    
-        </form>     
+    <body>
+        <div class="d-flex align-items-center justify-content-center" style="height: 350px">
+            <h1>Welcome To Challenger</h1>
+            <h1></h1>
+        </div>
+        
+         
+            
     </div>    
     </body>    
-    </html>     
---}}
+</html>     
+@endsection
