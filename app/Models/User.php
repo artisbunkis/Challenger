@@ -22,7 +22,8 @@ class User extends Authenticable
     protected $fillable = [
         'username',
         'email',
-        'password'
+        'password', 
+        'role'
     ];
 
     protected $hidden = [
@@ -30,8 +31,13 @@ class User extends Authenticable
         'remember_token'
     ];
 
+    
     protected $username = 'username';
     
+    //Determine if admin
+    public function isAdmin() {
+        return ($this->role == 1);
+    }
 
 
     // Ambil data dari field yang bersangkutan
