@@ -32,12 +32,12 @@
                             @isset($sportsTypes)
                             @foreach($sportsTypes as $sportsType)
                             @if($sportsType->sportsType_ID == $challenge->sportsType_ID)                                
-                                <p>Sports Type: {{$sportsType->sportsTypeName}}</p>   
+                                <p><b>Sports Type:</b> {{$sportsType->sportsTypeName}}</p>   
                             @endif
                             @endforeach
                             @endisset
 
-                            <p>Subscriber Count: 
+                            <p><b>Subscriber Count: </b>
                                 @isset($subscribedCountArray)
                                     @foreach ($subscribedCountArray as $s)
                                         @if($s[0] == $challenge->challenge_ID)
@@ -50,18 +50,18 @@
                             @isset($measurements)
                             @foreach($measurements as $measurement)
                             @if($challenge->challenge_ID == $measurement->challenge_ID)
-                                <p>Goal: {{$measurement->goalValue}}</p>
+                                <p><b>Goal:</b> {{$measurement->goalValue}}</p>
                             @endif
                             @endforeach
                             @endisset
 
                             
-                            <p>Ends in: {{$challenge->endDate}}</p>
+                            <p><b>Ends in:</b> {{$challenge->endDate}}</p>
 
                             @isset($user_ids)
                             @foreach($user_ids as $user_id)
                             @if($user_id->user_ID == $challenge->creatorUser_ID)
-                                <p>Creator: {{$user_id->username}}</p>
+                                <p><b>Creator:</b> {{$user_id->username}}</p>
                             @endif
                             @endforeach
                             @endisset
@@ -71,7 +71,7 @@
                             @isset($subscrChal)
                                 @foreach ($subscrChal as $sc)
                                     @if($sc->challenge_ID == $challenge->challenge_ID)
-                                        {{ $irSaraksta = true }}
+                                        @php $irSaraksta = true @endphp
                                         @break
                                     @endif
                                 
