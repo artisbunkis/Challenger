@@ -32,8 +32,10 @@
                         @foreach($users as $user)
                         @if($user->role !== 1)
                             <tr>
-                                <td>ID: {{$user->user_ID}}</td>
-                                <td>Username: {{$user->username}}</td>
+                                <td><b>ID:</b> {{$user->user_ID}}</td>
+                                <td><b>Username:</b> {{$user->username}}</td>
+                                <td><b>Last Login:</b> {{$user->last_login_at}}</td>
+                                <td><b>Last Login IP</b>{{$user->last_login_ip}}</td>
                                 <td>
                                     <form method="POST" action="{{ action([App\Http\Controllers\UserController::class, 'destroy'], $user->user_ID) }}">@csrf @method('DELETE')
                                     
