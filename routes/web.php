@@ -55,7 +55,9 @@ Route::get('profile', [App\Http\Controllers\UserController::class, 'show'])->nam
 //Route::post('findchallenges', [App\Http\Controllers\FindChallengesController::class, 'destroy'])->name('findChallenges.destroy'); //for destroy
 // Route::post("/findchallenges", "App\Http\Controllers\FindChallengesController@destroy")->name('findChallenges.destroy');
 Route::delete("/findchallenges", [FindChallengesController::class, 'erase'])->name('findchallenges.erase');
+
 Route::post("/findchallenges", [FindChallengesController::class, 'subscribe'])->name('findchallenges.subscribe');
+Route::post("/unsubscribe", [FindChallengesController::class, 'unsubscribe'])->name('findchallenges.unsubscribe');
 
 Route::get('lang/{lang}', ['as' => 'locale.switch', 'uses' => 'App\Http\Controllers\LocalizationController@switchLang']);
 

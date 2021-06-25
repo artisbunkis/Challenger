@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Challenge;
+use App\Models\Subscription;
 use App\Models\Comparison;
 use App\Models\SportsType;
 use Illuminate\Http\Request;
@@ -111,12 +112,39 @@ class CreateChallengeController extends Controller
         if(is_null($id)){ 
             return redirect('login');
         }
+
+        $subscribedChallengesID = Subscription::all()->where('user_ID', '=', Auth::id());
+
+        $subscrChal = [];
+        
+        $subscribedCountArray = [];
+        $subscriberCount = [];
+
+        foreach($subscribedChallengesID as $s) {
+            $challenge = Challenge::all()->where('challenge_ID', '=', $s->challenge_ID)->first();
+
+            array_push($subscrChal, $challenge);
+
+        }
+
+
         $sportsTypes = SportsType::all();
         $challenges = Challenge::all()->where('isPublic');
         $measurements = Challenge_Measurements::all();
         $user_ids = User::all();
 
-        return view('findchallenges', compact('challenges', 'sportsTypes', 'measurements', 'user_ids'));
+        foreach($challenges as $c) {
+            $subscriberCount = [];
+            $subscriptionCnt = Subscription::all()->where('challenge_ID', '=', $c->challenge_ID)->count();
+            array_push($subscriberCount, $c->challenge_ID);
+            array_push($subscriberCount, $subscriptionCnt);
+            array_push($subscribedCountArray, $subscriberCount);
+        }
+
+        
+
+
+        return view('findchallenges', compact('challenges', 'sportsTypes', 'measurements', 'user_ids', 'subscrChal', 'subscribedCountArray'));
     }
 
     /**

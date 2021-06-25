@@ -114,4 +114,12 @@ class FindChallengesController extends Controller
 
     }
 
+    public function unsubscribe(Request $request) {
+
+        $subscription = Subscription::where('challenge_ID', '=', $request->id)->delete();
+        return redirect('findchallenges')->with('success', 'Challenge Removed');
+
+    }
+
+
 }

@@ -22,52 +22,99 @@
         
         @isset($challenges)
         @foreach($challenges as $challenge)
-        <div class="col-md-4">
-            <div class="card border-info mb-3">
-                <div class="card-header text-center "><h2>{{$challenge->challengeName}}</h2></div>
-                    <div class="card-body text-md-left">
-                        @isset($sportsTypes)
-                        @foreach($sportsTypes as $sportsType)
-                        @if($sportsType->sportsType_ID == $challenge->sportsType_ID)                                
-                            <p>Sports Type: {{$sportsType->sportsTypeName}}</p>   
-                        @endif
-                        @endforeach
-                        @endisset
+        
+            
 
-                        <p>Subscriber Count: </p>
+            <div class="col-md-4">
+                <div class="card border-info mb-3">
+                    <div class="card-header text-center "><h2>{{$challenge->challengeName}}</h2></div>
+                        <div class="card-body text-md-left">
+                            @isset($sportsTypes)
+                            @foreach($sportsTypes as $sportsType)
+                            @if($sportsType->sportsType_ID == $challenge->sportsType_ID)                                
+                                <p>Sports Type: {{$sportsType->sportsTypeName}}</p>   
+                            @endif
+                            @endforeach
+                            @endisset
 
-                        @isset($measurements)
-                        @foreach($measurements as $measurement)
-                        @if($challenge->challenge_ID == $measurement->challenge_ID)
-                            <p>Goal: {{$measurement->goalValue}}</p>
-                        @endif
-                        @endforeach
-                        @endisset
+                            <p>Subscriber Count: 
+                                @isset($subscribedCountArray)
+                                    @foreach ($subscribedCountArray as $s)
+                                        @if($s[0] == $challenge->challenge_ID)
+                                            {{$s[1]}}
+                                        @endif
+                                    @endforeach
+                                @endisset
+                            </p>
 
-                        
-                        <p>Ends in: {{$challenge->endDate}}</p>
+                            @isset($measurements)
+                            @foreach($measurements as $measurement)
+                            @if($challenge->challenge_ID == $measurement->challenge_ID)
+                                <p>Goal: {{$measurement->goalValue}}</p>
+                            @endif
+                            @endforeach
+                            @endisset
 
-                        @isset($user_ids)
-                        @foreach($user_ids as $user_id)
-                        @if($user_id->user_ID == $challenge->creatorUser_ID)
-                            <p>Creator: {{$user_id->username}}</p>
-                        @endif
-                        @endforeach
-                        @endisset
-                        
-                        <form method="POST" id="forma" action="{{ action([App\Http\Controllers\FindChallengesController::class, 'subscribe'], $challenge->challenge_ID)}}"> @csrf @method('POST')
+                            
+                            <p>Ends in: {{$challenge->endDate}}</p>
+
+                            @isset($user_ids)
+                            @foreach($user_ids as $user_id)
+                            @if($user_id->user_ID == $challenge->creatorUser_ID)
+                                <p>Creator: {{$user_id->username}}</p>
+                            @endif
+                            @endforeach
+                            @endisset
+                            
+                            <?php $irSaraksta = false ?>
+                            
+                            @isset($subscrChal)
+                                @foreach ($subscrChal as $sc)
+                                    @if($sc->challenge_ID == $challenge->challenge_ID)
+                                        {{ $irSaraksta = true }}
+                                        @break
+                                    @endif
+                                
+                                @endforeach
+                                @isset($irSaraksta)
+                                    @if ($irSaraksta)
+                                    <form method="POST" id="forma" action="{{ action([App\Http\Controllers\FindChallengesController::class, 'unsubscribe'], $challenge->challenge_ID)}}"> @csrf @method('POST')
+                                                    
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                        <input type="hidden" name="id" value="{{ $challenge->challenge_ID }}">
+                                        
                                     
-                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                            <input type="hidden" name="id" value="{{ $challenge->challenge_ID }}">
+                                         <button type="submit">Unsubscribe</button>
+                                    </form>
+                                    @else
+                                    <form method="POST" id="forma" action="{{ action([App\Http\Controllers\FindChallengesController::class, 'subscribe'], $challenge->challenge_ID)}}"> @csrf @method('POST')
+                                                    
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                        <input type="hidden" name="id" value="{{ $challenge->challenge_ID }}">
+                                        
+                                    
+                                         <button type="submit">Subscribe</button>
+                                    </form>
+                                    @endif
+                                @endisset
+                            @endisset
+
+                            {{--
+                                <form method="POST" id="forma" action="{{ action([App\Http\Controllers\FindChallengesController::class, 'subscribe'], $challenge->challenge_ID)}}"> @csrf @method('POST')
+                                                    
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                        <input type="hidden" name="id" value="{{ $challenge->challenge_ID }}">
+                                        
+                                    
+                                         <button type="submit">Subscribe</button>
+                                    </form>
+                                --}}
                             
                         
-                        <button type="submit">Subscribe</button>
-                    </form>
-                        
-                    </div>
+                        </div>
 
-            </div>   
-        </div>
+                </div>   
+            </div>
         @endforeach
         @endisset
     </div>
