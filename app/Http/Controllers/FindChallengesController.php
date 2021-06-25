@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Challenge;
+use DB;
 
 class FindChallengesController extends Controller
 {
@@ -20,7 +22,10 @@ class FindChallengesController extends Controller
      */
     public function index()
     {
-        return view('findchallenges');
+        
+        $challenges = DB::select('select * from challenge');
+        return view('findchallenges',['challenges'=>$challenges]);
+        
     }
 
     /**
@@ -86,6 +91,13 @@ class FindChallengesController extends Controller
      */
     public function destroy($id)
     {
-        //
+
+        //DB::delete('delete from challenge where id = ?',[$id]);
+        //echo "Record deleted successfully.<br/>";
+       // echo '<a href = "findchallenges">Click Here</a> to go back.';
+
+        $challenge= Challenge::find($id);
+        $challenge->delete();
+        return redirect('findchallenges')->with('success', 'Challenge Removed');
     }
 }

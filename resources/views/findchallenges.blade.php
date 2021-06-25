@@ -64,6 +64,48 @@
     </div>
 </div>
 
+@can('is-admin')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card border-info mb-3">
+                <div class="card-header text-center "><h2>List of all chalenges</h2></div>
+                    <div class="card-body text-md-left">
+                        <table>
+                            <tr>
+                                <th>Challenge Title</th>
+                                <th>Delete</th>
+                                
+                            </tr>
+                        @isset($challenges)
+                        @foreach($challenges as $challenge)
+                            <tr>
+                                <td>{{$challenge->challengeName}}</td>
+                                
+
+                                <td><a href = 'findchallenges/{{$challenge->id}}'>Delete</a></td>
+                               
+                                <td>
+                                    <form method="POST" action="{{ action([App\Http\Controllers\FindChallengesController::class, 'destroy'], $challenge->id)}}">@csrf @method('DELETE')
+                                        <button type="submit">Delete</button>
+                                    </form>
+                                </td>
+                                
+                            </tr>
+                            
+                        @endforeach
+                        @endisset
+                        </table>
+                    </div>
+
+            </div>   
+        </div>
+
+    </div>
+</div>
+
+@endcan
+
 
 </body>
 </html>

@@ -43,10 +43,12 @@ Route::get('/', function () {
 
 Route::post('/profile', [App\Http\Controllers\ChallengeController::class, 'store'])->name('challenge');
 
-Route::get('/findchallenges', [App\Http\Controllers\CreateChallengeController::class, 'show'])->name('challenge.show'); 
+//Route::get('/findchallenges', [App\Http\Controllers\CreateChallengeController::class, 'show'])->name('challenge.show'); 
 
-
-
+//Route::delete('findchallenges', [FindChallengesController::class, 'destroy']);
+//Route::get('findchallenges/','FindChallengesController@index');
+Route::post('/findchallenges/{id}', [FindChallengesController::class, 'destroy']); //for destroy
 
 
 Route::get('lang/{lang}', ['as' => 'locale.switch', 'uses' => 'App\Http\Controllers\LocalizationController@switchLang']);
+

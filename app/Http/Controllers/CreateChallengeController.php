@@ -15,6 +15,11 @@ use Illuminate\Support\Facades\DB;
 
 class CreateChallengeController extends Controller
 {
+
+    public function __construct() {
+        // only Admins have access to the following methods
+        $this->middleware('auth.admin')->only(['destroy']);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -145,6 +150,7 @@ class CreateChallengeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Challenge::findOrFail($id)->delete();
+        return redirect('findchallenges')->with('success', 'Challenge Removed');;
     }
 }
