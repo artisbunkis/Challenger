@@ -69,7 +69,7 @@
     <div class="row justify-content-center">
         <div class="col-md-4">
             <div class="card border-info mb-3">
-                <div class="card-header text-center "><h2>List of all chalenges</h2></div>
+                <div class="card-header text-center "><h2>List of all challenges</h2></div>
                     <div class="card-body text-md-left">
                         <table>
                             <tr>
@@ -94,7 +94,7 @@
                                             <input type="hidden" name="id" value="{{ $challenge->challenge_ID }}">
                                             
                                         
-                                        <button type="submit">Delete</button>
+                                        <button type="submit" class="btn btn-danger">Delete</button>
                                     </form>
                                 </td>
                                 
