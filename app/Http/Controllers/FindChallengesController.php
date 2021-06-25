@@ -89,15 +89,12 @@ class FindChallengesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function erase(Request $request)
     {
 
-        //DB::delete('delete from challenge where id = ?',[$id]);
-        //echo "Record deleted successfully.<br/>";
-       // echo '<a href = "findchallenges">Click Here</a> to go back.';
-
-        $challenge= Challenge::find($id);
-        $challenge->delete();
+       
+        $challenge = Challenge::where('challenge_ID', '=', $request->id)->delete();
+        
         return redirect('findchallenges')->with('success', 'Challenge Removed');
     }
 }
