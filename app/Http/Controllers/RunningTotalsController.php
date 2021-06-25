@@ -8,6 +8,7 @@ use App\Models\Activity_Measurements;
 use App\Models\Challenge;
 use App\Models\Challenge_Measurements;
 use App\Models\SportsType;
+use App\Models\Subscription;
 use App\Models\Unit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -21,28 +22,31 @@ class RunningTotalsController extends Controller
      */
     public function index()
     {
-
-        $challenge = Challenge::all()->where('creatorUser_ID', '=', Auth::id());
-        $sportsType = SportsType::all();
-        $units = Unit::all();
+        $subscribedChallengesID = Subscription::all()->where('user_ID', '=', Auth::id());
+        echo($subscribedChallengesID);
+        //echo(Auth::id());
         $runningValues = [];
+        $challenge = NULL;
+        $challenges = [];
 
-        
-        $i=0;
-        foreach($challenge as $ch) {
-            
-            if(Challenge_Measurements::all()->where('challenge_ID', '=', $ch->challenge_ID)) {
-                $values = Challenge_Measurements::all()->where('challenge_ID', '=', $ch->challenge_ID);
-                //printf ($values);
-            }
+        foreach($subscribedChallengesID as $s) {
+            $challenge = Challenge::all()->where('challenge_ID', '=', $s->challenge_ID)->first();
+            array_push($challenges, $challenge);
+            $values = Challenge_Measurements::all()->where('challenge_ID', '=', $challenge->challenge_ID);
             
             array_push($runningValues, $values);
-                
-            $i++;
+        }
+
+        
+        $sportsType = SportsType::all();
+        $units = Unit::all();
+   
+        
+        foreach($challenges as $ch) {
+            echo($ch->challengeName);
         }
 
         $myActivities = Activity::all()->where('user_ID', '=', Auth::id());
-        echo($myActivities);
 
         $runningMeasurements = [];
 
@@ -55,7 +59,7 @@ class RunningTotalsController extends Controller
         
 
 
-        return view('runningtotals', compact('challenge', 'sportsType', 'runningValues', 'units', 'myActivities', 'runningMeasurements' ));
+        return view('runningtotals', compact('challenges', 'sportsType', 'runningValues', 'units', 'myActivities', 'runningMeasurements' ));
     }
 
 

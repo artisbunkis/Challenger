@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Challenge;
+use App\Models\Subscription;
+use Illuminate\Support\Facades\Auth;
 use DB;
+
 
 class FindChallengesController extends Controller
 {
@@ -97,4 +100,18 @@ class FindChallengesController extends Controller
         
         return redirect('findchallenges')->with('success', 'Challenge Removed');
     }
+
+    public function subscribe(Request $request) {
+
+        $subscription = new Subscription();
+        $subscription->challenge_ID = $request->id;
+        $subscription->user_ID = Auth::id();
+        $subscription->isDone = false;
+        $subscription->subscriptionDate = date("Y-m-d");
+        
+        $subscription->save();
+        return redirect('findchallenges')->with('success', 'Challenge Subscribed');
+
+    }
+
 }

@@ -17,8 +17,8 @@
                         <div class="form text-center">
                             {{-- Visi Running totals cards --}}
                             
-                            @isset($challenge)
-                                @foreach ($challenge as $chal)
+                            @isset($challenges)
+                                @foreach ($challenges as $chal)
                                 
 
                                 <div class="card-body-{{$card}}" style="background-color: rgb(189, 189, 189)">

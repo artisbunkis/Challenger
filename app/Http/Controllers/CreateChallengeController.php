@@ -64,7 +64,7 @@ class CreateChallengeController extends Controller
         
         $challenge = new Challenge();
         $challengeID = $challenge->id;
-        $challenge->creatorUser_ID = Auth::id();;
+        $challenge->creatorUser_ID = Auth::id();
         $challenge->sportsType_ID = $sportsType;
         $challenge->challengeName = $challengeName;
         $challenge->beginDate = $beginDate;
