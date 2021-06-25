@@ -7,6 +7,10 @@ use App\Models\User;
 
 class UserController extends Controller
 {
+    public function __construct() {
+        // only Admins have access to the following methods
+        $this->middleware('auth.admin')->only(['destroy']);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +19,7 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-        return view('users', compact('users'));
+        return view('/profile', compact('users'));
     }
 
     /**
@@ -45,9 +49,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        $users = User::all();
+        return view('profile', compact('users'));
     }
 
     /**
@@ -81,6 +86,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
+        User::find($id)->delete();
+        return redirect('profile');
         // City::where('country_id', $id)->delete();
         // Country::findOrFail($id)->delete();
         // return redirect('country/');
