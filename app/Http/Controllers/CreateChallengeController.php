@@ -31,10 +31,12 @@ class CreateChallengeController extends Controller
         $units = Unit::all();
         $sportsType = SportsType::all();
         $comparisons = Comparison::all();
+        $challenges = Challenge::all()->where('creatorUser_ID', '=', Auth::id());
+        $measurements = Challenge_Measurements::all();
         // foreach($comparisons as $c) {
         //     echo($c);
         // }
-        return view('createchallenge', compact('units', 'sportsType', 'comparisons'));
+        return view('createchallenge', compact('units', 'sportsType', 'comparisons', 'measurements', 'challenges'));
     }
 
     /**
@@ -131,7 +133,9 @@ class CreateChallengeController extends Controller
         $sportsTypes = SportsType::all();
         $challenges = Challenge::all()->where('isPublic');
         $measurements = Challenge_Measurements::all();
+        $units = Unit::all();
         $user_ids = User::all();
+        $comparisons = Comparison::all();
 
         foreach($challenges as $c) {
             $subscriberCount = [];
@@ -144,7 +148,7 @@ class CreateChallengeController extends Controller
         
 
 
-        return view('findchallenges', compact('challenges', 'sportsTypes', 'measurements', 'user_ids', 'subscrChal', 'subscribedCountArray'));
+        return view('findchallenges', compact('challenges', 'sportsTypes', 'measurements', 'user_ids', 'subscrChal', 'subscribedCountArray', 'units', 'comparisons'));
     }
 
     /**
@@ -181,4 +185,9 @@ class CreateChallengeController extends Controller
         Challenge::findOrFail($id)->delete();
         return redirect('findchallenges')->with('success', 'Challenge Removed');;
     }
+
+    public function showMyChallenges(Request $request) {
+
+    }
+
 }

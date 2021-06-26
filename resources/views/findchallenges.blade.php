@@ -16,9 +16,9 @@
 @endforeach
 @endisset
 --}}
-
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row" data-masonry='{"percentPosition": true }'>
         
         @isset($challenges)
         @foreach($challenges as $challenge)
@@ -50,7 +50,18 @@
                             @isset($measurements)
                             @foreach($measurements as $measurement)
                             @if($challenge->challenge_ID == $measurement->challenge_ID)
-                                <p><b>Goal:</b> {{$measurement->goalValue}}</p>
+                                <p><b>Goal:</b> 
+                                    @foreach ($units as $unit)
+                                        @if($unit->unit_ID == $measurement->unit_ID)
+                                            @foreach ($comparisons as $comparison)
+                                                @if ($measurement->comparison_ID == $comparison->comparison_ID)
+                                                    {{ $unit->unitName }} {{ $comparison->comparisonSign }} {{$measurement->goalValue}} {{ $unit->unitCode }}
+                                                @endif
+                                            @endforeach
+                                            
+                                        @endif
+                                    @endforeach
+                                    </p>
                             @endif
                             @endforeach
                             @endisset

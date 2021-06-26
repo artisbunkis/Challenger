@@ -8,10 +8,9 @@
     </head> 
 <body>
         
-
-         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-10">
+    <div class="container">
+        <div class="row justify-content">
+                <div class="col-md-6">
                     <div class="card">
                         <div class="card-header text-center"><h2>Create Challenge</h2></div>
                             <div class="form text-center">
@@ -60,10 +59,90 @@
                     </div>
                     
                 </div>
-            </div>
-    </div>
-        
 
+
+   
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <div class="card-header "><h2 class="text-center">My Challenges</h2></div>
+
+                    <div class="card-body">
+                    
+                        @isset($challenges)
+                        @foreach ($challenges as $challenge)
+                        <div class="card mb-3">
+                            <div class="card-header text-white bg-secondary">
+                                {{$challenge->challengeName}}
+                                    
+                            </div>
+                            <div class="card-body bg-light">
+                            
+                            <div class="row">
+                                
+                                <div class="col md-3">
+                                    <button class="btn btn-block btn-danger btn-sm">Delete Challenge</button>
+                                    
+                                </div>
+                            </div>
+                            
+                            @foreach ($sportsType as $sport)
+                                @if ($sport->sportsType_ID == $challenge->sportsType_ID)
+                                    {{ $sport->sportsTypeName }}
+                                @endif
+                            @endforeach  
+
+                            <div class="row">
+
+                                @foreach ($measurements as $measurement)
+                                    @if ($measurement->challenge_ID == $challenge->challenge_ID)
+                                        <div class="col md-3">
+                                            <div class="card mb-10">
+                                                
+                                                
+                                                    @isset($units)
+                                                        @foreach ($units as $unit)
+                                                            
+                                                            @if ($unit->unit_ID == $measurement->unit_ID)
+                                                            <div class="card-body" style="font-size: 12px; padding: 5px">
+                                                                <b>{{ $unit->unitName }}:</b>
+                                                                {{ $measurement->goalValue }} 
+                                                                {{ $unit->unitCode }}
+                                                            </div>
+                                                                
+                                                            @endif
+                                                        @endforeach
+                                                    @endisset
+                                                    
+                                            </div>
+                                            
+                                        </div>
+                                    @endif
+                                    
+                                    
+                                @endforeach
+                            </div>
+                            
+                                </div>
+                                
+                        </div>
+                            
+                        
+
+                        
+                        @endforeach
+                    @endisset
+                    </div>
+                        
+                        
+                            
+                        
+                
+
+         
+    </div>
+    
+</div>
+</div>
 
        
 

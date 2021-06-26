@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Challenge;
 use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Support\Hash;
@@ -33,5 +34,30 @@ class DatabaseSeeder extends Seeder
             'remember_token' => Str::random(10),
             'role' => 1
         ]);
+
+        User::create([
+            'Email' => 'archy@gmail.com',
+            'Username' => 'archy',
+            'Password' => bcrypt('password'),
+            'Gender_ID' => '0',
+            'FirstName' => 'Artis',
+            'LastName' => 'Bunkis',
+            'BirthDate' => '2000-09-27',
+            'remember_token' => Str::random(10),
+            'role' => 0
+        ]);
+
+        User::create([
+            'Email' => 'ricards@gmail.com',
+            'Username' => 'richZ',
+            'Password' => bcrypt('password'),
+            'Gender_ID' => '0',
+            'FirstName' => 'Ricards',
+            'LastName' => 'Zvagulis',
+            'BirthDate' => '2000-01-01',
+            'remember_token' => Str::random(10),
+            'role' => 0
+        ]);
+        
     }
 }

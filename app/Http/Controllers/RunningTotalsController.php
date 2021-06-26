@@ -23,7 +23,7 @@ class RunningTotalsController extends Controller
     public function index()
     {
         $subscribedChallengesID = Subscription::all()->where('user_ID', '=', Auth::id());
-        echo($subscribedChallengesID);
+        $finishedSubscribedChallenges = Subscription::all()->where('user_ID', '=', Auth::id())->where('isDone', '=', 1);
         //echo(Auth::id());
         $runningValues = [];
         $challenge = NULL;
@@ -32,6 +32,7 @@ class RunningTotalsController extends Controller
         foreach($subscribedChallengesID as $s) {
             $challenge = Challenge::all()->where('challenge_ID', '=', $s->challenge_ID)->first();
             array_push($challenges, $challenge);
+            //array_push($challenges, $s->isDone);
             $values = Challenge_Measurements::all()->where('challenge_ID', '=', $challenge->challenge_ID);
             
             array_push($runningValues, $values);
@@ -42,9 +43,7 @@ class RunningTotalsController extends Controller
         $units = Unit::all();
    
         
-        foreach($challenges as $ch) {
-            echo($ch->challengeName);
-        }
+        
 
         $myActivities = Activity::all()->where('user_ID', '=', Auth::id());
 
@@ -59,7 +58,7 @@ class RunningTotalsController extends Controller
         
 
 
-        return view('runningtotals', compact('challenges', 'sportsType', 'runningValues', 'units', 'myActivities', 'runningMeasurements' ));
+        return view('runningtotals', compact('challenges', 'sportsType', 'runningValues', 'units', 'myActivities', 'runningMeasurements', 'finishedSubscribedChallenges' ));
     }
 
 

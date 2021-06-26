@@ -59,5 +59,7 @@ Route::delete("/findchallenges", [FindChallengesController::class, 'erase'])->na
 Route::post("/findchallenges", [FindChallengesController::class, 'subscribe'])->name('findchallenges.subscribe');
 Route::post("/unsubscribe", [FindChallengesController::class, 'unsubscribe'])->name('findchallenges.unsubscribe');
 
+Route::post("/destroy", [TrackActivityController::class, 'destroy'])->name('trackactivity.destroy');
+
 Route::get('lang/{lang}', ['as' => 'locale.switch', 'uses' => 'App\Http\Controllers\LocalizationController@switchLang']);
 
