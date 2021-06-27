@@ -80,7 +80,7 @@
                                                         @if($unit->unit_ID == $measurement->unit_ID)
                                                             @foreach ($comparisons as $comparison)
                                                                 @if ($measurement->comparison_ID == $comparison->comparison_ID)
-                                                                    {{ $unit->unitName }} {{ $comparison->comparisonSign }} {{$measurement->goalValue}} {{ $unit->unitCode }}
+                                                                    <h3></h3>{{ $unit->unitName }} {{ $comparison->comparisonSign }} {{$measurement->goalValue}} {{ $unit->unitCode }}
                                                                 @endif
                                                             @endforeach
                                                             
@@ -88,6 +88,10 @@
                                                     @endforeach
                                             </div>
                                         </div>
+                                    </div>
+
+                                    <div class="row">
+
                                     </div>
                                         
                                     @endif
