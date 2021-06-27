@@ -143,7 +143,7 @@
                                                 <input type="hidden" name="id" value="{{ $challenge->challenge_ID }}">
                                                 
                                             
-                                                 <button type="submit">Unsubscribe</button>
+                                                 <button class="btn btn-block btn-danger btn-lg" style="font-size: 14px;" type="submit">Unsubscribe</button>
                                             </form>
                                             @else
                                             <form method="POST" id="forma" action="{{ action([App\Http\Controllers\FindChallengesController::class, 'subscribe'], $challenge->challenge_ID)}}"> @csrf @method('POST')
@@ -152,7 +152,7 @@
                                                 <input type="hidden" name="id" value="{{ $challenge->challenge_ID }}">
                                                 
                                             
-                                                 <button type="submit">Subscribe</button>
+                                                 <button class="btn btn-block btn-success btn-lg" style="font-size: 14px;" type="submit">Subscribe</button>
                                             </form>
                                             @endif
                                         @endisset
