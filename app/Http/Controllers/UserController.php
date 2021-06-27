@@ -90,7 +90,7 @@ class UserController extends Controller
         $file->move($directory, $filename);
         echo($file);
 
-        //return redirect('profile');
+        return redirect('profile');
     }
 
     /**
