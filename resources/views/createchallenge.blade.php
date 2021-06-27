@@ -113,6 +113,10 @@
                     <div class="card-body">
                     
                         @isset($challenges)
+                            @if(count($challenges) == 0)
+                                <p>You have no Challenges</p>
+                            @endif
+                        
                         @foreach ($challenges as $challenge)
                         <div class="card mb-3">
                             <div class="card-header text-white bg-secondary">

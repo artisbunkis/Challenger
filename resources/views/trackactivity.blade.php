@@ -6,7 +6,6 @@
         <title>Track Activity</title>         
     </head> 
 <body>
-<br><br>
 
 
 <div class="container">
@@ -86,6 +85,9 @@
                         <div class="card-body">
                            
                             @isset($allActivities)
+                            @if($allActivities == NULL)
+                                <p>You have no Activities</p>
+                            @endif
                             @foreach ($allActivities as $activity)
                             <div class="card mb-3">
                                 <div class="card-header text-white bg-secondary">
