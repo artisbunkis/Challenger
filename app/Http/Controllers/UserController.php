@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Gender;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -19,7 +21,9 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-        return view('/profile', compact('users'));
+        $thisuser = User::all()->where('user_ID', '=', Auth::id())->first();
+        $gender = Gender::all()->where('gender_ID', '=', $thisuser->gender_ID)->first();
+        return view('/profile', compact('users', 'thisuser', 'gender'));
     }
 
     /**
@@ -52,7 +56,10 @@ class UserController extends Controller
     public function show()
     {
         $users = User::all();
-        return view('profile', compact('users'));
+        $thisuser = User::all()->where('user_ID', '=', Auth::id())->first();
+        $gender = Gender::all()->where('gender_ID', '=', $thisuser->gender_ID)->first();
+        echo($gender);
+        return view('/profile', compact('users', 'thisuser', 'gender'));
     }
 
     /**
@@ -61,9 +68,29 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request)
     {
-        //
+        
+        $user = User::all()->where('user_ID', '=', Auth::id())->first();
+        $user->username = $request->username;
+        $user->email = $request->email;
+        $user->firstname = $request->firstname;
+        $user->lastname = $request->lastname;
+        $user->birthdate = $request->birthday;
+        $user->gender_ID = $request->gender;
+        $user->save();
+
+        // Profile photo
+        $file = $request->file('photo');
+        $name = Auth::id();
+        $filepath = 'uploads/images/';
+
+        // $filename = Auth::id();
+        // $directory  = 'uploadimages/photos/';
+        // $file->move($directory, $filename);
+        echo($file);
+
+        return redirect('profile');
     }
 
     /**

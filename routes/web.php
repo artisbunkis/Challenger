@@ -56,6 +56,10 @@ Route::get('profile', [App\Http\Controllers\UserController::class, 'show'])->nam
 // Route::post("/findchallenges", "App\Http\Controllers\FindChallengesController@destroy")->name('findChallenges.destroy');
 Route::delete("/findchallenges", [FindChallengesController::class, 'erase'])->name('findchallenges.erase');
 
+
+Route::post("/profile", [UserController::class, 'edit'])->name('usercontroller.edit');
+
+
 Route::post("/findchallenges", [FindChallengesController::class, 'subscribe'])->name('findchallenges.subscribe');
 Route::post("/unsubscribe", [FindChallengesController::class, 'unsubscribe'])->name('findchallenges.unsubscribe');
 
