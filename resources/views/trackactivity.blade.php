@@ -44,7 +44,10 @@
                                     
 
                                     
-                                   
+                                    <div class="container" id="unitsContainer" style="display:none; padding: 15px">
+                                        <div class="card mb-2">
+                                            <div class="card-body">
+                                                <div class="justify-content-center">
                                                     <div id="uniti"> 
                                     
                                                     </div>

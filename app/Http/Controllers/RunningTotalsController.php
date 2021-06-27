@@ -56,6 +56,60 @@ class RunningTotalsController extends Controller
         }
 
         
+        $subscription = Subscription::all()->where('user_ID', '=', Auth::id());
+        $activities = Activity::all()->where('user_ID', '=', Auth::id());
+
+        foreach($subscription as $sub) {
+            $challenge = Challenge::all()->where('challenge_ID', '=', $sub->challenge_ID)->first();
+            $challenge_measurements = Challenge_Measurements::all()->where('challenge_ID', '=', $challenge->challenge_ID);
+            $measurementCount = 0;
+            $doneMeasurements = 0;
+                foreach($challenge_measurements as $challenge_measurement) {
+                    
+                    
+                   
+                    $measurementCount += 1;
+                    $sumOfValues = 0;
+
+                    foreach($activities as $activity) {
+                        $activity_measurements = Activity_Measurements::all()->where('activity_ID', '=', $activity->activity_ID);
+                        
+                        foreach($activity_measurements as $activity_measurement) {
+                            if($activity_measurement->unit_ID == $challenge_measurement->unit_ID && $activity->sportsType_ID == $challenge->sportsType_ID) {
+                                
+                                $sumOfValues += $activity_measurement->value;
+                            }
+                        }
+                        
+                    }
+                    // echo($challenge->sportsType_ID);
+                    // echo($challenge_measurement->challengeMeasurement_ID);
+                    // echo(", ");
+                    // echo($sumOfValues);
+                    // echo(" | ");
+                    if($sumOfValues >= $challenge_measurement->goalValue) {
+                        $doneMeasurements += 1;
+                        $sumOfValues = 0;
+                        // echo("  ?  IS DONE  ?  ");
+                        // echo($sub->subscription_ID);
+                        // echo("  ?  IS DONE  ?  ");
+
+                        // $values = Subscription::where('subscription_ID', $sub->subscription_ID)->update(['isDone'=>1]);
+                        // $updateSubscription = Subscription::where('subscription_ID', '=', $sub->subscription_ID)->first();
+                        //$updateSubscription->isDone = 1;
+                        //$values->save();
+                    }
+                    
+                }
+                
+                
+                if($doneMeasurements == $measurementCount) {
+                    $values = Subscription::where('subscription_ID', $sub->subscription_ID)->update(['isDone'=>1]);
+                } else {
+                    $values = Subscription::where('subscription_ID', $sub->subscription_ID)->update(['isDone'=>0]);
+                }
+        }
+
 
 
         return view('runningtotals', compact('challenges', 'sportsType', 'runningValues', 'units', 'myActivities', 'runningMeasurements', 'finishedSubscribedChallenges' ));

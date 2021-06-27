@@ -155,7 +155,7 @@
                                                                                                 text-align: center;
                                                                                                 line-height: 30px;
                                                                                                 color: white ; border-radius: 25px; height: 10px; ">
-                                                                                                    <p style="font-size: 10px; padding: 115px;"></p>
+                                                                                                    <p style="font-size: 10px;"></p>
                                                                                                 </div>
                                                                                             </div>
                                                                                             <p style="font-size: 11px; padding-top: 5px; font-weight: bold">{{ round($summa/($it->goalValue/100), 1) }}%</p>
@@ -185,7 +185,12 @@
                                             @endforeach
                                         @endisset
 
-                                        @php
+                                        
+
+                                        
+                                    
+                                </div>
+                                @php
                                             $irFinished = false;
                                         @endphp  
                                         @isset($finishedSubscribedChallenges)
@@ -197,23 +202,20 @@
                                              
                                                 @endif
                                             @endforeach
+                                            
                                             @if ($irFinished)
-                                            <button type="button" class="btn btn-success btn-lg btn-block" type="submit" style="font-size: 14px;">Completed</button>
+                                                <button type="button" class="btn btn-success btn-lg btn-block" style="font-size: 14px;">Completed</button>
                                             @else
-                                                <form method="POST" id="forma" action="{{ action([App\Http\Controllers\FindChallengesController::class, 'unsubscribe'], $chal->challenge_ID)}}"> @csrf @method('POST')
-                                                        
-                                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                                    <input type="hidden" name="id" value="{{ $chal->challenge_ID }}">
-                                                    
+                                            <form method="POST" id="forma" action="{{ action([App\Http\Controllers\FindChallengesController::class, 'unsubscribe'], $chal->challenge_ID)}}"> @csrf @method('POST')
+                                                            
+                                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                                <input type="hidden" name="id" value="{{ $chal->challenge_ID }}">
                                                 
-                                                    <button type="button" class="btn btn-secondary btn-lg btn-block" style="font-size: 14px;">Unsubscribe</button>
-                                                </form>
+                                            
+                                                <button type="submit" class="btn btn-block btn-secondary btn-lg" style="font-size: 14px;">Unsubscribe</button>
+                                            </form>
                                             @endif
                                         @endisset
-
-                                        
-                                    
-                                </div>
                             </div>
                             
                         </div>   

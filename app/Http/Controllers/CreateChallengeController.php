@@ -33,10 +33,11 @@ class CreateChallengeController extends Controller
         $comparisons = Comparison::all();
         $challenges = Challenge::all()->where('creatorUser_ID', '=', Auth::id());
         $measurements = Challenge_Measurements::all();
+        $subscriptions = Subscription::all()->where('user_ID', '=', Auth::id());
         // foreach($comparisons as $c) {
         //     echo($c);
         // }
-        return view('createchallenge', compact('units', 'sportsType', 'comparisons', 'measurements', 'challenges'));
+        return view('createchallenge', compact('units', 'sportsType', 'comparisons', 'measurements', 'challenges', 'subscriptions'));
     }
 
     /**
