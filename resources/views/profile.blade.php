@@ -26,7 +26,7 @@
                                 @isset($gender)
                                     <p><b>Gender:</b> {{$gender->genderName}}</p>
                                 @else
-                                <p><b>Gender:</b> None </p>
+                                    <p><b>Gender:</b> None </p>
                                 @endisset
                                 
                                 

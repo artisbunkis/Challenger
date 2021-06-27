@@ -41,6 +41,7 @@
                         @if($sportsType->sportsType_ID == $challenge->sportsType_ID)  
                                                     
                         <div class="col-md-4 filterDiv {{$sportsType->sportsTypeName}}">
+                            
     
                                 
                             
@@ -68,20 +69,27 @@
                                     </p>
         
                                     @isset($measurements)
+                                    <p><b>Goals:</b></p>
                                     @foreach($measurements as $measurement)
                                     @if($challenge->challenge_ID == $measurement->challenge_ID)
-                                        <p><b>Goal:</b> 
-                                            @foreach ($units as $unit)
-                                                @if($unit->unit_ID == $measurement->unit_ID)
-                                                    @foreach ($comparisons as $comparison)
-                                                        @if ($measurement->comparison_ID == $comparison->comparison_ID)
-                                                            {{ $unit->unitName }} {{ $comparison->comparisonSign }} {{$measurement->goalValue}} {{ $unit->unitCode }}
+                                    
+                                    <div class="card mb-2" style="">
+                                        <div class="card-body">
+                                            <div class="justify-content-center">
+                                                @foreach ($units as $unit)
+                                                        @if($unit->unit_ID == $measurement->unit_ID)
+                                                            @foreach ($comparisons as $comparison)
+                                                                @if ($measurement->comparison_ID == $comparison->comparison_ID)
+                                                                    {{ $unit->unitName }} {{ $comparison->comparisonSign }} {{$measurement->goalValue}} {{ $unit->unitCode }}
+                                                                @endif
+                                                            @endforeach
+                                                            
                                                         @endif
                                                     @endforeach
-                                                    
-                                                @endif
-                                            @endforeach
-                                            </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        
                                     @endif
                                     @endforeach
                                     @endisset
