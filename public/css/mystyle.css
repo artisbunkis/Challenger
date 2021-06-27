@@ -16,11 +16,11 @@
     }
 
     .btn:hover {
-        background-color: #ddd;
+        background-color: rgb(44, 44, 44);
     }
 
     .btn.active {
-        background-color: #666;
+        background-color: rgb(75, 170, 80);
         color: white;
     }
 

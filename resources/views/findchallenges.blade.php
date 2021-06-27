@@ -31,6 +31,7 @@
             @endforeach
         @endisset
     </div>
+    <br>
 
     <div class="container">
         <div class="row" >
@@ -74,13 +75,28 @@
                                     @if($challenge->challenge_ID == $measurement->challenge_ID)
                                     
                                     <div class="card mb-2" style="">
-                                        <div class="card-body">
+                                        <div class="card-body" style="padding: 5px;">
                                             <div class="justify-content-center">
+                                                
                                                 @foreach ($units as $unit)
                                                         @if($unit->unit_ID == $measurement->unit_ID)
                                                             @foreach ($comparisons as $comparison)
                                                                 @if ($measurement->comparison_ID == $comparison->comparison_ID)
-                                                                    <h3></h3>{{ $unit->unitName }} {{ $comparison->comparisonSign }} {{$measurement->goalValue}} {{ $unit->unitCode }}
+                                                                <div class="row">
+                                                                    <div class="col" style="background-color:">
+                                                                        <h6>{{ $unit->unitName }} </h6> 
+                                                                       
+                                                                    </div>
+                                                                    <div class="col" style="background-color:; text-align: right">
+                                                                        @if ($comparison->comparison_ID == 3)
+                                                                            <h1><span style="font-size: 20px">{{ $comparison->comparisonSign }}</span>{{$measurement->goalValue}}<span style="font-size: 12px">{{ $unit->unitCode }}</span></h1>
+                                                                        @else
+                                                                            <h1>{{$measurement->goalValue}}<span style="font-size: 12px"> {{ $unit->unitCode }}</span></h1>
+                                                                        @endif
+                                                                        
+                                                                    </div>
+                                                                  </div>
+                                                                 
                                                                 @endif
                                                             @endforeach
                                                             
