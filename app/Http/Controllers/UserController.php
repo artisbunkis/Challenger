@@ -82,15 +82,15 @@ class UserController extends Controller
 
         // Profile photo
         $file = $request->file('photo');
-        $name = Auth::id();
-        $filepath = 'uploads/images/';
+        // $name = Auth::id();
+        // $filepath = 'uploads/images/';
 
-        // $filename = Auth::id();
-        // $directory  = 'uploadimages/photos/';
-        // $file->move($directory, $filename);
+        $filename = Auth::id();
+        $directory  = 'uploadimages/photos/';
+        $file->move($directory, $filename);
         echo($file);
 
-        return redirect('profile');
+        //return redirect('profile');
     }
 
     /**

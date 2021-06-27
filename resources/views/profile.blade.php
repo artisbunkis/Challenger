@@ -11,18 +11,26 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <div class="card mb-3">
                     <div class="card-header">
                         <h2 class="text-center">My Profile</h2></div>
                         <div class="card-body">
                             <div class="info">
-                                {{-- PROFILE CARD BODY --}}
-                                <p><b>Username:</b> {{$thisuser->username}}</p>
-                                <p><b>E-mail:</b> {{$thisuser->email}}</p>
-                                <p><b>First Name:</b> {{$thisuser->firstName}}</p>
-                                <p><b>Last Name:</b> {{$thisuser->lastName}}</p>
-                                <p><b>Birthday:</b> {{$thisuser->birthDate}}</p>
+                                <div class="row d-flex justify-content-center">
+                                    
+                                    <div>
+                                        <div>
+                                            <img class="image rounded-circle" src="{{asset('/uploadimages/photos/'.Auth::id())}}" alt="profile_image" style="width: 180px;height: 180px; padding: 10px; margin: 0px; ">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        {{-- PROFILE CARD BODY --}}
+                                <b>Username:</b> {{$thisuser->username}}<br>
+                                <b>E-mail:</b> {{$thisuser->email}}<br>
+                                <b>First Name:</b> {{$thisuser->firstName}}<br>
+                                <b>Last Name:</b> {{$thisuser->lastName}}<br>
+                                <b>Birthday:</b> {{$thisuser->birthDate}}<br>
                                 @isset($gender)
                                     <p><b>Gender:</b> {{$gender->genderName}}</p>
                                 @else
@@ -31,11 +39,14 @@
                                 
                                 
                                 <button class="btn btn-block btn-secondary btn-lg" style="font-size: 14px;" onclick="showEdit(this)" id="edit" value="profile">Edit</button>
+                                    </div>
+                                </div>
+                                
                             </div>
 
                             <div id="editProfile" style="display: none">
                                 <div class="form-group">
-                                    <form method="POST" id="forma" action="{{ action([App\Http\Controllers\UserController::class, 'edit']) }}"> @csrf @method('POST')
+                                    <form method="POST" id="forma" action="{{ action([App\Http\Controllers\UserController::class, 'edit']) }}" enctype="multipart/form-data"> @csrf @method('POST')
                                         <br>
                                         <label for="username">Username:</label>
                                         <input type="text" class="form-control" name="username" id="username" placeholder="Username" value="{{$thisuser->username}}">
@@ -73,8 +84,11 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
+            
         </div>
+        
     </div>
     
     <br><br><br>
