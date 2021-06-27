@@ -25,9 +25,9 @@ class FindChallengesController extends Controller
      */
     public function index()
     {
-        
-        $challenges = DB::select('select * from challenge');
-        return view('findchallenges',['challenges'=>$challenges]);
+        // JA NESTRADA TAD ATKOMENTET SITO
+        // $challenges = DB::select('select * from challenge');
+        // return view('findchallenges',['challenges'=>$challenges]);
         
     }
 

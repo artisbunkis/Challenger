@@ -23,7 +23,12 @@
                                 <p><b>First Name:</b> {{$thisuser->firstName}}</p>
                                 <p><b>Last Name:</b> {{$thisuser->lastName}}</p>
                                 <p><b>Birthday:</b> {{$thisuser->birthDate}}</p>
-                                <p><b>Gender:</b> {{$gender->genderName}}</p>
+                                @isset($gender)
+                                    <p><b>Gender:</b> {{$gender->genderName}}</p>
+                                @else
+                                <p><b>Gender:</b> None </p>
+                                @endisset
+                                
                                 
                                 <button class="btn btn-block btn-secondary btn-lg" style="font-size: 14px;" onclick="showEdit(this)" id="edit" value="profile">Edit</button>
                             </div>
