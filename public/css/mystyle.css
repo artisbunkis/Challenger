@@ -8,10 +8,7 @@
     display: block;
     }
 
-    .container {
-        margin-top: 20px;
-        overflow: hidden;
-    }
+    
 
     /* Style the buttons */
     .btn {
@@ -26,3 +23,5 @@
         background-color: #666;
         color: white;
     }
+
+    
