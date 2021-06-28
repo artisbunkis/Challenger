@@ -50,13 +50,13 @@
                                         <br>
                                         <label for="username">Username:</label>
                                         <input type="text" class="form-control" name="username" id="username" placeholder="Username" value="{{$thisuser->username}}">
-    
+                                        
                                         <label for="email">E-mail:</label>
                                         <input type="email" class="form-control" name="email" id="email" placeholder="E-mail" value="{{$thisuser->email}}">
-    
+               
                                         <label for="firstname">First Name:</label>
                                         <input type="text" class="form-control" name="firstname" id="firstname" placeholder="First Name" value="{{$thisuser->firstName}}">
-    
+                                    
                                         <label for="lastname">Last Name:</label>
                                         <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Last Name" value="{{$thisuser->lastName}}">
     
@@ -73,11 +73,14 @@
 
                                         <label for="photo">Photo:</label>
                                         <input type="file" name="photo" id="photo">
-
+                                        
                                         <button type="submit" class="btn btn-block btn-success btn-lg" style="font-size: 14px; ">Submit</button>
-
+                                    
                                     </form>
-                        
+                                    @error('username') {{$message}} @enderror
+                                    @error('email') {{$message}} @enderror
+                                    @error('firstname') {{$message}} @enderror
+                                    @error('lastname') {{$message}} @enderror
                                 </div>
                             </div>
                             

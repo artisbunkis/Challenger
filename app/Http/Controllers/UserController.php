@@ -70,7 +70,15 @@ class UserController extends Controller
      */
     public function edit(Request $request)
     {
-        
+        $uservalidation = request()->validate([
+            //'username'=>'required|unique:users,',
+            'firstname'=>'nullable|regex:/^[a-zA-Z]+$/',
+            'lastname'=>'nullable|string|regex:/^[a-zA-Z]+$/'
+
+        ]);
+        //if ($uservalidation->fails()) {
+        //   echo ('textfailed');
+       // }return;
         $user = User::all()->where('user_ID', '=', Auth::id())->first();
         $user->username = $request->username;
         $user->email = $request->email;
@@ -81,6 +89,8 @@ class UserController extends Controller
         $user->save();
 
         // Profile photo
+        if ($request->hasFile('photo')) {
+        
         $file = $request->file('photo');
         // $name = Auth::id();
         // $filepath = 'uploads/images/';
@@ -89,6 +99,7 @@ class UserController extends Controller
         $directory  = 'uploadimages/photos/';
         $file->move($directory, $filename);
         echo($file);
+        }
 
         return redirect('profile');
     }
