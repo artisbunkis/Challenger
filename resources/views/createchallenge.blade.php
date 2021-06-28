@@ -27,13 +27,13 @@
                                         --}} 
                                         <label for="challengeName">Challenge Name: </label>
                                         <input class="form-control" type="text" name="challengeName" id="challengeName">
-                        
+                                        <div class="alert-danger" style="font-weight: bold;"> @error('challengeName') {{$message}} @enderror</div>
                                         
 
                                         <div class="row" style="padding-top: 10px">
                                             <div class="col mb-7">
+                                            <label for="sportsType">Sports type: </label>
                                                 <select class="form-control" name="sportsType" id="sportsType">
-                                                    <option selected="selected">Sports Type</option>
                                                     <?php
                                                         foreach($sportsType as $sport) { ?>
                                                         <option value="<?= $sport->sportsTypeName ?>"><?= $sport->sportsTypeName ?></option>
@@ -41,7 +41,7 @@
                                                         } ?>
                                                 </select>                               
                                             </div>
-                                            <div class="col mb-2">
+                                            <div class="col mb-2 align-middle" style="margin-top: auto; margin-bottom: auto">
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" checked name="isPublic" id="isPublic">
                                                     <label class="form-check-label" for="defaultCheck1">
@@ -57,17 +57,18 @@
                                             <div class="col mb-5">
                                                 <label for="beginDate">Begin Date:</label>
                                                 <input class="form-control" type="date" name="beginDate" id="beginDate">
-                                
+                                                <div class="alert-danger" style="font-weight: bold;">@error('beginDate') {{$message}} @enderror</div>
                                                
                                 
                                             </div>
                                             <div class="col mb-5">
                                                 <label for="endDate">End Date:</label>
                                                 <input class="form-control" type="date" name="endDate" id="endDate">
+                                                <div class="alert-danger" style="font-weight: bold;">@error('endDate') {{$message}} @enderror</div>
                                             </div>
                                            
                                         </div>
-    
+
                                         
                                         
                                         <button type="button" class="btn btn-secondary btn-lg btn-block" style="font-size: 14px;" onclick="add(); showSaveButton()">Add Units</button>
@@ -300,6 +301,7 @@
         y.setAttribute("placeholder", "Goal value");
         y.setAttribute("id", "Measurement1");
         y.setAttribute("class", "form-control");
+        y.required = true;
 
         console.log(comparison);
         console.log(unit);

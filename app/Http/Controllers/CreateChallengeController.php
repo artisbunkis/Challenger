@@ -66,6 +66,11 @@ class CreateChallengeController extends Controller
         $endDate = $request->endDate;
         $isPublic = $request->isPublic;
         
+        $challengevalidation = request()->validate([
+            'challengeName'=>'required',
+            'beginDate'=>'required',
+            'endDate'=>'required'
+        ]);
         $challenge = new Challenge();
         $challengeID = $challenge->id;
         $challenge->creatorUser_ID = Auth::id();

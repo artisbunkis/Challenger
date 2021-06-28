@@ -144,7 +144,16 @@ return [
             'regex'=>'First name cannot have numbers in it.'
         ],
         'lastname'=>[
-            'regex'=>'First name cannot have numbers in it.'
+            'regex'=>'Last name cannot have numbers in it.'
+        ],
+        'challengeName'=>[
+            'required'=>'Challenge name field cannot be empty'
+        ],
+        'beginDate'=>[
+            'required'=>'Challenge beginning date field cannot be empty'
+        ],
+        'endDate'=>[
+            'required'=>'Challenge ending date field cannot be empty'
         ],
     ],
 

@@ -35,7 +35,7 @@
                                 
 
                                     <input class="form-control" type="datetime-local" name="startTime" id="startTime" require>
-                                    @error('startTime') {{$message}} @enderror
+                                    <div class="alert-danger" style="font-weight: bold;"> @error('startTime') {{$message}} @enderror </div>
                                     <br>
                                     
                                     
