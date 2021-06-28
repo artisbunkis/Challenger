@@ -98,6 +98,10 @@ class TrackActivityController extends Controller
         if(is_null($id)){
             return redirect('login');
         }
+        $activityvalidation = request()->validate([
+            'startTime'=>'required'
+        ]);
+        
         $activity = new Activity();
         $activity->activity_ID = $request->id; 
         $activity->startTime = $request->startTime; 
@@ -111,7 +115,6 @@ class TrackActivityController extends Controller
         for($i = 0; $i < count(json_decode($arr)); $i+=1) {
             //echo (json_decode($arr)[$i]->unit);
             //echo (json_decode($arr)[$i]->measurement);
-
             $unitID = Unit::where('unitName', '=', json_decode($arr)[$i]->unit)->value('unit_ID');
 
                 DB::table('activity_measurements')->insert([

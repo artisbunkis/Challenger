@@ -137,6 +137,15 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        'startTime'=>[
+            'required'=>'The start time field cannot be empty'
+        ],
+        'firstname'=>[
+            'regex'=>'First name cannot have numbers in it.'
+        ],
+        'lastname'=>[
+            'regex'=>'First name cannot have numbers in it.'
+        ],
     ],
 
     /*

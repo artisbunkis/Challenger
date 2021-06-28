@@ -20,7 +20,6 @@
                                     
                                     <label for="startTime">Select Sports Type</label>
                                     <select class="form-control" name="sportsType" id="sportsType">
-                                        <option selected="selected">Sports Type</option>
                                         <?php
                                         
                                             foreach($sportsType as $sport) { ?>
@@ -36,6 +35,7 @@
                                 
 
                                     <input class="form-control" type="datetime-local" name="startTime" id="startTime" require>
+                                    @error('startTime') {{$message}} @enderror
                                     <br>
                                     
                                     
@@ -53,7 +53,7 @@
                                                     <br>
                 
                                                     <input type="hidden" class="form-control" name="arrayOfUnits" id="arrayOfUnits">
-                                                    
+
                                                 </div>
                                             </div>
                                         </div>
@@ -208,6 +208,7 @@
         y.setAttribute("placeholder", "Goal value");
         y.setAttribute("id", "Measurement1");
         y.setAttribute("class", "form-control");
+        y.required = true;
         
 
         inputs.appendChild(document.createElement("br"));
