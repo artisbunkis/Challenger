@@ -16,12 +16,14 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
+    <link rel="shortcut icon" href="{{asset('/uploadimages/logo.ico')}}" >
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" style="border-bottom-right-radius: 45px; border-bottom-left-radius: 45px">
             <div class="container ">
                 
                 <a class="navbar-brand" href="{{ url('/') }}">
