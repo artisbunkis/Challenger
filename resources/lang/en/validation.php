@@ -162,11 +162,14 @@ return [
         ],
         'beginDate'=>[
             'required'=>'Challenge beginning date field cannot be empty',
-            'after'=>'The challenge cannot be started on this date.'
+            'after_or_equal'=>'The challenge cannot be started on this date.'
         ],
         'endDate'=>[
             'required'=>'Challenge ending date field cannot be empty',
             'after'=>'The challenge cannot end on this date.'
+        ],
+        'birthday'=>[
+            'before_or_equal'=>'Invalid birth date.'
         ],
     ],
 

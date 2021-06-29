@@ -81,7 +81,8 @@ class UserController extends Controller
                 'firstname'=>'nullable|regex:/^[a-zA-Z]+$/|max:30',
                 'lastname'=>'nullable|string|regex:/^[a-zA-Z]+$/|max:30',
                 //'username'=>'unique:users',
-                //'email'=>'unique:users'
+                //'email'=>'unique:users',
+                'birthday'=>'nullable|before_or_equal:today'
     
             ]);
         } else {
@@ -93,7 +94,8 @@ class UserController extends Controller
                         'firstname'=>'nullable|regex:/^[a-zA-Z]+$/|max:30',
                         'lastname'=>'nullable|string|regex:/^[a-zA-Z]+$/|max:30',
                         // 'username'=>'unique:users',
-                        'email'=>'unique:users|max:70'
+                        'email'=>'unique:users|max:70',
+                        'birthday'=>'nullable|before_or_equal:today'
             
                     ]);
                 }
@@ -104,6 +106,7 @@ class UserController extends Controller
                         'lastname'=>'nullable|string|regex:/^[a-zA-Z]+$/|max:30',
                         'username'=>'unique:users|max:30',
                         //'email'=>'unique:users'
+                        'birthday'=>'nullable|before_or_equal:today'
             
                     ]);
                 } 
@@ -113,7 +116,8 @@ class UserController extends Controller
                     'firstname'=>'nullable|regex:/^[a-zA-Z]+$/|max:30',
                     'lastname'=>'nullable|string|regex:/^[a-zA-Z]+$/|max:30',
                     'username'=>'unique:users|max:30',
-                    'email'=>'unique:users|max:70'
+                    'email'=>'unique:users|max:70',
+                    'birthday'=>'nullable|before_or_equal:today'
         
                 ]);
             }
