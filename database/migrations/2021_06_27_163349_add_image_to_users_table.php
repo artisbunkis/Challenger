@@ -14,7 +14,7 @@ class AddImageToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('image')->default('user.png');
+            $table->boolean('hasProfilePicture')->default(0);
         });
     }
 
@@ -26,7 +26,7 @@ class AddImageToUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('image');
+            $table->dropColumn('hasProfilePicture');
         });
     }
 }

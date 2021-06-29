@@ -21,7 +21,14 @@
                                     
                                     <div>
                                         <div>
-                                            <img class="image rounded-circle" src="{{asset('/uploadimages/photos/'.Auth::id())}}" alt="profile_image" style="width: 180px;height: 180px; padding: 10px; margin: 0px; ">
+                                            @if ($thisuser->hasProfilePicture == true)
+                                                {{-- show image --}}
+                                                <img class="image rounded-circle" src="{{asset('/uploadimages/photos/'.Auth::id())}}" alt="profile_image" style="width: 180px;height: 180px; padding: 10px; margin: 0px; ">
+                                            @else
+                                                {{-- show default image --}}
+                                                <img class="image rounded-circle" src="{{asset('/uploadimages/photos/default.jpg')}}" alt="profile_image" style="width: 180px;height: 180px; padding: 10px; margin: 0px; ">
+                                            @endif
+                                            
                                         </div>
                                     </div>
                                     <div>

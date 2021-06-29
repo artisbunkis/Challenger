@@ -86,20 +86,23 @@ class UserController extends Controller
         $user->lastname = $request->lastname;
         $user->birthdate = $request->birthday;
         $user->gender_ID = $request->gender;
-        $user->save();
+        
 
         // Profile photo
         if ($request->hasFile('photo')) {
         
-        $file = $request->file('photo');
-        // $name = Auth::id();
-        // $filepath = 'uploads/images/';
+            $file = $request->file('photo');
+            // $name = Auth::id();
+            // $filepath = 'uploads/images/';
 
-        $filename = Auth::id();
-        $directory  = 'uploadimages/photos/';
-        $file->move($directory, $filename);
-        echo($file);
+            $filename = Auth::id();
+            $directory  = 'uploadimages/photos/';
+            $file->move($directory, $filename);
+            echo($file);
+            $user->hasProfilePicture = true;
         }
+
+        $user->save();
 
         return redirect('profile');
     }
