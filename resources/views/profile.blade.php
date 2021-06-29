@@ -73,7 +73,8 @@
 
                                         <label for="birthday">{{ __("Birthday")}}:</label>
                                         <input type="date" class="form-control" name="birthday" id="birthday" placeholder="Birthday" value="{{$thisuser->birthdate}}">
-    
+                                        <div class="alert-danger" style="font-weight: bold;">@error('birthday') {{$message}} @enderror</div>
+
                                         <label for="gender">{{ __("Gender")}}:</label>
                                         <select type="text" class="form-control" name="gender" id="gender" placeholder="Gender" selected="{{$thisuser->gender_ID}}">
                                             <option value="1">{{ __("Male")}}</option>
