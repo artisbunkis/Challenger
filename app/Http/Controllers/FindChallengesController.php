@@ -95,7 +95,10 @@ class FindChallengesController extends Controller
      */
     public function erase(Request $request)
     {   
-        $subscriptions = Subscription::all()->where('challenge_ID', '=', $request->id)->delete();
+        $subscriptions = Subscription::all()->where('challenge_ID', '=', $request->id);
+        foreach($subscriptions as $s) {
+            $s->delete();
+        }
         $challenge = Challenge::where('challenge_ID', '=', $request->id)->delete();        
         return redirect('findchallenges');
     }
