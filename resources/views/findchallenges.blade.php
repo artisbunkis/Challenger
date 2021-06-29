@@ -342,16 +342,13 @@
                                                 
                                
                                 <td>
-                                    {{--
+                                        {{--
                                         <form method="POST" action="{{ action('FindChallengesController@destroy')}}"> @csrf @method('POST')
                                         <form action="{{ action('FindChallengesController@destroy', $challenge->challenge_ID) }}" method="POST"> @csrf
                                             --}}
-                                        <form method="DELETE" id="forma" action="{{ action([App\Http\Controllers\FindChallengesController::class, 'erase'], $challenge->challenge_ID)}}"> @csrf @method('DELETE')
-                                    
+                                        <form method="POST" id="forma" action="{{ action([App\Http\Controllers\FindChallengesController::class, 'erase'], $challenge->challenge_ID)}}"> @csrf @method('DELETE')
                                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                             <input type="hidden" name="id" value="{{ $challenge->challenge_ID }}">
-                                            
-                                        
                                         <button type="submit" class="btn btn-danger">{{ __("Delete")}}</button>
                                     </form>
                                 </td>

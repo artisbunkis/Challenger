@@ -8,6 +8,7 @@ use App\Http\Controllers\FindChallengesController;
 use App\Http\Controllers\CreateChallengeController;
 use App\Http\Controllers\RunningTotalsController;
 use App\Http\Controllers\TrackActivityController;
+use App\Http\Controllers\NotificationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,7 @@ Route::resource('runningtotals', RunningTotalsController::class);
 
 
 
+
 Route::get('/profile', [App\Http\Controllers\HomeController::class, 'index'])->name('profile');
 
 Route::get('/', function () {
@@ -52,9 +54,9 @@ Route::get('profile', [App\Http\Controllers\UserController::class, 'show'])->nam
 //Route::delete('findchallenges', [FindChallengesController::class, 'destroy']);
 //Route::get('findchallenges/','FindChallengesController@index');
 
-//Route::post('findchallenges', [App\Http\Controllers\FindChallengesController::class, 'destroy'])->name('findChallenges.destroy'); //for destroy
-// Route::post("/findchallenges", "App\Http\Controllers\FindChallengesController@destroy")->name('findChallenges.destroy');
+
 Route::delete("/findchallenges", [FindChallengesController::class, 'erase'])->name('findchallenges.erase');
+Route::delete("/createchallenge", [CreateChallengeController::class, 'destroy'])->name('createchallenge.destroy');
 
 
 Route::post("/profile", [UserController::class, 'edit'])->name('usercontroller.edit');
@@ -67,3 +69,4 @@ Route::post("/destroy", [TrackActivityController::class, 'destroy'])->name('trac
 
 Route::get('lang/{lang}', ['as' => 'locale.switch', 'uses' => 'App\Http\Controllers\LocalizationController@switchLang']);
 
+Route::get('/notify/{challenge}', [NotificationController::class, 'sendNotification']);

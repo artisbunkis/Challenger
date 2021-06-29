@@ -8,12 +8,12 @@ use Illuminate\Foundation\Auth\User as Authenticable;
 
 use App\Models\Challenge;
 use App\Models\Activity;
-
-
+use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticable
 {
     use HasFactory;
+    use Notifiable;
 
     protected $table = "users";
 
@@ -49,7 +49,7 @@ class User extends Authenticable
 
 
     public function challenge(){//FK
-        return $this->morphToMany(Challenge::class);//Challenge has users, user can have multiple challenges
+        //return $this->morphToMany(Challenge::class);//Challenge has users, user can have multiple challenges
     }
 
     public function activities(){//FK

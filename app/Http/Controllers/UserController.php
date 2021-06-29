@@ -11,6 +11,7 @@ class UserController extends Controller
 {
     public function __construct() {
         // only Admins have access to the following methods
+        $this->middleware('auth');
         $this->middleware('auth.admin')->only(['destroy']);
     }
     /**
@@ -58,7 +59,7 @@ class UserController extends Controller
         $users = User::all();
         $thisuser = User::all()->where('user_ID', '=', Auth::id())->first();
         $gender = Gender::all()->where('gender_ID', '=', $thisuser->gender_ID)->first();
-        echo($gender);
+        
         return view('/profile', compact('users', 'thisuser', 'gender'));
     }
 
@@ -86,20 +87,23 @@ class UserController extends Controller
         $user->lastname = $request->lastname;
         $user->birthdate = $request->birthday;
         $user->gender_ID = $request->gender;
-        $user->save();
+        
 
         // Profile photo
         if ($request->hasFile('photo')) {
         
-        $file = $request->file('photo');
-        // $name = Auth::id();
-        // $filepath = 'uploads/images/';
+            $file = $request->file('photo');
+            // $name = Auth::id();
+            // $filepath = 'uploads/images/';
 
-        $filename = Auth::id();
-        $directory  = 'uploadimages/photos/';
-        $file->move($directory, $filename);
-        echo($file);
+            $filename = Auth::id();
+            $directory  = 'uploadimages/photos/';
+            $file->move($directory, $filename);
+            //echo($file);
+            $user->hasProfilePicture = true;
         }
+
+        $user->save();
 
         return redirect('profile');
     }

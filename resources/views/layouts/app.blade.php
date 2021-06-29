@@ -16,15 +16,19 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
+    <link rel="shortcut icon" href="{{asset('/uploadimages/logo.ico')}}" >
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" style="border-bottom-right-radius: 45px; border-bottom-left-radius: 45px">
+            <div class="container ">
+                
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('Challenger', 'Challenger') }}
+                    <img src="{{asset('/uploadimages/logo.svg')}}" width="50" height="50" class="d-inline-block align-center" alt="" style="">
+                    
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
