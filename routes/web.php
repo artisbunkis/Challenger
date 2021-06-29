@@ -53,9 +53,9 @@ Route::get('profile', [App\Http\Controllers\UserController::class, 'show'])->nam
 //Route::delete('findchallenges', [FindChallengesController::class, 'destroy']);
 //Route::get('findchallenges/','FindChallengesController@index');
 
-//Route::post('findchallenges', [App\Http\Controllers\FindChallengesController::class, 'destroy'])->name('findChallenges.destroy'); //for destroy
-// Route::post("/findchallenges", "App\Http\Controllers\FindChallengesController@destroy")->name('findChallenges.destroy');
+
 Route::delete("/findchallenges", [FindChallengesController::class, 'erase'])->name('findchallenges.erase');
+Route::delete("/createchallenge", [CreateChallengeController::class, 'destroy'])->name('createchallenge.destroy');
 
 
 Route::post("/profile", [UserController::class, 'edit'])->name('usercontroller.edit');

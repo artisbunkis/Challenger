@@ -179,7 +179,7 @@
                                         @endforeach
                                         @isset($irSaraksta)
                                             @if ($irSaraksta)
-                                            <form method="POST" id="forma" action="{{ action([App\Http\Controllers\FindChallengesController::class, 'unsubscribe'], $challenge->challenge_ID)}}"> @csrf @method('POST')
+                                            <form method="POST" id="forma1" action="{{ action([App\Http\Controllers\FindChallengesController::class, 'unsubscribe'], $challenge->challenge_ID)}}"> @csrf @method('POST')
                                                             
                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                                 <input type="hidden" name="id" value="{{ $challenge->challenge_ID }}">
@@ -188,7 +188,7 @@
                                                 <button type="submit" class="btn btn-block btn-outline-success btn-sm" >Unsubscribe</button>
                                             </form>
                                             @else
-                                            <form method="POST" id="forma" action="{{ action([App\Http\Controllers\FindChallengesController::class, 'subscribe'], $challenge->challenge_ID)}}"> @csrf @method('POST')
+                                            <form method="POST" id="forma2" action="{{ action([App\Http\Controllers\FindChallengesController::class, 'subscribe'], $challenge->challenge_ID)}}"> @csrf @method('POST')
                                                             
                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                                 <input type="hidden" name="id" value="{{ $challenge->challenge_ID }}">
@@ -202,8 +202,11 @@
                                 </div>
 
                                 <div class="col md-3">
-                                    <button class="btn btn-block btn-danger btn-sm">Delete Challenge</button>
-                                    
+                                    <form method="POST" id="forma3" action="{{ action([App\Http\Controllers\CreateChallengeController::class, 'destroy'], $challenge->challenge_ID)}}"> @csrf @method('DELETE')
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                        <input type="hidden" name="id" value="{{ $challenge->challenge_ID }}">
+                                    <button type="submit" class="btn btn-danger">Delete Challenge</button>
+                                    </form>                         
                                 </div>
 
 

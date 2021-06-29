@@ -15,7 +15,7 @@ class FindChallengesController extends Controller
 
     public function __construct() {
         // only Admins have access to the following methods
-        $this->middleware('auth.admin')->only(['destroy']);
+        $this->middleware('auth.admin')->only(['destroy', 'erase']);
     }
 
     /**
@@ -93,25 +93,20 @@ class FindChallengesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function erase(Request $request)
-    {
-
-       
-        $challenge = Challenge::where('challenge_ID', '=', $request->id)->delete();
+    {   
         
-        return redirect('findchallenges')->with('success', 'Challenge Removed');
+        $challenge = Challenge::where('challenge_ID', '=', $request->id)->delete();        
+        return redirect('findchallenges');
     }
 
     public function subscribe(Request $request) {
-
         $subscription = new Subscription();
         $subscription->challenge_ID = $request->id;
         $subscription->user_ID = Auth::id();
         $subscription->isDone = false;
         $subscription->subscriptionDate = date("Y-m-d");
-        
         $subscription->save();
         return redirect('findchallenges')->with('success', 'Challenge Subscribed');
-
     }
 
     public function unsubscribe(Request $request) {
