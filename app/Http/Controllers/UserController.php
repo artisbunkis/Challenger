@@ -11,6 +11,7 @@ class UserController extends Controller
 {
     public function __construct() {
         // only Admins have access to the following methods
+        $this->middleware('auth');
         $this->middleware('auth.admin')->only(['destroy']);
     }
     /**

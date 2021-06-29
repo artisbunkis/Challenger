@@ -18,7 +18,11 @@ use Illuminate\Support\Facades\Redirect;
 class CreateChallengeController extends Controller
 {
 
-   
+    public function __construct() {
+        // only Admins have access to the following methods
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
