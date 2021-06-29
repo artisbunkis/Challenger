@@ -10,16 +10,15 @@
     </head>    
     <body>
 
-        <div class="d-flex align-items-center justify-content-center" style="height: 90vh">
-            <h1 class="welcomeText fade-in">Welcome To Challenger!</h1>
+        
 
         <title>{{ __("Login Form")}}</title>   
         <link rel="stylesheet" type="text/css" href="css/style.css"> 
         <link href="{{ asset('/css/style.css') }}" rel="stylesheet">    
     </head>    
     <body>
-        <div class="d-flex align-items-center justify-content-center" style="height: 350px">
-            <h1>{{ __("Welcome To Challenger")}}</h1>
+        <div class="d-flex align-items-center justify-content-center" style="height: 90vh">
+            <h1 class="welcomeText fade-in">{{ __("Welcome To Challenger")}}!</h1>
             <h1></h1>
 
         </div>
