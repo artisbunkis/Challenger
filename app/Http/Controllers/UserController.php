@@ -74,7 +74,9 @@ class UserController extends Controller
         $uservalidation = request()->validate([
             //'username'=>'required|unique:users,',
             'firstname'=>'nullable|regex:/^[a-zA-Z]+$/',
-            'lastname'=>'nullable|string|regex:/^[a-zA-Z]+$/'
+            'lastname'=>'nullable|string|regex:/^[a-zA-Z]+$/',
+            'username'=>'unique:users',
+            'email'=>'unique:users'
 
         ]);
         //if ($uservalidation->fails()) {
