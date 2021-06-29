@@ -43,16 +43,29 @@
                                                     
                         <div class="col-md-4 filterDiv {{$sportsType->sportsTypeName}}">
                             
+                            
     
                                 
                             
                             <div class="card mb-3 filterDiv {{$sportsType->sportsTypeName}}">
-                            <div class="card-header text-center "><h2>{{$challenge->challengeName}}</h2></div>
+                            <div class="card-header text-center ">
+                                <div class="row justify-content">
+                                    <div class="" style="padding-left: 5px; margin-bottom: auto; margin-top: auto">
+                                        <img src="{{asset('/uploadimages/sportsicons/'.$sportsType->sportsTypeName.'.svg')}}" width="50" height="50" class="d-inline-block align-center" alt="" style="">
+                                    </div>
+                                    <div class="" style="margin: auto">
+                                        <h2>{{$challenge->challengeName}}</h2>
+                                    </div>
+                                    
+                                   
+                                </div>
+                               </div>
                                 <div class="card-body text-md-left">
                                     @isset($sportsTypes)
                                     @foreach($sportsTypes as $sportsType)
                                     @if($sportsType->sportsType_ID == $challenge->sportsType_ID)                                
                                         <div  id="sportsBox">
+                                            
                                             <p><b>Sports Type:</b> {{$sportsType->sportsTypeName}}</p>   
                                         </div>
                                     @endif

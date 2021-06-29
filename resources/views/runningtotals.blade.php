@@ -51,15 +51,26 @@
 
                     <div class="col-md-4">
                         <div class="card mb-3">
+                           
                             <div class="card-header text-center ">
-                                <h2>{{$chal->challengeName}}</h2>
-                                @isset($sportsType)
-                                    @foreach ($sportsType as $sport)
-                                        @if ($sport->sportsType_ID == $chal->sportsType_ID)
-                                            <h6>{{ $sport->sportsTypeName }}</h6>
-                                        @endif
-                                    @endforeach                                
-                                @endisset
+                                <div class="row justify-content">
+                                    @isset($sportsType)
+                                        @foreach ($sportsType as $sport)
+                                            @if ($sport->sportsType_ID == $chal->sportsType_ID)
+                                                <div class="" style="padding-left: 5px; margin-bottom: auto; margin-top: auto">
+                                                    <img src="{{asset('/uploadimages/sportsicons/'.$sport->sportsTypeName.'.svg')}}" width="50" height="50" class="d-inline-block align-center" alt="" style="margin: auto">
+                                                </div>
+                                                <div class="" style="margin: auto">
+                                                    <h2 style="margin: 0">{{$chal->challengeName}}</h2>
+                                                    {{$sport->sportsTypeName}}
+                                                </div>
+                                            @endif
+                                        @endforeach                                
+                                    @endisset
+                                    
+                                </div>
+                                
+                                
                             </div>
 
                             <div class="card-body text-md-left">
