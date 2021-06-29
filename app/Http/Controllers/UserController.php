@@ -77,13 +77,14 @@ class UserController extends Controller
 
         if($request->username == $thisuser->username && $request->email == $thisuser->email) {
             $uservalidation = request()->validate([
+                //'username'=>'unique:users',
+                //'email'=>'unique:users',
                 //'username'=>'required|unique:users,',
                 'firstname'=>'nullable|regex:/^[a-zA-Z]+$/|max:30',
                 'lastname'=>'nullable|string|regex:/^[a-zA-Z]+$/|max:30',
-                //'username'=>'unique:users',
-                //'email'=>'unique:users',
                 'birthday'=>'nullable|before_or_equal:today',
                 'photo' => 'mimes:jpeg,png,bmp,tiff,jpg |max:4096'
+
     
             ]);
         } else {
@@ -91,10 +92,9 @@ class UserController extends Controller
             if($request->username == $thisuser->username || $request->email == $thisuser->email) {
                 if($request->username == $thisuser->username) {
                     $uservalidation = request()->validate([
-                        //'username'=>'required|unique:users,',
+                        // 'username'=>'unique:users'
                         'firstname'=>'nullable|regex:/^[a-zA-Z]+$/|max:30',
                         'lastname'=>'nullable|string|regex:/^[a-zA-Z]+$/|max:30',
-                        // 'username'=>'unique:users',
                         'email'=>'unique:users|max:70',
                         'birthday'=>'nullable|before_or_equal:today',
                         'photo' => 'mimes:jpeg,png,bmp,tiff,jpg |max:4096'
@@ -104,10 +104,10 @@ class UserController extends Controller
                 if($request->email == $thisuser->email) {
                     $uservalidation = request()->validate([
                         //'username'=>'required|unique:users,',
+                        //'email'=>'unique:users'
                         'firstname'=>'nullable|regex:/^[a-zA-Z]+$/|max:30',
                         'lastname'=>'nullable|string|regex:/^[a-zA-Z]+$/|max:30',
                         'username'=>'required|unique:users|max:30',
-                        //'email'=>'unique:users'
                         'birthday'=>'nullable|before_or_equal:today',
                         'photo' => 'mimes:jpeg,png,bmp,tiff,jpg |max:4096'
             
@@ -128,9 +128,7 @@ class UserController extends Controller
             
         }
         
-        //if ($uservalidation->fails()) {
-        //   echo ('textfailed');
-       // }return;
+
         $user = User::all()->where('user_ID', '=', Auth::id())->first();
         $user->username = $request->username;
         $user->email = $request->email;
