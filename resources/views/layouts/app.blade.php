@@ -23,7 +23,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" style="border-bottom-right-radius: 45px; border-bottom-left-radius: 45px">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" style="border-bottom-right-radius: 15px; border-bottom-left-radius: 15px">
             <div class="container ">
                 
                 <a class="navbar-brand" href="{{ url('/') }}">

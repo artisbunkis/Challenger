@@ -71,14 +71,54 @@ class UserController extends Controller
      */
     public function edit(Request $request)
     {
-        $uservalidation = request()->validate([
-            //'username'=>'required|unique:users,',
-            'firstname'=>'nullable|regex:/^[a-zA-Z]+$/',
-            'lastname'=>'nullable|string|regex:/^[a-zA-Z]+$/',
-            'username'=>'unique:users',
-            'email'=>'unique:users'
+        
+        
+        $thisuser = User::all()->where('user_ID', '=', Auth::id())->first();
 
-        ]);
+        if($request->username == $thisuser->username || $request->email == $thisuser->email) {
+            if($request->username == $thisuser->username) {
+                $uservalidation = request()->validate([
+                    //'username'=>'required|unique:users,',
+                    'firstname'=>'nullable|regex:/^[a-zA-Z]+$/',
+                    'lastname'=>'nullable|string|regex:/^[a-zA-Z]+$/',
+                    // 'username'=>'unique:users',
+                    'email'=>'unique:users'
+        
+                ]);
+            }
+            if($request->email == $thisuser->email) {
+                $uservalidation = request()->validate([
+                    //'username'=>'required|unique:users,',
+                    'firstname'=>'nullable|regex:/^[a-zA-Z]+$/',
+                    'lastname'=>'nullable|string|regex:/^[a-zA-Z]+$/',
+                    'username'=>'unique:users',
+                    //'email'=>'unique:users'
+        
+                ]);
+            } 
+        } else {
+            if($request->username == $thisuser->username && $request->email == $thisuser->email) {
+                $uservalidation = request()->validate([
+                    //'username'=>'required|unique:users,',
+                    'firstname'=>'nullable|regex:/^[a-zA-Z]+$/',
+                    'lastname'=>'nullable|string|regex:/^[a-zA-Z]+$/',
+                    //'username'=>'unique:users',
+                    //'email'=>'unique:users'
+        
+                ]);
+            } else {
+                $uservalidation = request()->validate([
+                    //'username'=>'required|unique:users,',
+                    'firstname'=>'nullable|regex:/^[a-zA-Z]+$/',
+                    'lastname'=>'nullable|string|regex:/^[a-zA-Z]+$/',
+                    'username'=>'unique:users',
+                    'email'=>'unique:users'
+        
+                ]);
+            }
+            
+        }
+        
         //if ($uservalidation->fails()) {
         //   echo ('textfailed');
        // }return;
