@@ -18,10 +18,7 @@ use Illuminate\Support\Facades\Redirect;
 class CreateChallengeController extends Controller
 {
 
-    public function __construct() {
-        // only Admins have access to the following methods
-        $this->middleware('auth.admin')->only(['destroy']);
-    }
+   
     /**
      * Display a listing of the resource.
      *
@@ -106,8 +103,8 @@ class CreateChallengeController extends Controller
         return redirect()->action([NotificationController::class, 'sendNotification'], [$challenge]);
         
         
-        //return view('findchallenges');
-        
+        return redirect('findchallenges');
+         
     }
 
     /**
@@ -188,10 +185,10 @@ class CreateChallengeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        Challenge::findOrFail($id)->delete();
-        return redirect('findchallenges')->with('success', 'Challenge Removed');;
+        $challenge = Challenge::where('challenge_ID', '=', $request->id)->delete();        
+        return redirect('createchallenge');
     }
 
     public function showMyChallenges(Request $request) {

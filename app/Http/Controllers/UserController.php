@@ -58,7 +58,7 @@ class UserController extends Controller
         $users = User::all();
         $thisuser = User::all()->where('user_ID', '=', Auth::id())->first();
         $gender = Gender::all()->where('gender_ID', '=', $thisuser->gender_ID)->first();
-        echo($gender);
+        
         return view('/profile', compact('users', 'thisuser', 'gender'));
     }
 
@@ -98,7 +98,7 @@ class UserController extends Controller
             $filename = Auth::id();
             $directory  = 'uploadimages/photos/';
             $file->move($directory, $filename);
-            echo($file);
+            //echo($file);
             $user->hasProfilePicture = true;
         }
 
