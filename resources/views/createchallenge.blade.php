@@ -205,7 +205,7 @@
                                     <form method="POST" id="forma3" action="{{ action([App\Http\Controllers\CreateChallengeController::class, 'destroy'], $challenge->challenge_ID)}}"> @csrf @method('DELETE')
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <input type="hidden" name="id" value="{{ $challenge->challenge_ID }}">
-                                    <button type="submit" class="btn btn-danger">Delete Challenge</button>
+                                    <button type="submit" class="btn btn-block btn-danger btn-sm">Delete Challenge</button>
                                     </form>                         
                                 </div>
 
