@@ -197,10 +197,11 @@ class CreateChallengeController extends Controller
      */
     public function destroy(Request $request)
     {
-        $subscriptions = Subscription::all()->where('challenge_ID', '=', $request->challenge_ID);
-        foreach($subscriptions as $s) {
-            $s->delete();
-        }
+        //echo($request->id);
+        $subscriptions = Subscription::where('challenge_ID', '=', $request->id)->delete();
+        // foreach($subscriptions as $s) {
+        //     $s->delete();
+        // }
         $challenge = Challenge::where('challenge_ID', '=', $request->id)->delete();        
         return redirect('createchallenge');
     }
