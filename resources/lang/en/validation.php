@@ -171,6 +171,9 @@ return [
         'birthday'=>[
             'before_or_equal'=>'Invalid birth date.'
         ],
+        'photo'=>[
+            'mimes'=>'Invalid file format.'
+        ],
     ],
 
     /*

@@ -82,7 +82,8 @@ class UserController extends Controller
                 'lastname'=>'nullable|string|regex:/^[a-zA-Z]+$/|max:30',
                 //'username'=>'unique:users',
                 //'email'=>'unique:users',
-                'birthday'=>'nullable|before_or_equal:today'
+                'birthday'=>'nullable|before_or_equal:today',
+                'photo' => 'mimes:jpeg,png,bmp,tiff |max:4096'
     
             ]);
         } else {
@@ -95,7 +96,8 @@ class UserController extends Controller
                         'lastname'=>'nullable|string|regex:/^[a-zA-Z]+$/|max:30',
                         // 'username'=>'unique:users',
                         'email'=>'unique:users|max:70',
-                        'birthday'=>'nullable|before_or_equal:today'
+                        'birthday'=>'nullable|before_or_equal:today',
+                        'photo' => 'mimes:jpeg,png,bmp,tiff |max:4096'
             
                     ]);
                 }
@@ -106,7 +108,8 @@ class UserController extends Controller
                         'lastname'=>'nullable|string|regex:/^[a-zA-Z]+$/|max:30',
                         'username'=>'unique:users|max:30',
                         //'email'=>'unique:users'
-                        'birthday'=>'nullable|before_or_equal:today'
+                        'birthday'=>'nullable|before_or_equal:today',
+                        'photo' => 'mimes:jpeg,png,bmp,tiff |max:4096'
             
                     ]);
                 } 
@@ -117,7 +120,8 @@ class UserController extends Controller
                     'lastname'=>'nullable|string|regex:/^[a-zA-Z]+$/|max:30',
                     'username'=>'unique:users|max:30',
                     'email'=>'unique:users|max:70',
-                    'birthday'=>'nullable|before_or_equal:today'
+                    'birthday'=>'nullable|before_or_equal:today',
+                    'photo' => 'mimes:jpeg,png,bmp,tiff |max:4096'
         
                 ]);
             }
