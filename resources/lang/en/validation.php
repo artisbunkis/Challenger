@@ -141,10 +141,20 @@ return [
             'required'=>'The start time field cannot be empty'
         ],
         'firstname'=>[
-            'regex'=>'First name cannot have numbers in it.'
+            'regex'=>'First name cannot have numbers in it.',
+            'max'=>'Your name exceeds the maximum lenght'
         ],
         'lastname'=>[
-            'regex'=>'Last name cannot have numbers in it.'
+            'regex'=>'Last name cannot have numbers in it.',
+            'max'=>'Your last name exceeds the maximum lenght'
+        ],
+        'username'=>[
+            'max'=>'Your username cannot exceed 30 characters'
+
+        ],
+        'email'=>[
+            'max'=>'Your email cannot be longer than 70 characters'
+
         ],
         'challengeName'=>[
             'required'=>'Challenge name field cannot be empty'
