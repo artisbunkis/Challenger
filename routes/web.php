@@ -8,6 +8,7 @@ use App\Http\Controllers\FindChallengesController;
 use App\Http\Controllers\CreateChallengeController;
 use App\Http\Controllers\RunningTotalsController;
 use App\Http\Controllers\TrackActivityController;
+use App\Http\Controllers\NotificationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,3 +68,4 @@ Route::post("/destroy", [TrackActivityController::class, 'destroy'])->name('trac
 
 Route::get('lang/{lang}', ['as' => 'locale.switch', 'uses' => 'App\Http\Controllers\LocalizationController@switchLang']);
 
+Route::get('/notify', [NotificationController::class, 'sendNotification']);
