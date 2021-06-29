@@ -157,13 +157,16 @@ return [
 
         ],
         'challengeName'=>[
-            'required'=>'Challenge name field cannot be empty'
+            'required'=>'Challenge name field cannot be empty',
+            'max'=>'Challenge name exceeds the maximum lenght of 100 characters'
         ],
         'beginDate'=>[
-            'required'=>'Challenge beginning date field cannot be empty'
+            'required'=>'Challenge beginning date field cannot be empty',
+            'after'=>'The challenge cannot be started on this date.'
         ],
         'endDate'=>[
-            'required'=>'Challenge ending date field cannot be empty'
+            'required'=>'Challenge ending date field cannot be empty',
+            'after'=>'The challenge cannot end on this date.'
         ],
     ],
 
