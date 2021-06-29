@@ -4,7 +4,7 @@
 <!DOCTYPE html>    
 <html>  
     <head>    
-        <title>Create Challenge</title>         
+        <title>{{ __("Create Challenge")}}</title>         
     </head> 
 <body>
         
@@ -18,21 +18,21 @@
 
 
                     <div class="card mb-3">
-                        <div class="card-header text-center"><h2>Create Challenge</h2></div>
+                        <div class="card-header text-center"><h2>{{ __("Create Challenge")}}</h2></div>
                             <div class="card-body">
                                 <div class="form-group">
                                     <form method="POST" id="forma" class="form-group" action="{{ action([App\Http\Controllers\CreateChallengeController::class, 'store']) }}"> @csrf
                                         {{--
                                         <input type="hidden" name="sportsType_ID" value="{{ $challenge->sportsType_ID }}"> // te vajag fk sataisit pareizi 
                                         --}} 
-                                        <label for="challengeName">Challenge Name: </label>
+                                        <label for="challengeName">{{ __("Challenge Name")}}: </label>
                                         <input class="form-control" type="text" name="challengeName" id="challengeName">
                                         <div class="alert-danger" style="font-weight: bold;"> @error('challengeName') {{$message}} @enderror</div>
                                         
 
                                         <div class="row" style="padding-top: 10px">
                                             <div class="col mb-7">
-                                            <label for="sportsType">Sports type: </label>
+                                            <label for="sportsType">{{ __("Sports type")}}: </label>
                                                 <select class="form-control" name="sportsType" id="sportsType">
                                                     <?php
                                                         foreach($sportsType as $sport) { ?>
@@ -45,7 +45,7 @@
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" checked name="isPublic" id="isPublic">
                                                     <label class="form-check-label" for="defaultCheck1">
-                                                        Public:
+                                                    {{ __("Public")}}:
                                                     </label>
                                                   </div>
                                               
@@ -55,14 +55,14 @@
 
                                         <div class="row" style="padding-top: 10px">
                                             <div class="col mb-5">
-                                                <label for="beginDate">Begin Date:</label>
+                                                <label for="beginDate">{{ __("Begin Date")}}:</label>
                                                 <input class="form-control" type="date" name="beginDate" id="beginDate">
                                                 <div class="alert-danger" style="font-weight: bold;">@error('beginDate') {{$message}} @enderror</div>
                                                
                                 
                                             </div>
                                             <div class="col mb-5">
-                                                <label for="endDate">End Date:</label>
+                                                <label for="endDate">{{ __("End Date")}}:</label>
                                                 <input class="form-control" type="date" name="endDate" id="endDate">
                                                 <div class="alert-danger" style="font-weight: bold;">@error('endDate') {{$message}} @enderror</div>
                                             </div>
@@ -71,7 +71,7 @@
 
                                         
                                         
-                                        <button type="button" class="btn btn-secondary btn-lg btn-block" style="font-size: 14px;" onclick="add(); showSaveButton()">Add Units</button>
+                                        <button type="button" class="btn btn-secondary btn-lg btn-block" style="font-size: 14px;" onclick="add(); showSaveButton()">{{ __("Add Units")}}</button>
                                         
                                         
                                         <div class="container" id="unitsContainer" style="display:none; padding: 15px">
@@ -93,7 +93,7 @@
                                         <input type="hidden" name="arrayOfUnits" id="arrayOfUnits">
                                         <input type="hidden" name="arrayOfComparisons" id="arrayOfComparisons">
     
-                                        <button type="button" class="btn btn-success btn-lg btn-block" style="display: none; font-size: 14px;" id="saveButton" onclick="saveUnits()">Save Units</button>
+                                        <button type="button" class="btn btn-success btn-lg btn-block" style="display: none; font-size: 14px;" id="saveButton" onclick="saveUnits()">{{ __("Save Units")}}</button>
     
                                         <input type="hidden" id="submitButton" class="btn btn-success btn-lg btn-block" style="font-size: 14px;" value="Submit">
                                         </form>
@@ -109,13 +109,13 @@
    
         <div class="col-md-6">
             <div class="card mb-3">
-                <div class="card-header "><h2 class="text-center">My Challenges</h2></div>
+                <div class="card-header "><h2 class="text-center">{{ __("My Challenges")}}</h2></div>
 
                     <div class="card-body">
                     
                         @isset($challenges)
                             @if(count($challenges) == 0)
-                                <p>You have no Challenges</p>
+                                <p>{{ __("You have no Challenges")}}</p>
                             @endif
                         
                         @foreach ($challenges as $challenge)
@@ -185,7 +185,7 @@
                                                 <input type="hidden" name="id" value="{{ $challenge->challenge_ID }}">
                                                 
                                             
-                                                <button type="submit" class="btn btn-block btn-outline-success btn-sm" >Unsubscribe</button>
+                                                <button type="submit" class="btn btn-block btn-outline-success btn-sm" >{{ __("Unsubscribe")}}</button>
                                             </form>
                                             @else
                                             <form method="POST" id="forma2" action="{{ action([App\Http\Controllers\FindChallengesController::class, 'subscribe'], $challenge->challenge_ID)}}"> @csrf @method('POST')
@@ -194,7 +194,7 @@
                                                 <input type="hidden" name="id" value="{{ $challenge->challenge_ID }}">
                                                 
                                             
-                                                <button class="btn btn-block btn-success btn-sm" type="submit">Subscribe</button>
+                                                <button class="btn btn-block btn-success btn-sm" type="submit">{{ __("Subscribe")}}</button>
                                             </form>
                                             @endif
                                         @endisset
@@ -205,7 +205,7 @@
                                     <form method="POST" id="forma3" action="{{ action([App\Http\Controllers\CreateChallengeController::class, 'destroy'], $challenge->challenge_ID)}}"> @csrf @method('DELETE')
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <input type="hidden" name="id" value="{{ $challenge->challenge_ID }}">
-                                    <button type="submit" class="btn btn-block btn-danger btn-sm">Delete Challenge</button>
+                                    <button type="submit" class="btn btn-block btn-danger btn-sm">{{ __("Delete Challenge")}}</button>
                                     </form>                         
                                 </div>
 
@@ -324,7 +324,7 @@
         
 
         label = document.createElement("label");
-        label.innerHTML += 'Enter Measurement Values:';
+        label.innerHTML += '{{ __("Enter Measurement Values")}}:';
         inputs.appendChild(cardBlock);
         cardBody.appendChild(label);
         cardBody.appendChild(y);

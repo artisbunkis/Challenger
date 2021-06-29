@@ -14,7 +14,7 @@
             <div class="col-md-5">
                 <div class="card mb-3">
                     <div class="card-header">
-                        <h2 class="text-center">My Profile</h2></div>
+                        <h2 class="text-center">{{ __("My Profile")}}</h2></div>
                         <div class="card-body">
                             <div class="info">
                                 <div class="row d-flex justify-content-center">
@@ -33,19 +33,19 @@
                                     </div>
                                     <div>
                                         {{-- PROFILE CARD BODY --}}
-                                <b>Username:</b> {{$thisuser->username}}<br>
-                                <b>E-mail:</b> {{$thisuser->email}}<br>
-                                <b>First Name:</b> {{$thisuser->firstName}}<br>
-                                <b>Last Name:</b> {{$thisuser->lastName}}<br>
-                                <b>Birthday:</b> {{$thisuser->birthDate}}<br>
+                                <b>{{ __("Username")}}:</b> {{$thisuser->username}}<br>
+                                <b>{{ __("E-mail")}}:</b> {{$thisuser->email}}<br>
+                                <b>{{ __("First Name")}}:</b> {{$thisuser->firstName}}<br>
+                                <b>{{ __("Last Name")}}:</b> {{$thisuser->lastName}}<br>
+                                <b>{{ __("Birthday")}}:</b> {{$thisuser->birthDate}}<br>
                                 @isset($gender)
-                                    <p><b>Gender:</b> {{$gender->genderName}}</p>
+                                    <p><b>{{ __("Gender")}}:</b> {{$gender->genderName}}</p>
                                 @else
-                                    <p><b>Gender:</b> None </p>
+                                    <p><b>{{ __("Gender")}}:</b> None </p>
                                 @endisset
                                 
                                 
-                                <button class="btn btn-block btn-secondary btn-lg" style="font-size: 14px;" onclick="showEdit(this)" id="edit" value="profile">Edit</button>
+                                <button class="btn btn-block btn-secondary btn-lg" style="font-size: 14px;" onclick="showEdit(this)" id="edit" value="profile">{{ __("Edit")}}</button>
                                     </div>
                                 </div>
                                 
@@ -55,37 +55,37 @@
                                 <div class="form-group">
                                     <form method="POST" id="forma" action="{{ action([App\Http\Controllers\UserController::class, 'edit']) }}" enctype="multipart/form-data"> @csrf @method('POST')
                                         <br>
-                                        <label for="username">Username:</label>
+                                        <label for="username">{{ __("Username")}}:</label>
                                         <input type="text" class="form-control" name="username" id="username" placeholder="Username" value="{{$thisuser->username}}">
                                         <div class="alert-danger" style="font-weight: bold;">@error('username') {{$message}} @enderror</div>
                                         
-                                        <label for="email">E-mail:</label>
+                                        <label for="email">{{ __("E-mail")}}:</label>
                                         <input type="email" class="form-control" name="email" id="email" placeholder="E-mail" value="{{$thisuser->email}}">
                                         <div class="alert-danger" style="font-weight: bold;">@error('email') {{$message}} @enderror</div>
 
-                                        <label for="firstname">First Name:</label>
+                                        <label for="firstname">{{ __("First Name")}}:</label>
                                         <input type="text" class="form-control" name="firstname" id="firstname" placeholder="First Name" value="{{$thisuser->firstName}}">
                                         <div class="alert-danger" style="font-weight: bold;">@error('firstname') {{$message}} @enderror</div>
 
-                                        <label for="lastname">Last Name:</label>
+                                        <label for="lastname">{{ __("Last Name")}}:</label>
                                         <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Last Name" value="{{$thisuser->lastName}}">
                                         <div class="alert-danger" style="font-weight: bold;">@error('lastname') {{$message}} @enderror</div>
 
-                                        <label for="birthday">Birthday:</label>
+                                        <label for="birthday">{{ __("Birthday")}}:</label>
                                         <input type="date" class="form-control" name="birthday" id="birthday" placeholder="Birthday" value="{{$thisuser->birthdate}}">
     
-                                        <label for="gender">Gender:</label>
+                                        <label for="gender">{{ __("Gender")}}:</label>
                                         <select type="text" class="form-control" name="gender" id="gender" placeholder="Gender" selected="{{$thisuser->gender_ID}}">
-                                            <option value="1">Male</option>
-                                            <option value="2">Female</option>
-                                            <option value="3">Unknown</option>
+                                            <option value="1">{{ __("Male")}}</option>
+                                            <option value="2">{{ __("Female")}}</option>
+                                            <option value="3">{{ __("Unknown")}}</option>
                                         </select>
                                         <br>
 
-                                        <label for="photo">Photo:</label>
+                                        <label for="photo">{{ __("Photo")}}:</label>
                                         <input type="file" name="photo" id="photo">
                                         
-                                        <button type="submit" class="btn btn-block btn-success btn-lg" style="font-size: 14px; ">Submit</button>
+                                        <button type="submit" class="btn btn-block btn-success btn-lg" style="font-size: 14px; ">{{ __("Submit")}}</button>
                                     
                                     </form>
 
@@ -111,7 +111,7 @@
             <div class="col-sm-10">
                 <div class="card text-center">
                     <div class="card-header">
-                        <H1>List Of Users</H1>
+                        <H1>{{ __("List Of Users")}}</H1>
                     </div>
                     <div class="card-body">
                         <table>
@@ -121,13 +121,13 @@
                         @if($user->role !== 1)
                             <tr>
                                 <td><b>ID:</b> {{$user->user_ID}}</td>
-                                <td><b>Username:</b> {{$user->username}}</td>
-                                <td><b>Last Login:</b> {{$user->last_login_at}}</td>
-                                <td><b>Last Login IP</b>{{$user->last_login_ip}}</td>
+                                <td><b>{{ __("Username")}}:</b> {{$user->username}}</td>
+                                <td><b>{{ __("Last Login")}}:</b> {{$user->last_login_at}}</td>
+                                <td><b>{{ __("Last Login IP")}}</b>{{$user->last_login_ip}}</td>
                                 <td>
                                     <form method="POST" action="{{ action([App\Http\Controllers\UserController::class, 'destroy'], $user->user_ID) }}">@csrf @method('DELETE')
                                     
-                                             <button type="submit" class="btn btn-danger">Delete</button>
+                                             <button type="submit" class="btn btn-danger">{{ __("Delete")}}</button>
                                     </form>
                                 
                                 </td>
