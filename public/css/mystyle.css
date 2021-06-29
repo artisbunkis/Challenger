@@ -1,0 +1,27 @@
+    .filterDiv {
+    
+   
+    display: none;
+    }
+
+    .show {
+    display: block;
+    }
+
+    
+
+    /* Style the buttons */
+    .btn {
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: rgb(44, 44, 44);
+    }
+
+    .btn.active {
+        background-color: rgb(75, 170, 80);
+        color: white;
+    }
+
+    

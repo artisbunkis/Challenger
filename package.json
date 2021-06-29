@@ -23,5 +23,9 @@
         "vue": "^2.5.17",
         "vue-loader": "^15.9.5",
         "vue-template-compiler": "^2.6.10"
+    },
+    "dependencies": {
+        "chart.js": "^3.3.2",
+        "flag-icon-css": "^3.5.0"
     }
 }

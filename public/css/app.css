@@ -10942,4 +10942,2090 @@ a.text-dark:focus {
   }
 }
 
+.flag-icon-background,
+.flag-icon {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.flag-icon {
+  position: relative;
+  display: inline-block;
+  width: 1.3333333333em;
+  line-height: 1em;
+}
+
+.flag-icon:before {
+  content: " ";
+}
+
+.flag-icon.flag-icon-squared {
+  width: 1em;
+}
+
+.flag-icon-ad {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ad.svg?45026b922ec57f969a0a19debde23320);
+}
+
+.flag-icon-ad.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ad.svg?94e810253dbc84702e9a1b1f44e3de36);
+}
+
+.flag-icon-ae {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ae.svg?2c530f6449f3e5abd04b2df6be77ee0a);
+}
+
+.flag-icon-ae.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ae.svg?23c174705b39d649ba4341c8f1c83aac);
+}
+
+.flag-icon-af {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/af.svg?458ab7e0c32d14aefe334255c26dc561);
+}
+
+.flag-icon-af.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/af.svg?867627c537fd298125324bc38d88de90);
+}
+
+.flag-icon-ag {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ag.svg?5929ca9ff0f160f96fb5ed45aa08fd12);
+}
+
+.flag-icon-ag.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ag.svg?3f18bb58815f1eb37b603c82f58bb62e);
+}
+
+.flag-icon-ai {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ai.svg?c4699001b99c1638c76545a8f3c90d13);
+}
+
+.flag-icon-ai.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ai.svg?546a12e334b3f4d8967c7cd65178f7f0);
+}
+
+.flag-icon-al {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/al.svg?3dd8853b91d6f490b4c1429d31c80dee);
+}
+
+.flag-icon-al.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/al.svg?090568ab89f9b7e68f3bee7e93b0b48b);
+}
+
+.flag-icon-am {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/am.svg?e935f82147f4d3c76c9284797c6f2a20);
+}
+
+.flag-icon-am.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/am.svg?36fc7db319e532bff785a981db0c3334);
+}
+
+.flag-icon-ao {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ao.svg?ad6f3c8c3519f36b36c4cf46ebca2ab5);
+}
+
+.flag-icon-ao.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ao.svg?7ed590a16ff7642e7a85cc845a56f4b8);
+}
+
+.flag-icon-aq {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/aq.svg?e3fbc5d0ce77f1c9e808345d2bdd18ca);
+}
+
+.flag-icon-aq.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/aq.svg?e6c275d0d4e5135fb04baf7ebcaa8e6d);
+}
+
+.flag-icon-ar {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ar.svg?2ff091f8773d0ea8640d60a3a286481b);
+}
+
+.flag-icon-ar.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ar.svg?5a7c09af30ea06db87f16f582b2be3f6);
+}
+
+.flag-icon-as {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/as.svg?3b86b6876653592c0fa31eb96c570867);
+}
+
+.flag-icon-as.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/as.svg?7ae00cb9d6bf497132c195ddecfc9ecc);
+}
+
+.flag-icon-at {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/at.svg?1281f451a103684e9248610c8725fecc);
+}
+
+.flag-icon-at.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/at.svg?d7b3791eb6679e92a2bd4447053ebc93);
+}
+
+.flag-icon-au {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/au.svg?932d918261bcbb88f0cc22baa8e5f32f);
+}
+
+.flag-icon-au.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/au.svg?5b98a120aeec3f5a1aeb9c0a8c011cf8);
+}
+
+.flag-icon-aw {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/aw.svg?98298192f432c6fc56cc1899a86b8d04);
+}
+
+.flag-icon-aw.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/aw.svg?b478dded01c70ad2275c32a83c4f818d);
+}
+
+.flag-icon-ax {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ax.svg?6651bb2513bc040f7f2b02f9c503b288);
+}
+
+.flag-icon-ax.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ax.svg?c260e9a581b4c4415f206107819ae3b4);
+}
+
+.flag-icon-az {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/az.svg?d4faca473814e47b3f03fd7c83e72ad1);
+}
+
+.flag-icon-az.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/az.svg?84126238074d3c3c30b970dc95e07324);
+}
+
+.flag-icon-ba {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ba.svg?7097f2f878560a3debc6d5fd27807596);
+}
+
+.flag-icon-ba.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ba.svg?d1e732dc96724fe02492edb7e025a9d9);
+}
+
+.flag-icon-bb {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/bb.svg?021629a6a596929b04629ceed2c33ef4);
+}
+
+.flag-icon-bb.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/bb.svg?17738ccf41cecf9d38bae410178bc122);
+}
+
+.flag-icon-bd {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/bd.svg?d16830cba55e113c58881a5a7cb6a7cb);
+}
+
+.flag-icon-bd.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/bd.svg?a3ae69dedf0b3ad8fb44f09bb4f11716);
+}
+
+.flag-icon-be {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/be.svg?410c4acc521ec3a598361eacbb8e1557);
+}
+
+.flag-icon-be.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/be.svg?914a3c37d1998aa1f6b0bcb231f5f98f);
+}
+
+.flag-icon-bf {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/bf.svg?4275eb85c53fe2d0f6a824dd028d8455);
+}
+
+.flag-icon-bf.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/bf.svg?6fc31e160aec39c1d496a8a13554b6ad);
+}
+
+.flag-icon-bg {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/bg.svg?c9c13073359faec8e076a738146b8f66);
+}
+
+.flag-icon-bg.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/bg.svg?4f2a9bbb4c1ea18ea4dd2acca5d79160);
+}
+
+.flag-icon-bh {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/bh.svg?ec61516daebfebe2cd499a46c9f6570a);
+}
+
+.flag-icon-bh.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/bh.svg?0cfc56195412f09f4c705d519df5972c);
+}
+
+.flag-icon-bi {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/bi.svg?3fce551eeb9f82d29f7683f31173db5e);
+}
+
+.flag-icon-bi.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/bi.svg?5adb744e68bc13f75956296eb29398a7);
+}
+
+.flag-icon-bj {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/bj.svg?e8591ed7d23999de96ef5e714b0fffee);
+}
+
+.flag-icon-bj.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/bj.svg?fb3d1c01b8a808e6fe1335322cb758a6);
+}
+
+.flag-icon-bl {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/bl.svg?6a6bc7f183b774316b63325b5e8ae296);
+}
+
+.flag-icon-bl.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/bl.svg?669bbb820754f1cc0ce4bf010c056e23);
+}
+
+.flag-icon-bm {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/bm.svg?e2aa572a02963b087e48158ff3de2fcc);
+}
+
+.flag-icon-bm.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/bm.svg?7dd1b92ad42d2f9d69dd785acff5c8da);
+}
+
+.flag-icon-bn {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/bn.svg?ad7aafa9a29894397b43296e034a46ee);
+}
+
+.flag-icon-bn.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/bn.svg?5fd8c65274736a1b6af4a688b9965a55);
+}
+
+.flag-icon-bo {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/bo.svg?1155c3da4861424ea8ffa53c51854847);
+}
+
+.flag-icon-bo.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/bo.svg?ee5938f07b3324e9af6d22cc2b9dc1ac);
+}
+
+.flag-icon-bq {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/bq.svg?8ff78ac28371e9069bfb5206d9704c9a);
+}
+
+.flag-icon-bq.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/bq.svg?6e5b96f6104d2ff9977a1eb9e5c73272);
+}
+
+.flag-icon-br {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/br.svg?5ec13287c2da0d77a7e7d968528618ff);
+}
+
+.flag-icon-br.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/br.svg?b3663866f502ec386f0ee9bc6df5ecdc);
+}
+
+.flag-icon-bs {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/bs.svg?5497678a4578b848e08d70e77484bbad);
+}
+
+.flag-icon-bs.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/bs.svg?a9ddb124f725485b9445976c1db059b0);
+}
+
+.flag-icon-bt {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/bt.svg?eed19cbfd0dc809d6886614fe43413d5);
+}
+
+.flag-icon-bt.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/bt.svg?1372873ed65891680a2d0a4cf3a5d35c);
+}
+
+.flag-icon-bv {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/bv.svg?b789f839eda2bce4b0e344610c23e9f7);
+}
+
+.flag-icon-bv.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/bv.svg?adee14dc818c2a37dbd9f73c21e61ce1);
+}
+
+.flag-icon-bw {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/bw.svg?8a35721e3f5ff275ace83b5654e857a7);
+}
+
+.flag-icon-bw.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/bw.svg?0acc600b67ac7165e38c1f691d70c839);
+}
+
+.flag-icon-by {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/by.svg?ed1fb53394827e144c8a4ba1b06e77ed);
+}
+
+.flag-icon-by.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/by.svg?da99aaa559633b439aa30c100f14cfbb);
+}
+
+.flag-icon-bz {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/bz.svg?4eb2d29f4fcc586ae3e27a74fb073cdb);
+}
+
+.flag-icon-bz.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/bz.svg?7826f0d58900985ad3120f3a0b8451dd);
+}
+
+.flag-icon-ca {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ca.svg?d348137a99e6d528c5b7ffec1e05488a);
+}
+
+.flag-icon-ca.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ca.svg?102b45b24a03abdaeae6cf78eb470b12);
+}
+
+.flag-icon-cc {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/cc.svg?200233c98efe5d026e98498cf8969844);
+}
+
+.flag-icon-cc.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/cc.svg?27d55bfa0a8b66542f74f3fc7049997c);
+}
+
+.flag-icon-cd {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/cd.svg?e5fd4d1225cc6c53b73d7b6f037aafeb);
+}
+
+.flag-icon-cd.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/cd.svg?d44809aaad5d32f91a56124d5f222aba);
+}
+
+.flag-icon-cf {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/cf.svg?617adc02abcee400496d073fbbd21515);
+}
+
+.flag-icon-cf.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/cf.svg?eb50c5ecfa556ddba5a7a7e6cdd0c75e);
+}
+
+.flag-icon-cg {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/cg.svg?440e321a39cf550b0bec17d9fd107038);
+}
+
+.flag-icon-cg.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/cg.svg?862f4608de0f8e9d213cd201d252cecc);
+}
+
+.flag-icon-ch {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ch.svg?7a52ef5e31b7f5e08a015cbcdc72e365);
+}
+
+.flag-icon-ch.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ch.svg?1113c7e9162d605ca580694f60526e96);
+}
+
+.flag-icon-ci {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ci.svg?b1030b2b5315547c7fbe93c5dc5e8f78);
+}
+
+.flag-icon-ci.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ci.svg?6f06682eaf98960662af030b21caa3b2);
+}
+
+.flag-icon-ck {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ck.svg?65a80cb3a138985c22dcde8234f36142);
+}
+
+.flag-icon-ck.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ck.svg?d76f3968d6f25ed0bc7d4bb559099de8);
+}
+
+.flag-icon-cl {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/cl.svg?b9ff305a088060fd040a79f1252e9bd8);
+}
+
+.flag-icon-cl.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/cl.svg?303f56a616afb6bae962ead1475d28f8);
+}
+
+.flag-icon-cm {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/cm.svg?7578267e8568b1490427bb8db78871b6);
+}
+
+.flag-icon-cm.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/cm.svg?0dcbc4f1fe098b1b8725ef1a2b98dae4);
+}
+
+.flag-icon-cn {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/cn.svg?7977e12a9afade492c93c76be2cb47de);
+}
+
+.flag-icon-cn.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/cn.svg?f5a6f048eb8367343bd42fd1895a8c5f);
+}
+
+.flag-icon-co {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/co.svg?59ec93f7d718ebed3779113450fddf23);
+}
+
+.flag-icon-co.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/co.svg?4c87d079860a09479706816fb964cfdc);
+}
+
+.flag-icon-cr {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/cr.svg?6f2d7bb05d9edb1089ec5bac86cf57c3);
+}
+
+.flag-icon-cr.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/cr.svg?ebed46008265a3777565bf8c24dd3bda);
+}
+
+.flag-icon-cu {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/cu.svg?ff35f996902731bad2871a6163a8b426);
+}
+
+.flag-icon-cu.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/cu.svg?1452c504ef675071dcdf6ef2a44e55df);
+}
+
+.flag-icon-cv {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/cv.svg?434373304db5970887de778fb452f3a0);
+}
+
+.flag-icon-cv.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/cv.svg?1ddd34244b91f9c46e1d60ea251e248c);
+}
+
+.flag-icon-cw {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/cw.svg?8e4cecbf86c9e4b2df3ae368ef68cdd2);
+}
+
+.flag-icon-cw.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/cw.svg?3fc4503762b62953af04fb0bccc1436c);
+}
+
+.flag-icon-cx {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/cx.svg?b9b5e6cd65826aab60c67ecc613a4612);
+}
+
+.flag-icon-cx.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/cx.svg?dda4107fd05b8081ae62bc9871ba1d9d);
+}
+
+.flag-icon-cy {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/cy.svg?70de54e68d8683969410788a726e35ec);
+}
+
+.flag-icon-cy.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/cy.svg?bdc1fde27ba14b2afa3b59bec603759f);
+}
+
+.flag-icon-cz {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/cz.svg?8ef2bc6a4d5bad23e2843b0f7142f0c7);
+}
+
+.flag-icon-cz.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/cz.svg?1b3452b8ce83987fb494ea9ac5f49522);
+}
+
+.flag-icon-de {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/de.svg?7e82f4c71df5fc78abbb54a6f82ed299);
+}
+
+.flag-icon-de.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/de.svg?11d88d2b77e6abe5ebb1a7264ad57268);
+}
+
+.flag-icon-dj {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/dj.svg?76f4cdf5eb6411038bc5994153148b04);
+}
+
+.flag-icon-dj.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/dj.svg?278a5a5fce9a6090ce80ad1fc1eaf1fc);
+}
+
+.flag-icon-dk {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/dk.svg?f4e8fc5376a202f1d771ff93fab6b2ea);
+}
+
+.flag-icon-dk.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/dk.svg?c2e570fa503242ab4c3edca6b2acb2cb);
+}
+
+.flag-icon-dm {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/dm.svg?466757644ba07a8bbf786eae1222a578);
+}
+
+.flag-icon-dm.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/dm.svg?dc3455775ad035d0926ce4551bc721a6);
+}
+
+.flag-icon-do {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/do.svg?c05850db8e87e53a12689a7c273cc1c7);
+}
+
+.flag-icon-do.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/do.svg?64a9810e7d07e3af7412bee6afe85102);
+}
+
+.flag-icon-dz {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/dz.svg?945a413c6ba8e484b7b1545494376723);
+}
+
+.flag-icon-dz.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/dz.svg?2be2fee6433a59e75c3da92d5f366470);
+}
+
+.flag-icon-ec {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ec.svg?3ea7f906eaf807123a280d5806787ff2);
+}
+
+.flag-icon-ec.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ec.svg?7be6ca137c0a396154ac29e4a1fcc6b5);
+}
+
+.flag-icon-ee {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ee.svg?887a78f0eb107b3ce616a7fdf0feab97);
+}
+
+.flag-icon-ee.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ee.svg?7b6b8abcf78cfa7f4a773de556859b2f);
+}
+
+.flag-icon-eg {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/eg.svg?b3580df977ae211f31d3c2b1714b8787);
+}
+
+.flag-icon-eg.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/eg.svg?c6ff8d6c3057865a32f17e347d1916dd);
+}
+
+.flag-icon-eh {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/eh.svg?8c8b27438e64065d85428af7cefbba6d);
+}
+
+.flag-icon-eh.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/eh.svg?905fdd0842d1597c4a27ad535ca30c49);
+}
+
+.flag-icon-er {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/er.svg?458bc299993e856c309df58a7fb0c4ea);
+}
+
+.flag-icon-er.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/er.svg?ff62e2720daee288818f6277da2a1afb);
+}
+
+.flag-icon-es {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/es.svg?1a25a96e26fcca676c08fb109bcec333);
+}
+
+.flag-icon-es.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/es.svg?b3825b28f7a64779d80d6a5da10cfa08);
+}
+
+.flag-icon-et {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/et.svg?cbe354bb4afa8afc62dabc80051f9577);
+}
+
+.flag-icon-et.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/et.svg?061591dd14f8c02c150f57d14cabd671);
+}
+
+.flag-icon-fi {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/fi.svg?3b522e7f272eee4009b2073b0b6735ac);
+}
+
+.flag-icon-fi.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/fi.svg?eb793b740dd4fa0f8b6301a4b74a435e);
+}
+
+.flag-icon-fj {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/fj.svg?f3d86add9fe9ed6722749f8a0f21fc1d);
+}
+
+.flag-icon-fj.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/fj.svg?55dd1c6e9a323130d8e763f7a6971c8d);
+}
+
+.flag-icon-fk {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/fk.svg?ddc6bd174c1e6603e32352cbbb63f3fb);
+}
+
+.flag-icon-fk.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/fk.svg?fe8e733a5a44d9626de2b2d6ab9084c5);
+}
+
+.flag-icon-fm {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/fm.svg?3bfd96ee5faa59b8017a192bff06f6d6);
+}
+
+.flag-icon-fm.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/fm.svg?1579e5b6f7e79e7514451b61b5acd1e0);
+}
+
+.flag-icon-fo {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/fo.svg?f284df39e89f9ed508ad86e7b0c7d2ac);
+}
+
+.flag-icon-fo.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/fo.svg?8b4db68d6e0717fe940e8f23f6bedb8a);
+}
+
+.flag-icon-fr {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/fr.svg?81d43a151d8bc64145f25bc3d4cdc02a);
+}
+
+.flag-icon-fr.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/fr.svg?c88df3297cffe49852ae43ae5d2dcdd4);
+}
+
+.flag-icon-ga {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ga.svg?4257c8ec8a129da794b2a34583d3988c);
+}
+
+.flag-icon-ga.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ga.svg?dec832634c40be902627f39315558653);
+}
+
+.flag-icon-gb {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/gb.svg?ba1c7f5df0dd4173c951a644c65e02df);
+}
+
+.flag-icon-gb.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/gb.svg?35dbacd736781608964ae37a3b390b48);
+}
+
+.flag-icon-gd {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/gd.svg?b446a44dff915db188691a49dd65a49e);
+}
+
+.flag-icon-gd.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/gd.svg?1b313417e54a6f4446ee51fb4cfaf958);
+}
+
+.flag-icon-ge {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ge.svg?98cf9dc189b05e67103c0dcff4b7a982);
+}
+
+.flag-icon-ge.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ge.svg?7ccc29e2355cf25d55c56b48a81588b1);
+}
+
+.flag-icon-gf {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/gf.svg?695a47d62497dc58466740984bbe3b4f);
+}
+
+.flag-icon-gf.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/gf.svg?74219f32e778ea33b181c400c6559a6c);
+}
+
+.flag-icon-gg {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/gg.svg?6b23b5b1092e831766f94b8df740deff);
+}
+
+.flag-icon-gg.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/gg.svg?30f47622e942430014e8123ba7e1cfee);
+}
+
+.flag-icon-gh {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/gh.svg?d060e231aa94a98e78d96e709c1f9914);
+}
+
+.flag-icon-gh.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/gh.svg?286f4413bbf14d667ea8cbb147279a4e);
+}
+
+.flag-icon-gi {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/gi.svg?345b700f04babfed53e1b6286d2ad511);
+}
+
+.flag-icon-gi.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/gi.svg?e73af10429f00dc293ea3230387af7b6);
+}
+
+.flag-icon-gl {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/gl.svg?84ac5572fd0727fd850e09e4fc7a8b34);
+}
+
+.flag-icon-gl.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/gl.svg?68756f324152d0ada90caf6c823f6f86);
+}
+
+.flag-icon-gm {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/gm.svg?cdfdf8bcb862134ab9fe838e0a8c3fbb);
+}
+
+.flag-icon-gm.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/gm.svg?65c86e0a8df296521d901a6c76f801d8);
+}
+
+.flag-icon-gn {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/gn.svg?bf5b087387ce93eddfacb5f5ff5c656d);
+}
+
+.flag-icon-gn.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/gn.svg?7bf7a35a82ae814ed25d6219f39db9d3);
+}
+
+.flag-icon-gp {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/gp.svg?092b6bf958cd4a1f76c928e77991adf0);
+}
+
+.flag-icon-gp.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/gp.svg?30b1d26cfe9f458611e26248fadb490c);
+}
+
+.flag-icon-gq {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/gq.svg?c2cb1adba91b64af03bc41a5597899eb);
+}
+
+.flag-icon-gq.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/gq.svg?89421f59da9e40d8cfccac2479092421);
+}
+
+.flag-icon-gr {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/gr.svg?e2d0116790bdfda46fb4cdedc74b5b53);
+}
+
+.flag-icon-gr.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/gr.svg?c51a52c416ea428fe41f7cee240d7640);
+}
+
+.flag-icon-gs {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/gs.svg?c19adcdd5855af626a3c70ddc50f6690);
+}
+
+.flag-icon-gs.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/gs.svg?a96857cd4e8cd95734f9af34ce767b6a);
+}
+
+.flag-icon-gt {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/gt.svg?ccfc27d34052eec1eb6ecfa9805ae620);
+}
+
+.flag-icon-gt.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/gt.svg?3d87ccc4e82ef502f1dd9f09414eb509);
+}
+
+.flag-icon-gu {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/gu.svg?459831ea94ce2f15eede065e961764df);
+}
+
+.flag-icon-gu.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/gu.svg?35820090ead0219b998c5ca00528e556);
+}
+
+.flag-icon-gw {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/gw.svg?f29eedfe431a60cae11edef68d978860);
+}
+
+.flag-icon-gw.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/gw.svg?f647ba54d53db3f2e3a46a66bb84f3c7);
+}
+
+.flag-icon-gy {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/gy.svg?49a30b4ff82716f3aaddf3e991aef4aa);
+}
+
+.flag-icon-gy.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/gy.svg?43c003e277ed5a4d0ca0ccb9dc4515fd);
+}
+
+.flag-icon-hk {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/hk.svg?c0a93c089256c99bf337965d0074738d);
+}
+
+.flag-icon-hk.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/hk.svg?5a1122079f786b82c2ed4938e65caa7e);
+}
+
+.flag-icon-hm {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/hm.svg?fdd5197f75474534c5181648567dd633);
+}
+
+.flag-icon-hm.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/hm.svg?8b4c33d4098f83d3cddd6953707af769);
+}
+
+.flag-icon-hn {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/hn.svg?f53ee3d65d19c9dd755eb992a52ae727);
+}
+
+.flag-icon-hn.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/hn.svg?ebef2cd564ca07f12aa10d84048e0496);
+}
+
+.flag-icon-hr {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/hr.svg?00a76e1b588a62b0fad98dd62bd1283b);
+}
+
+.flag-icon-hr.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/hr.svg?f3f2e25c45a219c68654040bb674a6c4);
+}
+
+.flag-icon-ht {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ht.svg?3af38bff509f443ef70e799f51a0e5c0);
+}
+
+.flag-icon-ht.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ht.svg?663996cf665e8ab764d5df3d49b4b73d);
+}
+
+.flag-icon-hu {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/hu.svg?bcbd277021f4a8f5a0591c07a54c9caf);
+}
+
+.flag-icon-hu.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/hu.svg?7ae2a1f04ec537fbba4bea8c15126490);
+}
+
+.flag-icon-id {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/id.svg?e2afd171e6a62816237b8c39bdb26ccc);
+}
+
+.flag-icon-id.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/id.svg?0b7fa609d99165dc53779622ac443791);
+}
+
+.flag-icon-ie {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ie.svg?5ecf710f14d859cbceb6f20ff89a7c13);
+}
+
+.flag-icon-ie.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ie.svg?1b0ac4e772c2e62aef2f4646a46ab03f);
+}
+
+.flag-icon-il {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/il.svg?4c70e23214e9da6a56eb525f6a31a5c8);
+}
+
+.flag-icon-il.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/il.svg?3bc4ce048568d30c327fe163783c8f63);
+}
+
+.flag-icon-im {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/im.svg?b21ce587e66db16e0428f4f3de36c4d3);
+}
+
+.flag-icon-im.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/im.svg?d637f63b68f97839a27b37c34f1af1a1);
+}
+
+.flag-icon-in {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/in.svg?e5926cb75dcbb15638dae2af4b9abbcc);
+}
+
+.flag-icon-in.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/in.svg?e626d1bb4e16e732e1ddf526206aefb3);
+}
+
+.flag-icon-io {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/io.svg?e31ca9aa9209d9b76a0b7511c21e9fc0);
+}
+
+.flag-icon-io.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/io.svg?c32d7f9e59460fb90af6fdf4c757a860);
+}
+
+.flag-icon-iq {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/iq.svg?5cd51d2bbb7385580434ed831dbdf8ca);
+}
+
+.flag-icon-iq.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/iq.svg?e549011efede8b5ba38b8b2af9915c2e);
+}
+
+.flag-icon-ir {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ir.svg?12e7432b428f8d631eb5fede40b2e095);
+}
+
+.flag-icon-ir.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ir.svg?c945dfdfaee26ad2861c09ba9c678844);
+}
+
+.flag-icon-is {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/is.svg?2dfa14d19684fbe061e4e81ef473aed2);
+}
+
+.flag-icon-is.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/is.svg?1842f1a952e8f0d4ca471d3cd3872b2a);
+}
+
+.flag-icon-it {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/it.svg?290f2fec799fabdf2a85be3d2a2f9977);
+}
+
+.flag-icon-it.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/it.svg?9938f4b9588502f93b20243ed3a5b60c);
+}
+
+.flag-icon-je {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/je.svg?7a0b4850d933dbc21d7544b015d878b7);
+}
+
+.flag-icon-je.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/je.svg?e1bb30f3c6be27ba0bc425574ed802bb);
+}
+
+.flag-icon-jm {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/jm.svg?6bb96bbc99218d9f84f7edcf8012c77b);
+}
+
+.flag-icon-jm.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/jm.svg?74ccffca23e5a91356deb4060afdd5b9);
+}
+
+.flag-icon-jo {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/jo.svg?f41fe7d26b69dec06fef1fb61a0e0fff);
+}
+
+.flag-icon-jo.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/jo.svg?e678dae866ec74e6a939083ea4223eac);
+}
+
+.flag-icon-jp {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/jp.svg?19c631c1498ba5517cd5d01823f50e2a);
+}
+
+.flag-icon-jp.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/jp.svg?980c12c54fe2259234344611bde3f6da);
+}
+
+.flag-icon-ke {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ke.svg?74aaf58557811d8e79ab93e6e0a2d3f5);
+}
+
+.flag-icon-ke.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ke.svg?9ea890912ffd2f80e7a3182a0c325afc);
+}
+
+.flag-icon-kg {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/kg.svg?1fe994c1e99757dce0236378b8704696);
+}
+
+.flag-icon-kg.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/kg.svg?4ad89b3a703d225e1f6d2e2128d573ea);
+}
+
+.flag-icon-kh {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/kh.svg?7b33804c913e2285c5387a26b6a95a08);
+}
+
+.flag-icon-kh.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/kh.svg?695ec7a1a39090e600d533a38c5db55c);
+}
+
+.flag-icon-ki {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ki.svg?de100d3095b62260166f474b5bd7bbb4);
+}
+
+.flag-icon-ki.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ki.svg?32000b051bb6bb9ee78500c639023c1a);
+}
+
+.flag-icon-km {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/km.svg?93ef5e214ae093b8adc829329c310f7f);
+}
+
+.flag-icon-km.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/km.svg?4c4fa2a75b7c9360ac5f343b19ad4c9e);
+}
+
+.flag-icon-kn {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/kn.svg?a4e974e81853186f152252c4d9c54dbd);
+}
+
+.flag-icon-kn.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/kn.svg?091a5508172f8eee28f23ce17d744ecb);
+}
+
+.flag-icon-kp {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/kp.svg?8d10def41b377b1163c50a349b8c4394);
+}
+
+.flag-icon-kp.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/kp.svg?2e79afa21a3e610e55511db40f3ef092);
+}
+
+.flag-icon-kr {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/kr.svg?939387c390531d01a6877e2f6f272f56);
+}
+
+.flag-icon-kr.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/kr.svg?9406f22f1237e7e4059d43ab60f9fbc8);
+}
+
+.flag-icon-kw {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/kw.svg?2dce482defe9d86d05967143aaeb7d3a);
+}
+
+.flag-icon-kw.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/kw.svg?a3a60802b9df1ea679acbbebbc926483);
+}
+
+.flag-icon-ky {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ky.svg?ef8e18776eff1caf6b648c5c29847b64);
+}
+
+.flag-icon-ky.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ky.svg?c311ddba04238d23214d3069072caea2);
+}
+
+.flag-icon-kz {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/kz.svg?7194851eb720d3fdb3ad7c94eade695c);
+}
+
+.flag-icon-kz.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/kz.svg?f528d1705766032d823749be521ec653);
+}
+
+.flag-icon-la {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/la.svg?8d6ad26b7061bc0588921e7a978bdac1);
+}
+
+.flag-icon-la.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/la.svg?80cf2b55ad4d86b51967de1bc8a5b7f8);
+}
+
+.flag-icon-lb {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/lb.svg?75479923a75562bb3dbec6b5243f1860);
+}
+
+.flag-icon-lb.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/lb.svg?940cc75a55e4b18f510a404301dd6e61);
+}
+
+.flag-icon-lc {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/lc.svg?c6488de9494a4e151cc47bdfadffdb4d);
+}
+
+.flag-icon-lc.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/lc.svg?0d361ba543e6cd2404e1bff90be28d78);
+}
+
+.flag-icon-li {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/li.svg?69a1d60ca3996705d91f1f4bd4825b5a);
+}
+
+.flag-icon-li.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/li.svg?572f90277090beca0d31315cec8e1bf4);
+}
+
+.flag-icon-lk {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/lk.svg?593078c9718a2a7a20d6e8e2242eb739);
+}
+
+.flag-icon-lk.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/lk.svg?93412c6fbb52d5bb809b23a3bc50271d);
+}
+
+.flag-icon-lr {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/lr.svg?3a7c494b08f2d0e36a4f5452e3919c92);
+}
+
+.flag-icon-lr.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/lr.svg?74dcec3fec3f73e24a0a362de1a2e496);
+}
+
+.flag-icon-ls {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ls.svg?0de0f907e70c37b2e86e25e29e4bdad4);
+}
+
+.flag-icon-ls.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ls.svg?cddead61f832a10065e915b2c41e04d6);
+}
+
+.flag-icon-lt {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/lt.svg?4c19d3a9f8cb00a45baa5b619cc1dc21);
+}
+
+.flag-icon-lt.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/lt.svg?2ea82cfcd24756f9d718925a52c8efa7);
+}
+
+.flag-icon-lu {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/lu.svg?adc8f77e99b53bd83b54e64df9ee9ceb);
+}
+
+.flag-icon-lu.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/lu.svg?b843e6436ac12254b9d23ba3fc407e37);
+}
+
+.flag-icon-lv {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/lv.svg?9a5d132cec13c3e033f02e906883f06b);
+}
+
+.flag-icon-lv.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/lv.svg?2ce7f836390f846b1359abaa9ba4e8bc);
+}
+
+.flag-icon-ly {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ly.svg?0ea8dfcec5cc820043a4a07c40a56fdc);
+}
+
+.flag-icon-ly.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ly.svg?9d867c1b9d3b76652858a0c5505718bb);
+}
+
+.flag-icon-ma {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ma.svg?363a4f79da72a6e74be0d7f8d4e6c1dc);
+}
+
+.flag-icon-ma.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ma.svg?3b79aff17ae55b760333c9c11e2e1998);
+}
+
+.flag-icon-mc {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/mc.svg?a2634c60fa92f9ff20f08026a6a4b56e);
+}
+
+.flag-icon-mc.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/mc.svg?082fc1558b4cf726b6130f863131d635);
+}
+
+.flag-icon-md {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/md.svg?4d08e48ef4cfb7c192dc4a833ededb93);
+}
+
+.flag-icon-md.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/md.svg?efdfab01385b30e739862fd2fc165f48);
+}
+
+.flag-icon-me {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/me.svg?0b785614513a0b99de04a91166cbf603);
+}
+
+.flag-icon-me.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/me.svg?4c8b84af010134d56b90d1ce18ad9e6b);
+}
+
+.flag-icon-mf {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/mf.svg?2d96a80bd05aca4ef7119716fad0fe64);
+}
+
+.flag-icon-mf.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/mf.svg?c02a78fb2738ceb5eece24c60cb245f5);
+}
+
+.flag-icon-mg {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/mg.svg?f9101073ea57c9f7664cd8f4cc26effa);
+}
+
+.flag-icon-mg.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/mg.svg?5bdc14fe1aa439d1a0b7bec9890f0ef8);
+}
+
+.flag-icon-mh {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/mh.svg?c0b2e372c1a8cb36930ed13adc05d0a8);
+}
+
+.flag-icon-mh.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/mh.svg?7ec670b4d72f8a614957322d46619007);
+}
+
+.flag-icon-mk {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/mk.svg?31ba11ec4d4cdae74ebc0cbc1b768f44);
+}
+
+.flag-icon-mk.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/mk.svg?c370fe88a49ab3c18701c98f02ebbcf4);
+}
+
+.flag-icon-ml {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ml.svg?18083e46073cc9f5f58fda59451b15f9);
+}
+
+.flag-icon-ml.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ml.svg?d11c30638f3d7b1766dc9194c76f52f8);
+}
+
+.flag-icon-mm {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/mm.svg?6f93c6d0ec04077b61c7c7f0f97f0332);
+}
+
+.flag-icon-mm.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/mm.svg?7068544f07c5b683b67aeaf8afb43ff1);
+}
+
+.flag-icon-mn {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/mn.svg?5e4557f7ed743f19592c0f3d5424ad8f);
+}
+
+.flag-icon-mn.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/mn.svg?291814d605941d58335feaba24527a3c);
+}
+
+.flag-icon-mo {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/mo.svg?ac9b1701934ac68456104bab8ff6c5c8);
+}
+
+.flag-icon-mo.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/mo.svg?8d4848888f2e8b82554594097cb5c21b);
+}
+
+.flag-icon-mp {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/mp.svg?394b0c91d8212a6cb6db896dcbd08758);
+}
+
+.flag-icon-mp.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/mp.svg?b0a5ed44db6410228f23d1f2676aeded);
+}
+
+.flag-icon-mq {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/mq.svg?e82d6df9e99c87fb655bdcdc315d2730);
+}
+
+.flag-icon-mq.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/mq.svg?09c19f656772c8f93989b6123655dd91);
+}
+
+.flag-icon-mr {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/mr.svg?3642790a35ff100e55f7874d13af32c5);
+}
+
+.flag-icon-mr.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/mr.svg?7211bfd49f97a5ae1253d2172336ade9);
+}
+
+.flag-icon-ms {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ms.svg?9474f8cf128ce6813e2d501b08cfd7a0);
+}
+
+.flag-icon-ms.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ms.svg?8f7c204278ae1cdcd35caa2bb55dacc7);
+}
+
+.flag-icon-mt {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/mt.svg?c91049a111e0a4dc2611b09a5a469c0b);
+}
+
+.flag-icon-mt.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/mt.svg?0c23ea353ac917d9e4d486a9af72e221);
+}
+
+.flag-icon-mu {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/mu.svg?97beced41b168e88e8fb1d9562264d1d);
+}
+
+.flag-icon-mu.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/mu.svg?d7d71f034d81a71053730203f958dca1);
+}
+
+.flag-icon-mv {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/mv.svg?0329f53cf8f786716fe4c85fecf33bf2);
+}
+
+.flag-icon-mv.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/mv.svg?91b2c27c9c550f55860739fda63e1ec9);
+}
+
+.flag-icon-mw {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/mw.svg?b4d805efda655aef8b6e88cb546f2d80);
+}
+
+.flag-icon-mw.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/mw.svg?6807c4fdd0370b23d239d22883ecf478);
+}
+
+.flag-icon-mx {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/mx.svg?bc63d25be57acf721e56aa378395e51b);
+}
+
+.flag-icon-mx.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/mx.svg?05c8d69783e68aaad2f439631db79616);
+}
+
+.flag-icon-my {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/my.svg?0d298a9e4566332f8a840d388fa6db2d);
+}
+
+.flag-icon-my.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/my.svg?848fbf91865a8d1912638bb1c2b8fa0a);
+}
+
+.flag-icon-mz {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/mz.svg?dac5f7ee4f2a02e79de217bea9f79849);
+}
+
+.flag-icon-mz.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/mz.svg?dcf8977ee74002921810a1e8014a57a1);
+}
+
+.flag-icon-na {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/na.svg?e241f81665d5aa3bcd027395adb6eb1a);
+}
+
+.flag-icon-na.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/na.svg?27bc2313a9535106015ccb6e98c26b29);
+}
+
+.flag-icon-nc {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/nc.svg?5681de45e8340741e312252970a01037);
+}
+
+.flag-icon-nc.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/nc.svg?046cebb8a66efa64641c9c90e9f077b2);
+}
+
+.flag-icon-ne {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ne.svg?6fd3ccdef1a91e8be5aef3841765069d);
+}
+
+.flag-icon-ne.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ne.svg?64f5ff142997ea42d42e58f1831693bc);
+}
+
+.flag-icon-nf {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/nf.svg?7a4f3d1b34fa49f5a098666d39b3ba44);
+}
+
+.flag-icon-nf.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/nf.svg?7c3216dcabd2a393fa48df68238d1667);
+}
+
+.flag-icon-ng {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ng.svg?b69ed1e58b69dcadbf0e30265064ee70);
+}
+
+.flag-icon-ng.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ng.svg?caaf41205a6fde2a18533c696a971248);
+}
+
+.flag-icon-ni {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ni.svg?d30c03773b8ce54120334c712f6c79f9);
+}
+
+.flag-icon-ni.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ni.svg?52cfeebfb0f78f395c1380c208ae088d);
+}
+
+.flag-icon-nl {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/nl.svg?21eb77dcfa38c6d7bb81fb3d3ab4a7cf);
+}
+
+.flag-icon-nl.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/nl.svg?f9d570ec865ab2c1e9d4c00bfe653190);
+}
+
+.flag-icon-no {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/no.svg?6df96bb22557028a5f7728dd629bfdef);
+}
+
+.flag-icon-no.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/no.svg?266dbd6fc3e66414aa3c05bb90510bf7);
+}
+
+.flag-icon-np {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/np.svg?ecc31e52fb6b958eb68131f217009d1b);
+}
+
+.flag-icon-np.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/np.svg?f7885aa646996a2aa6e0da751dd93816);
+}
+
+.flag-icon-nr {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/nr.svg?dcf2ea3a8e5dbf8a9b805ecb2d2fc922);
+}
+
+.flag-icon-nr.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/nr.svg?1f7cfffb6cb01e5215ada60e128ea252);
+}
+
+.flag-icon-nu {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/nu.svg?770e6779515b496ac3b67e6f0a207c7e);
+}
+
+.flag-icon-nu.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/nu.svg?9deebec59d90dece17fc9c87e82b6ff0);
+}
+
+.flag-icon-nz {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/nz.svg?4dedf09b8933ec6f43903ba10d865d56);
+}
+
+.flag-icon-nz.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/nz.svg?37be84f4206a0eae405bbd495ecaaa69);
+}
+
+.flag-icon-om {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/om.svg?716feea54634c16f406a0bdd4efa9b21);
+}
+
+.flag-icon-om.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/om.svg?09e65f88432f6b938338e8d055807259);
+}
+
+.flag-icon-pa {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/pa.svg?8788ab50de263793f74b85d2e6eaba5c);
+}
+
+.flag-icon-pa.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/pa.svg?69b3b90501ccfc42beffe5f0fd531d4e);
+}
+
+.flag-icon-pe {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/pe.svg?9e2ec84ad461c170e9e5ece9be584c46);
+}
+
+.flag-icon-pe.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/pe.svg?83c26459858b4334c435886c37cc8379);
+}
+
+.flag-icon-pf {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/pf.svg?296e94595f307817fc2bf28cc6a98618);
+}
+
+.flag-icon-pf.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/pf.svg?fbd548e641a7199e969d252cf9d1eb18);
+}
+
+.flag-icon-pg {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/pg.svg?dcb8c4ab032af81620bdf25bc2ff9575);
+}
+
+.flag-icon-pg.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/pg.svg?9ebf0bb36bfe656e7aba15d47451a236);
+}
+
+.flag-icon-ph {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ph.svg?596b9b66d026fa222c2d4a055e7f299d);
+}
+
+.flag-icon-ph.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ph.svg?374bb0d60bc777e60d0fd5350e9a03cc);
+}
+
+.flag-icon-pk {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/pk.svg?8f9276eb2e7dc3eac94d57ec63ea2818);
+}
+
+.flag-icon-pk.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/pk.svg?0e17f31b0f156316ef2028671d12825f);
+}
+
+.flag-icon-pl {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/pl.svg?7ea4b5b2df865bf73b06a50c1763b50e);
+}
+
+.flag-icon-pl.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/pl.svg?9400273de5d060652ce7f8c43adbcf25);
+}
+
+.flag-icon-pm {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/pm.svg?c5a64f87b2370f6a2ae3cf9d6523c9e4);
+}
+
+.flag-icon-pm.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/pm.svg?7582c30f04bd66a4e73cc3975398f85d);
+}
+
+.flag-icon-pn {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/pn.svg?0911eddaa4bb5cbf54b8d318c454fe35);
+}
+
+.flag-icon-pn.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/pn.svg?ab7259a94ec182c05827fd8bd1a3e445);
+}
+
+.flag-icon-pr {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/pr.svg?7845ecd77b3b58e3c8a531c23905ef9c);
+}
+
+.flag-icon-pr.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/pr.svg?836bcb814711de3da2063e866565340a);
+}
+
+.flag-icon-ps {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ps.svg?77489c5e7455703ed84f5548c3addbb3);
+}
+
+.flag-icon-ps.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ps.svg?451101efffc43d2b1ae6755db0380c6c);
+}
+
+.flag-icon-pt {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/pt.svg?b89a5b80ca1a71c3b96a85fe858b62da);
+}
+
+.flag-icon-pt.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/pt.svg?5697f2973616282e4c76ffeadbc78f0a);
+}
+
+.flag-icon-pw {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/pw.svg?5f3d8d8e8473f6439a214096e59c7636);
+}
+
+.flag-icon-pw.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/pw.svg?666cd05f03955ea01aa5859d914a0fa1);
+}
+
+.flag-icon-py {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/py.svg?51b0bef3321042c047177de5e4f42e7c);
+}
+
+.flag-icon-py.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/py.svg?b19bb0ae9ad5d553a146f088ed6fa4a0);
+}
+
+.flag-icon-qa {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/qa.svg?90240e607800ce7ed1bdf42b580695bc);
+}
+
+.flag-icon-qa.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/qa.svg?c08921ec8cdc1b1a0e8e7f818cfdbe2f);
+}
+
+.flag-icon-re {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/re.svg?f05b5f1673afe6db0760a5fc7e8610c6);
+}
+
+.flag-icon-re.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/re.svg?7e8577e98f035e765e59bb047a0cd2d2);
+}
+
+.flag-icon-ro {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ro.svg?ea966c3dc0adf3d08a0048f1af8e322c);
+}
+
+.flag-icon-ro.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ro.svg?51182fc9671cbaa10989dbae17427f55);
+}
+
+.flag-icon-rs {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/rs.svg?51e6180ced2cf59fd51e42fcc904988b);
+}
+
+.flag-icon-rs.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/rs.svg?3b67d7bed888271edff679c68117af49);
+}
+
+.flag-icon-ru {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ru.svg?f1c2ba49b3ccc06ba58a3889e1445971);
+}
+
+.flag-icon-ru.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ru.svg?f760036294e1fff52a9a88663d0d7a46);
+}
+
+.flag-icon-rw {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/rw.svg?26854553b660fa5e4982e8253545fa3c);
+}
+
+.flag-icon-rw.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/rw.svg?02a8a07e06e4ae9c012213554233b005);
+}
+
+.flag-icon-sa {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/sa.svg?b9a346574cdc8950dd34b50780441f57);
+}
+
+.flag-icon-sa.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/sa.svg?dbdc272cb217fd407ff810ae4b6e2762);
+}
+
+.flag-icon-sb {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/sb.svg?2c405bb603253b6e2040a62b6b417b90);
+}
+
+.flag-icon-sb.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/sb.svg?00988e025b134db9744329626d126aab);
+}
+
+.flag-icon-sc {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/sc.svg?9ba013463b785efeb6be8cb92d335bb1);
+}
+
+.flag-icon-sc.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/sc.svg?8357ba15f90dbaaeec2a8b5ab44fdfad);
+}
+
+.flag-icon-sd {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/sd.svg?090d0e106e0c7fd28b239852af2c91e1);
+}
+
+.flag-icon-sd.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/sd.svg?cb3da007630d3b35d1ca521bb2c76364);
+}
+
+.flag-icon-se {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/se.svg?22333e71c0c3e3d8da11f6e7985c622b);
+}
+
+.flag-icon-se.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/se.svg?4984ae470ed69178af1dc26d6978f38f);
+}
+
+.flag-icon-sg {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/sg.svg?e6a27ad3fc2dedabca8b680fae357537);
+}
+
+.flag-icon-sg.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/sg.svg?9751741f84e6e5263a407b127b7d782b);
+}
+
+.flag-icon-sh {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/sh.svg?c5ab8c6e3ffc963e14fb32d4ac271ccd);
+}
+
+.flag-icon-sh.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/sh.svg?acd7b6efcbb9ea9ca7e6f87ca23d5b9b);
+}
+
+.flag-icon-si {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/si.svg?7f576d8798a8732afa465065bff56a6b);
+}
+
+.flag-icon-si.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/si.svg?d38938fcbf4ff943085655e60cd4899d);
+}
+
+.flag-icon-sj {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/sj.svg?4952c9a6d03f7d9caa08bffd322b3bce);
+}
+
+.flag-icon-sj.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/sj.svg?bf11a7596686324ffe17b844d8d2da49);
+}
+
+.flag-icon-sk {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/sk.svg?be58e557507f1468968917cb825153ab);
+}
+
+.flag-icon-sk.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/sk.svg?563985765998ec7428e99bda01cbee7c);
+}
+
+.flag-icon-sl {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/sl.svg?4fd17d63688a1b300bcafac703d5dd7c);
+}
+
+.flag-icon-sl.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/sl.svg?f1772cd4436de4f4535ad8725adbd85d);
+}
+
+.flag-icon-sm {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/sm.svg?7e23c95234800a7c7e1e0a03e8b3702e);
+}
+
+.flag-icon-sm.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/sm.svg?b57f66050d777f87e0a5ca189c484b15);
+}
+
+.flag-icon-sn {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/sn.svg?1ce79520b54b680dcc8ef40e1ed8a80b);
+}
+
+.flag-icon-sn.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/sn.svg?a03bc309423c9052891ad0e5e65dbcee);
+}
+
+.flag-icon-so {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/so.svg?d1a7d3e18523bf69f2eb0470b89b7622);
+}
+
+.flag-icon-so.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/so.svg?34b037a702aae22a75340594821f0476);
+}
+
+.flag-icon-sr {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/sr.svg?690504905775fc1b1480f659e631a028);
+}
+
+.flag-icon-sr.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/sr.svg?4ee190817d3b7c7862ca83e56bea902d);
+}
+
+.flag-icon-ss {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ss.svg?e4bf9bb42bd5d25190fee9dfdd245c76);
+}
+
+.flag-icon-ss.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ss.svg?2ad5a2bbc138690704ada7e1a8577410);
+}
+
+.flag-icon-st {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/st.svg?72697a87cfc011963be4361604931288);
+}
+
+.flag-icon-st.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/st.svg?342a4d3c791c89ec3103cbfbc44496c0);
+}
+
+.flag-icon-sv {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/sv.svg?3bb132d79aef68d7fe4173688648ef29);
+}
+
+.flag-icon-sv.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/sv.svg?f4b3314001ea3a7cf1d0a98c254d8cd3);
+}
+
+.flag-icon-sx {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/sx.svg?aafb13f61b6688f41a14c976d908b855);
+}
+
+.flag-icon-sx.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/sx.svg?ce647f25cbbcdb00ed0d4be53bff5d32);
+}
+
+.flag-icon-sy {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/sy.svg?6529aa17e46f775a39317b1ed78a526d);
+}
+
+.flag-icon-sy.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/sy.svg?9d13beb594ee208a68642569e115b3ff);
+}
+
+.flag-icon-sz {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/sz.svg?d62f5eab640be40355e8fdca853ed0a4);
+}
+
+.flag-icon-sz.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/sz.svg?5d494168348fddfa3aeb364ab6c2e3ea);
+}
+
+.flag-icon-tc {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/tc.svg?f4f865830e706c26ef447d41af35610d);
+}
+
+.flag-icon-tc.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/tc.svg?0d16f864a483488586df2212e962475a);
+}
+
+.flag-icon-td {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/td.svg?230eddd3b5d97166b70e47afed43a67f);
+}
+
+.flag-icon-td.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/td.svg?ad4b4469031fb72bd98f795c031cfeee);
+}
+
+.flag-icon-tf {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/tf.svg?cf4959c4339d5b1230931b8b44c5e9a9);
+}
+
+.flag-icon-tf.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/tf.svg?aaea08de295f296f0bba198b214831ae);
+}
+
+.flag-icon-tg {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/tg.svg?f97c4ebe662df8683fdec11f56c87599);
+}
+
+.flag-icon-tg.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/tg.svg?4abbb52870d11bce293d114b7fa12619);
+}
+
+.flag-icon-th {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/th.svg?b6ade2beba225ed5f2b5dc6487ffa54a);
+}
+
+.flag-icon-th.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/th.svg?2ca3db46e2b26412705d4c1c0b6ced04);
+}
+
+.flag-icon-tj {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/tj.svg?b32f7c017787f0d8579b5aeab5923fb4);
+}
+
+.flag-icon-tj.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/tj.svg?e97716cafb6e3b770d5b939f587d026e);
+}
+
+.flag-icon-tk {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/tk.svg?54b9e3f941cb3083e2a3f71fe78e0c2d);
+}
+
+.flag-icon-tk.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/tk.svg?e3d850fb9644bf50d89118be561bd46e);
+}
+
+.flag-icon-tl {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/tl.svg?503b7926732b784efbede0c1d6569df2);
+}
+
+.flag-icon-tl.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/tl.svg?c7a146dc0d916983f8dd11f2982c0ed9);
+}
+
+.flag-icon-tm {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/tm.svg?6de6696b70775fd30f3b5a237fceb28c);
+}
+
+.flag-icon-tm.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/tm.svg?442986488503d5356e8026045953e0d6);
+}
+
+.flag-icon-tn {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/tn.svg?6cd8c9a453cd0fc5e7619a480e957d2d);
+}
+
+.flag-icon-tn.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/tn.svg?8b09464a7524dff3fa47e5a0204991e5);
+}
+
+.flag-icon-to {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/to.svg?65dda6ec6f9719bbd78463630e8470b6);
+}
+
+.flag-icon-to.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/to.svg?aaa24511e1160314531ac9a771642a48);
+}
+
+.flag-icon-tr {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/tr.svg?2880fc8e0e28f4a11a8d5f7db508d4c6);
+}
+
+.flag-icon-tr.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/tr.svg?c3d773f3ebbea061e963baad5606508a);
+}
+
+.flag-icon-tt {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/tt.svg?b9a6939e2ab09927d19088bb11957702);
+}
+
+.flag-icon-tt.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/tt.svg?4252a958aa98bb3ef5f7755b8f0f8736);
+}
+
+.flag-icon-tv {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/tv.svg?99618ffc3d126b12802f080330a16921);
+}
+
+.flag-icon-tv.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/tv.svg?c87adc622981a557f7a5e841ea9ad1a6);
+}
+
+.flag-icon-tw {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/tw.svg?83324ef79fd96b77a6090612fad174df);
+}
+
+.flag-icon-tw.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/tw.svg?a72a85cb06aca393b4c6820552923106);
+}
+
+.flag-icon-tz {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/tz.svg?2218434d34c055a29fdf4ebd154fe074);
+}
+
+.flag-icon-tz.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/tz.svg?20af2614818e325d953d7ed0c602923c);
+}
+
+.flag-icon-ua {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ua.svg?67a46bf793e26237ace0ff44b2eff6b6);
+}
+
+.flag-icon-ua.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ua.svg?2dd397cb920452449acaff2aa80a167d);
+}
+
+.flag-icon-ug {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ug.svg?83f4207b3f42150d667b04e7fe6b6a47);
+}
+
+.flag-icon-ug.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ug.svg?983dd591c56af488af9614a3b3fc9711);
+}
+
+.flag-icon-um {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/um.svg?0f5d59d436cb8d91444b8cbe055abc3a);
+}
+
+.flag-icon-um.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/um.svg?c3e06b4d7dfec14653ce49da7ac9efe4);
+}
+
+.flag-icon-us {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/us.svg?3cc0d38b3e8d93132c90fec5d3d06c68);
+}
+
+.flag-icon-us.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/us.svg?c95087e1a852cf730acc3defc2d52724);
+}
+
+.flag-icon-uy {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/uy.svg?4c3f85c5401c3a3875eedbcd2173f43f);
+}
+
+.flag-icon-uy.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/uy.svg?091841c8018480091faefbc9124eb3eb);
+}
+
+.flag-icon-uz {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/uz.svg?6e16292aee6b5262a6938af4ed24792d);
+}
+
+.flag-icon-uz.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/uz.svg?ba79d2974850ade2d0360e7cd0616f31);
+}
+
+.flag-icon-va {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/va.svg?6d6a5ae672030a7e351ffa3265e44c32);
+}
+
+.flag-icon-va.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/va.svg?555e01bd279c6bbc28c4b4bd85a47582);
+}
+
+.flag-icon-vc {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/vc.svg?e19034240ae39be40a4c1ce9a31b3ba7);
+}
+
+.flag-icon-vc.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/vc.svg?2614017538c99c0f2ea7b5823d128ae4);
+}
+
+.flag-icon-ve {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ve.svg?b8bb0477d02228d82ffb54c74b24ec24);
+}
+
+.flag-icon-ve.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ve.svg?125ee9246eea1cb1b6626f2cb1f335af);
+}
+
+.flag-icon-vg {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/vg.svg?7bc5c83294392b4386af3792418872b1);
+}
+
+.flag-icon-vg.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/vg.svg?76c17dc332a16129789a6a33f58627a3);
+}
+
+.flag-icon-vi {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/vi.svg?bad0002a368d6bca0956ab2b5b889145);
+}
+
+.flag-icon-vi.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/vi.svg?1ae3b627580608e32c9947b9a2a87144);
+}
+
+.flag-icon-vn {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/vn.svg?2301f6f466f2e744e48a5bbaa83269eb);
+}
+
+.flag-icon-vn.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/vn.svg?25540177a9e64be64b71d743cec8a669);
+}
+
+.flag-icon-vu {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/vu.svg?25acc79729c1d8a104b6a5d1afc4c9fa);
+}
+
+.flag-icon-vu.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/vu.svg?87d69c1826cf7245c2d83ae1d4e4a7fb);
+}
+
+.flag-icon-wf {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/wf.svg?e9a373c6bcbf8ea5021ff0ce24b72e06);
+}
+
+.flag-icon-wf.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/wf.svg?55c63880d979782164502e87292e35b5);
+}
+
+.flag-icon-ws {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ws.svg?a6817aa95b8cdf652ba6f8c60527188d);
+}
+
+.flag-icon-ws.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ws.svg?81cbff3db85ab05a4ac816a8ab047727);
+}
+
+.flag-icon-ye {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/ye.svg?f62afcddf3ac8b1dfd3e9b0e67ba23bd);
+}
+
+.flag-icon-ye.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/ye.svg?2289a38ef27f51f7e88a7791dd125021);
+}
+
+.flag-icon-yt {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/yt.svg?5c77b04743aada260f6b0daaa7c08793);
+}
+
+.flag-icon-yt.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/yt.svg?bf9663aea16580e485d0b525dfaa73f1);
+}
+
+.flag-icon-za {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/za.svg?83099da26ad6804ed7a59dfb9b639de0);
+}
+
+.flag-icon-za.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/za.svg?3c71a2a22271a414dd3d3b34e95364d3);
+}
+
+.flag-icon-zm {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/zm.svg?79a41234f024ca5ab0a9ea130ab83b7b);
+}
+
+.flag-icon-zm.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/zm.svg?a303f51a36999e85ed3baa54fef73a7a);
+}
+
+.flag-icon-zw {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/zw.svg?f5ceeff7d65d0b5e33b79719b9948b59);
+}
+
+.flag-icon-zw.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/zw.svg?2840e62aaca37d36b327f560b9557df1);
+}
+
+.flag-icon-es-ca {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/es-ca.svg?2b2d073d58c4747e322ef8e48b09beca);
+}
+
+.flag-icon-es-ca.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/es-ca.svg?a03129ff81e9f5633e7501e84ad38e4d);
+}
+
+.flag-icon-es-ga {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/es-ga.svg?23a30d01d4c6338e7f5c307f5045cfd6);
+}
+
+.flag-icon-es-ga.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/es-ga.svg?405f191245cb5d0085d789f338a16d67);
+}
+
+.flag-icon-eu {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/eu.svg?db2e50ad0bf5ecccc0caf01d1556a162);
+}
+
+.flag-icon-eu.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/eu.svg?1019087b8a58ac24c4ea6304579bdd0f);
+}
+
+.flag-icon-gb-eng {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/gb-eng.svg?1fa89df2764a3f107c345ec3d56886e8);
+}
+
+.flag-icon-gb-eng.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/gb-eng.svg?ebbd69accf16823ad6840bbdfef791ba);
+}
+
+.flag-icon-gb-nir {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/gb-nir.svg?8ad03581959bce8c3da0e389104cf1e3);
+}
+
+.flag-icon-gb-nir.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/gb-nir.svg?f9fcc604971f0e53b88d3edf29000e85);
+}
+
+.flag-icon-gb-sct {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/gb-sct.svg?4743f1b0f3ffe8d16ba501687a3dc597);
+}
+
+.flag-icon-gb-sct.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/gb-sct.svg?bea4865f11865ef5646547efd1a78c32);
+}
+
+.flag-icon-gb-wls {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/gb-wls.svg?a69b6bb076d89808e06433d79c9d3d6d);
+}
+
+.flag-icon-gb-wls.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/gb-wls.svg?77f90d8e620af4d9604d4da7c7f49346);
+}
+
+.flag-icon-un {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/un.svg?4c0a34afb0c02cd13b3df7aa133bed62);
+}
+
+.flag-icon-un.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/un.svg?19c1ad320e901a90c0e31c38039a0f27);
+}
+
+.flag-icon-xk {
+  background-image: url(/images/vendor/flag-icon-css/flags/4x3/xk.svg?12d1409638442c96c8b9998dfa744c6c);
+}
+
+.flag-icon-xk.flag-icon-squared {
+  background-image: url(/images/vendor/flag-icon-css/flags/1x1/xk.svg?48269c0b55c2532ccb7608a0fc28a5c2);
+}
+
 
