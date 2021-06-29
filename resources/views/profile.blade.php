@@ -85,6 +85,7 @@
 
                                         <label for="photo">{{ __("Photo")}}:</label>
                                         <input type="file" name="photo" id="photo">
+                                        <div class="alert-danger" style="font-weight: bold;">@error('photo') {{$message}} @enderror</div>
                                         
                                         <button type="submit" class="btn btn-block btn-success btn-lg" style="font-size: 14px; ">{{ __("Submit")}}</button>
                                     
