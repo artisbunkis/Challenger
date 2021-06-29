@@ -83,7 +83,7 @@ class UserController extends Controller
                 //'username'=>'unique:users',
                 //'email'=>'unique:users',
                 'birthday'=>'nullable|before_or_equal:today',
-                'photo' => 'mimes:jpeg,png,bmp,tiff |max:4096'
+                'photo' => 'mimes:jpeg,png,bmp,tiff,jpg |max:4096'
     
             ]);
         } else {
@@ -97,7 +97,7 @@ class UserController extends Controller
                         // 'username'=>'unique:users',
                         'email'=>'unique:users|max:70',
                         'birthday'=>'nullable|before_or_equal:today',
-                        'photo' => 'mimes:jpeg,png,bmp,tiff |max:4096'
+                        'photo' => 'mimes:jpeg,png,bmp,tiff,jpg |max:4096'
             
                     ]);
                 }
@@ -109,7 +109,7 @@ class UserController extends Controller
                         'username'=>'required|unique:users|max:30',
                         //'email'=>'unique:users'
                         'birthday'=>'nullable|before_or_equal:today',
-                        'photo' => 'mimes:jpeg,png,bmp,tiff |max:4096'
+                        'photo' => 'mimes:jpeg,png,bmp,tiff,jpg |max:4096'
             
                     ]);
                 } 
@@ -121,7 +121,7 @@ class UserController extends Controller
                     'username'=>'required|unique:users|max:30',
                     'email'=>'unique:users|max:70',
                     'birthday'=>'nullable|before_or_equal:today',
-                    'photo' => 'mimes:jpeg,png,bmp,tiff |max:4096'
+                    'photo' => 'mimes:jpeg,png,bmp,tiff,jpg |max:4096'
         
                 ]);
             }
