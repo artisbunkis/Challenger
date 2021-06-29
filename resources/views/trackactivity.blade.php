@@ -3,7 +3,7 @@
 <!DOCTYPE html>    
 <html>  
     <head>    
-        <title>Track Activity</title>         
+        <title>{{ __("Track Activity")}}</title>         
     </head> 
 <body>
 
@@ -12,13 +12,13 @@
         <div class="row justify-content">
             <div class="col-md-5">
                 <div class="card mb-3">
-                    <div class="card-header "><h2 class="text-center">Track Activity</h2></div>
+                    <div class="card-header "><h2 class="text-center">{{ __("Track Activity")}}</h2></div>
                     
                         <div class="card-body">
                             <div class="form-group">
                                 <form method="POST" id="forma" action="{{ action([App\Http\Controllers\TrackActivityController::class, 'store']) }}"> @csrf
                                     
-                                    <label for="startTime">Select Sports Type</label>
+                                    <label for="startTime">{{ __("Select Sports Type")}}</label>
                                     <select class="form-control" name="sportsType" id="sportsType">
                                         <?php
                                         
@@ -30,7 +30,7 @@
                                     <br>
 
                                     
-                                    <label for="startTime" >Set Start Time</label>
+                                    <label for="startTime" >{{ __("Set Start Time")}}</label>
 
                                 
 
@@ -39,7 +39,7 @@
                                     <br>
                                     
                                     
-                                    <button type="button" class="btn btn-secondary btn-lg btn-block" style="font-size: 14px;" onclick="add(); showSaveButton()">Add Units</button>
+                                    <button type="button" class="btn btn-secondary btn-lg btn-block" style="font-size: 14px;" onclick="add(); showSaveButton()">{{ __("Add Units")}}</button>
                                     
 
                                     
@@ -62,7 +62,7 @@
                                     </div>
                                     
 
-                                    <button type="button" class="btn btn-success btn-lg btn-block" style="display: none; font-size: 14px;" id="saveButton" onclick="saveUnits()">Save Units</button>
+                                    <button type="button" class="btn btn-success btn-lg btn-block" style="display: none; font-size: 14px;" id="saveButton" onclick="saveUnits()">{{ __("Save Units")}}</button>
                                     
                                     <input type="hidden" id="submitButton" class="btn btn-success btn-lg btn-block" style="font-size: 14px;" value="Submit">
                                     <br><br>
@@ -80,13 +80,13 @@
 
             <div class="col-md-7">
                 <div class="card mb-3">
-                    <div class="card-header "><h2 class="text-center">Activities</h2></div>
+                    <div class="card-header "><h2 class="text-center">{{ __("Activities")}}</h2></div>
 
                         <div class="card-body">
                            
                             @isset($allActivities)
                             @if($allActivities == NULL)
-                                <p>You have no Activities</p>
+                                <p>{{ __("You have no Activities")}}</p>
                             @endif
                             @foreach ($allActivities as $activity)
                             <div class="card mb-3">
@@ -102,7 +102,7 @@
                                 
                                 <div class="row">
                                     <div class="col md-3">
-                                        <p><b>Start Time:</b> {{ $activity[0]->startTime }}</p>
+                                        <p><b>{{ __("Start Time")}}:</b> {{ $activity[0]->startTime }}</p>
                                     </div>
                                     <div class="col md-3">
                                         <form method="POST" id="forma" action="{{ action([App\Http\Controllers\TrackActivityController::class, 'destroy'], $activity[0]->activity_ID)}}"> @csrf @method('POST')
@@ -110,7 +110,7 @@
                                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                             <input type="hidden" name="id" value="{{ $activity[0]->activity_ID }}">
                                                             
-                                            <button class="btn btn-block btn-danger btn-sm">Delete Activity</button>
+                                            <button class="btn btn-block btn-danger btn-sm">{{ __("Delete Activity")}}</button>
                                         </form>
                                         
                                     </div>
@@ -213,7 +213,7 @@
 
         inputs.appendChild(document.createElement("br"));
         label = document.createElement("label");
-        label.innerHTML += 'Enter Measurement Values:';
+        label.innerHTML += '{{ __("Enter Measurement Values:")}}';
         inputs.appendChild(label);
         inputs.appendChild(document.createElement("br"));
         inputs.appendChild(y);

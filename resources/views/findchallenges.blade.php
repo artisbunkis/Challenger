@@ -3,7 +3,7 @@
 <!DOCTYPE html>    
 <html>  
     <head>    
-        <title>Find Challenge</title>   
+        <title>{{ __("Find Challenge")}}</title>   
         <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/mystyle.css') }} ">     
     </head> 
 
@@ -19,7 +19,7 @@
     <div id="myBtnContainer" class="d-flex justify-content-between">
         
         <div >
-            <button class="btn  btn-secondary btn-sm butn" onclick="filterSelection('all')">All</button>   
+            <button class="btn  btn-secondary btn-sm butn" onclick="filterSelection('all')">{{ __("All")}}</button>   
         </div>
         
         @isset($sportsTypes)
@@ -53,13 +53,13 @@
                                     @foreach($sportsTypes as $sportsType)
                                     @if($sportsType->sportsType_ID == $challenge->sportsType_ID)                                
                                         <div  id="sportsBox">
-                                            <p><b>Sports Type:</b> {{$sportsType->sportsTypeName}}</p>   
+                                            <p><b>{{ __("Sports Type")}}:</b> {{$sportsType->sportsTypeName}}</p>   
                                         </div>
                                     @endif
                                     @endforeach
                                     @endisset
         
-                                    <p><b>Subscriber Count: </b>
+                                    <p><b>{{ __("Subscriber Count")}}: </b>
                                         @isset($subscribedCountArray)
                                             @foreach ($subscribedCountArray as $s)
                                                 @if($s[0] == $challenge->challenge_ID)
@@ -70,7 +70,7 @@
                                     </p>
         
                                     @isset($measurements)
-                                    <p><b>Goals:</b></p>
+                                    <p><b>{{ __("Goals")}}:</b></p>
                                     @foreach($measurements as $measurement)
                                     @if($challenge->challenge_ID == $measurement->challenge_ID)
                                     
@@ -115,12 +115,12 @@
                                     @endisset
         
                                     
-                                    <p><b>Ends in:</b> {{$challenge->endDate}}</p>
+                                    <p><b>{{ __("Ends in")}}:</b> {{$challenge->endDate}}</p>
         
                                     @isset($user_ids)
                                     @foreach($user_ids as $user_id)
                                     @if($user_id->user_ID == $challenge->creatorUser_ID)
-                                        <p><b>Creator:</b> {{$user_id->username}}</p>
+                                        <p><b>{{ __("Creator")}}:</b> {{$user_id->username}}</p>
                                     @endif
                                     @endforeach
                                     @endisset
@@ -143,7 +143,7 @@
                                                 <input type="hidden" name="id" value="{{ $challenge->challenge_ID }}">
                                                 
                                             
-                                                 <button class="btn btn-block btn-danger btn-lg" style="font-size: 14px;" type="submit">Unsubscribe</button>
+                                                 <button class="btn btn-block btn-danger btn-lg" style="font-size: 14px;" type="submit">{{ __("Unsubscribe")}}</button>
                                             </form>
                                             @else
                                             <form method="POST" id="forma" action="{{ action([App\Http\Controllers\FindChallengesController::class, 'subscribe'], $challenge->challenge_ID)}}"> @csrf @method('POST')
@@ -152,7 +152,7 @@
                                                 <input type="hidden" name="id" value="{{ $challenge->challenge_ID }}">
                                                 
                                             
-                                                 <button class="btn btn-block btn-success btn-lg" style="font-size: 14px;" type="submit">Subscribe</button>
+                                                 <button class="btn btn-block btn-success btn-lg" style="font-size: 14px;" type="submit">{{ __("Subscribe")}}</button>
                                             </form>
                                             @endif
                                         @endisset
@@ -232,13 +232,13 @@
                                 @foreach($sportsTypes as $sportsType)
                                 @if($sportsType->sportsType_ID == $challenge->sportsType_ID)                                
                                     <div  id="sportsBox">
-                                        <p><b>Sports Type:</b> {{$sportsType->sportsTypeName}}</p>   
+                                        <p><b>{{ __("Sports Type")}}:</b> {{$sportsType->sportsTypeName}}</p>   
                                     </div>
                                 @endif
                                 @endforeach
                                 @endisset
     
-                                <p><b>Subscriber Count: </b>
+                                <p><b>{{ __("Subscriber Count")}}: </b>
                                     @isset($subscribedCountArray)
                                         @foreach ($subscribedCountArray as $s)
                                             @if($s[0] == $challenge->challenge_ID)
@@ -251,7 +251,7 @@
                                 @isset($measurements)
                                 @foreach($measurements as $measurement)
                                 @if($challenge->challenge_ID == $measurement->challenge_ID)
-                                    <p><b>Goal:</b> 
+                                    <p><b>{{ __("Goal")}}:</b> 
                                         @foreach ($units as $unit)
                                             @if($unit->unit_ID == $measurement->unit_ID)
                                                 @foreach ($comparisons as $comparison)
@@ -268,12 +268,12 @@
                                 @endisset
     
                                 
-                                <p><b>Ends in:</b> {{$challenge->endDate}}</p>
+                                <p><b>{{ __("Ends in")}}:</b> {{$challenge->endDate}}</p>
     
                                 @isset($user_ids)
                                 @foreach($user_ids as $user_id)
                                 @if($user_id->user_ID == $challenge->creatorUser_ID)
-                                    <p><b>Creator:</b> {{$user_id->username}}</p>
+                                    <p><b>{{ __("Creator")}}:</b> {{$user_id->username}}</p>
                                 @endif
                                 @endforeach
                                 @endisset
@@ -296,7 +296,7 @@
                                             <input type="hidden" name="id" value="{{ $challenge->challenge_ID }}">
                                             
                                         
-                                             <button type="submit">Unsubscribe</button>
+                                             <button type="submit">{{ __("Unsubscribe")}}</button>
                                         </form>
                                         @else
                                         <form method="POST" id="forma" action="{{ action([App\Http\Controllers\FindChallengesController::class, 'subscribe'], $challenge->challenge_ID)}}"> @csrf @method('POST')
@@ -305,7 +305,7 @@
                                             <input type="hidden" name="id" value="{{ $challenge->challenge_ID }}">
                                             
                                         
-                                             <button type="submit">Subscribe</button>
+                                             <button type="submit">{{ __("Subscribe")}}</button>
                                         </form>
                                         @endif
                                     @endisset
@@ -327,12 +327,12 @@
     <div class="row justify-content-center">
         <div class="col-md-4">
             <div class="card border-info mb-3">
-                <div class="card-header text-center "><h2>List of all challenges</h2></div>
+                <div class="card-header text-center "><h2>{{ __("List of all challenges")}}</h2></div>
                     <div class="card-body text-md-left">
                         <table>
                             <tr>
-                                <th>Challenge Title</th>
-                                <th>Delete</th>
+                                <th>{{ __("Challenge Title")}}</th>
+                                <th>{{ __("Delete")}}</th>
                                 
                             </tr>
                         @isset($challenges)
@@ -352,7 +352,7 @@
                                             <input type="hidden" name="id" value="{{ $challenge->challenge_ID }}">
                                             
                                         
-                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                        <button type="submit" class="btn btn-danger">{{ __("Delete")}}</button>
                                     </form>
                                 </td>
                                 

@@ -19,14 +19,14 @@
  
 
     <head>    
-        <title>Find Challenge</title>
+        <title>{{ __("Find Challenge")}}</title>
             
     </head> 
 <body>
 
 
     <div class="container">
-        <h1>Running Totals</h1>
+        <h1>{{ __("Running Totals")}}</h1>
         @php
             $cntOfFinished = 0;
         @endphp
@@ -36,7 +36,7 @@
                     $cntOfFinished += 1;
                 @endphp
             @endforeach
-            <p>Finished Challenges: {{ $cntOfFinished }}</p>
+            <p>{{ __("Finished Challenges")}}: {{ $cntOfFinished }}</p>
         @endisset
     </div>
     
@@ -74,7 +74,7 @@
                                                         <div class="card mb-2" style="padding: 10px">
                                                             <div class="card-body-{{$card}}-2">
                                                                 <div class="justify-content-center">
-                                                                    <p><b>Goal value:</b> {{ $it->goalValue }}
+                                                                    <p><b>{{ __("Goal value")}}:</b> {{ $it->goalValue }}
                                                                         @isset($units)
                                                                             @foreach ($units as $unit)
                                                                                 @if ($unit->unit_ID == $it->unit_ID) 
@@ -84,7 +84,7 @@
 
                                                                                         
                                                                                     {{-- RUNNING TOTALS --}}
-                                                                                    <p><b>My Running total:</b>
+                                                                                    <p><b>{{ __("My Running total")}}:</b>
                                                                                     @isset($myActivities)
                                                                                         @foreach ($myActivities as $activity)
                                                                                             @if ($activity->startTime > $chal->beginDate and $activity->startTime < $chal->endDate)
@@ -140,7 +140,7 @@
                                                                                                     <p style="font-size: 12px;"></p>
                                                                                                 </div>
                                                                                             </div>
-                                                                                            <p style="font-size: 11px; padding-top: 5px; font-weight: bold">Completed</p>
+                                                                                            <p style="font-size: 11px; padding-top: 5px; font-weight: bold">{{ __("Complete")}}</p>
                                                                                         @else
                                                                                             <div id="myProgress" style=" width: 100%; height: 10px; background-color: #ddd ; border-radius: 25px ">
                                                                                                 <div id="myBar" style="width: {{ 
@@ -204,7 +204,7 @@
                                             @endforeach
                                             
                                             @if ($irFinished)
-                                                <button type="button" class="btn btn-success btn-lg btn-block" style="font-size: 14px;">Completed</button>
+                                                <button type="button" class="btn btn-success btn-lg btn-block" style="font-size: 14px;">{{ __("Completed")}}</button>
                                             @else
                                             <form method="POST" id="forma" action="{{ action([App\Http\Controllers\FindChallengesController::class, 'unsubscribe'], $chal->challenge_ID)}}"> @csrf @method('POST')
                                                             
@@ -212,7 +212,7 @@
                                                 <input type="hidden" name="id" value="{{ $chal->challenge_ID }}">
                                                 
                                             
-                                                <button type="submit" class="btn btn-block btn-secondary btn-lg" style="font-size: 14px;">Unsubscribe</button>
+                                                <button type="submit" class="btn btn-block btn-secondary btn-lg" style="font-size: 14px;">{{ __("Unsubscribe")}}</button>
                                             </form>
                                             @endif
                                         @endisset
