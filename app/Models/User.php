@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticable;
 
 use App\Models\Challenge;
 use App\Models\Activity;
+use App\Models\Gender;
 use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticable
@@ -56,7 +57,9 @@ class User extends Authenticable
         return $this->HasMany(Activity::class);
     }
 
-
+    public function genders(){//FK
+        return $this->belongsTo(Gender::class);
+    }
 
 
 
