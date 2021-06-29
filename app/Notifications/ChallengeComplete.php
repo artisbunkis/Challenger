@@ -16,10 +16,10 @@ class ChallengeComplete extends Notification
      *
      * @return void
      */
-    public function __construct($challengeData)
+    public function __construct($challenge)
     {
-        echo(0);
-        $this->challengeData = $challengeData;
+        echo($challenge);
+        $this->challenge = $challenge;
     }
 
     /**
@@ -42,12 +42,17 @@ class ChallengeComplete extends Notification
      */
     public function toMail($notifiable)
     {
-        echo(2);
+
         return (new MailMessage)
-            ->line($this->challengeData['name'])
-            ->line($this->challengeData['body']);
+            ->greeting('You have created a new challenge!')
+            ->line('Congradulations, you just created a new challenge with name "'.$this->challenge->challengeName.'"')
+            ->line('We hope you will finish the challenge till '.$this->challenge->endDate)
+            ->line('')
+            ->line('Good Luck!');
+        
     }
 
+    
     /**
      * Get the array representation of the notification.
      *
@@ -56,9 +61,10 @@ class ChallengeComplete extends Notification
      */
     public function toArray($notifiable)
     {
-        echo(3);
+        // echo(3);
         return [
-            'challenge_ID'=>$this->challengeData['challenge_ID']
+            'challenge_ID'=>$this->challenge->challenge_ID
         ];
+        return;
     }
 }

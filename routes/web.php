@@ -36,6 +36,7 @@ Route::resource('runningtotals', RunningTotalsController::class);
 
 
 
+
 Route::get('/profile', [App\Http\Controllers\HomeController::class, 'index'])->name('profile');
 
 Route::get('/', function () {
@@ -68,4 +69,4 @@ Route::post("/destroy", [TrackActivityController::class, 'destroy'])->name('trac
 
 Route::get('lang/{lang}', ['as' => 'locale.switch', 'uses' => 'App\Http\Controllers\LocalizationController@switchLang']);
 
-Route::get('/notify', [NotificationController::class, 'sendNotification']);
+Route::get('/notify/{challenge}', [NotificationController::class, 'sendNotification']);

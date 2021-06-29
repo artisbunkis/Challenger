@@ -8,12 +8,12 @@ use Illuminate\Foundation\Auth\User as Authenticable;
 
 use App\Models\Challenge;
 use App\Models\Activity;
-
-
+use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticable
 {
     use HasFactory;
+    use Notifiable;
 
     protected $table = "users";
 

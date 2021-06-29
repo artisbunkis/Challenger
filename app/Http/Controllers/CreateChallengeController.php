@@ -13,6 +13,7 @@ use App\Models\Unit;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
 
 class CreateChallengeController extends Controller
 {
@@ -102,9 +103,10 @@ class CreateChallengeController extends Controller
             ]);
         }
 
-
+        return redirect()->action([NotificationController::class, 'sendNotification'], [$challenge]);
         
-        return view('findchallenges');
+        
+        //return view('findchallenges');
         
     }
 

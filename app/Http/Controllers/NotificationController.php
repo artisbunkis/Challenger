@@ -1,11 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Challenge;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Notification;
 
 use App\Models\User;
 use App\Notifications\ChallengeComplete;
+use Illuminate\Support\Facades\Auth;
 
 class NotificationController extends Controller
 {
@@ -19,19 +22,23 @@ class NotificationController extends Controller
         return view('welcome');
     }
     
-    public function sendNotification() {
+    public function sendNotification($challengeID) {
         
-        $data = User::first();
-        echo($data);
-        $challengeData = [
-            'name' => 'bla bla bla',
-            'body' => 'test text',
-        ];
+        $data = User::all()->where('user_ID', '=', Auth::id())->first();
+
+        // $challengeData = [
+        //     'challenge_ID' => 1,
+        //     'name' => 'bla bla bla',
+        //     'body' => 'test text',
+        // ];
         
+        $challenge = Challenge::all()->where('challenge_ID', '=', $challengeID)->first();
+
         //echo($challengeData['body']);
-        Notification::sendNow($data, new ChallengeComplete($challengeData), ['mail', 'database']);
+        Notification::send($data, new ChallengeComplete($challenge));
         //Notification::send($data, new ChallengeComplete($challengeData));
-        echo($challengeData['body']);
-        dd(' notification has been sent!');
+
+        // echo($challengeData['body']);
+        return redirect('findchallenges');
     }
 }
