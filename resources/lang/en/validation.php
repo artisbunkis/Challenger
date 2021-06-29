@@ -141,19 +141,32 @@ return [
             'required'=>'The start time field cannot be empty'
         ],
         'firstname'=>[
-            'regex'=>'First name cannot have numbers in it.'
+            'regex'=>'First name cannot have numbers in it.',
+            'max'=>'Your name exceeds the maximum lenght'
         ],
         'lastname'=>[
-            'regex'=>'Last name cannot have numbers in it.'
+            'regex'=>'Last name cannot have numbers in it.',
+            'max'=>'Your last name exceeds the maximum lenght'
+        ],
+        'username'=>[
+            'max'=>'Your username cannot exceed 30 characters'
+
+        ],
+        'email'=>[
+            'max'=>'Your email cannot be longer than 70 characters'
+
         ],
         'challengeName'=>[
-            'required'=>'Challenge name field cannot be empty'
+            'required'=>'Challenge name field cannot be empty',
+            'max'=>'Challenge name exceeds the maximum lenght of 100 characters'
         ],
         'beginDate'=>[
-            'required'=>'Challenge beginning date field cannot be empty'
+            'required'=>'Challenge beginning date field cannot be empty',
+            'after'=>'The challenge cannot be started on this date.'
         ],
         'endDate'=>[
-            'required'=>'Challenge ending date field cannot be empty'
+            'required'=>'Challenge ending date field cannot be empty',
+            'after'=>'The challenge cannot end on this date.'
         ],
     ],
 

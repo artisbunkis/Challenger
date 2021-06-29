@@ -6,21 +6,16 @@
 <!DOCTYPE html>    
 <html>  
     <head>    
-        <title>{{ __("Create Challenge")}}</title>         
+        <title>Login</title>     
+        <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/loginstyle.css') }} ">       
     </head>
     
     
-    <body style="margin: 0;
-    height: 100%; background-image: url({{asset('/uploadimages/loginWallpaper.jpg')}}) ; -webkit-background-size: cover;
-     -moz-background-size: cover;
-     -o-background-size: cover;
-    background-size: cover;
-    height: 100%; ;
-    background-size: cover;">
-        <div class="container">
+    <body>
+        <div class="container" style="height:100vh">
             <div class="row d-flex flex-row-reverse">
-                <div class="col-md-5 justify-content-center">
-                    <div class="card">
+                <div class="col-md-6 justify-content-center">
+                    <div class="card fade-in">
                         <div class="card-header">{{ __('Login') }}</div>
         
                         <div class="card-body">

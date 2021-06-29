@@ -1,10 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
+<!DOCTYPE html>    
+<html>  
+    <head>    
+        <title>Register</title>     
+        <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/registerstyle.css') }} ">       
+    </head>
+<body>
+        
+    
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card fade-in">
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
@@ -74,4 +83,6 @@
         </div>
     </div>
 </div>
+</body>
+</html>
 @endsection

@@ -78,8 +78,8 @@ class UserController extends Controller
         if($request->username == $thisuser->username && $request->email == $thisuser->email) {
             $uservalidation = request()->validate([
                 //'username'=>'required|unique:users,',
-                'firstname'=>'nullable|regex:/^[a-zA-Z]+$/',
-                'lastname'=>'nullable|string|regex:/^[a-zA-Z]+$/',
+                'firstname'=>'nullable|regex:/^[a-zA-Z]+$/|max:30',
+                'lastname'=>'nullable|string|regex:/^[a-zA-Z]+$/|max:30',
                 //'username'=>'unique:users',
                 //'email'=>'unique:users'
     
@@ -90,19 +90,19 @@ class UserController extends Controller
                 if($request->username == $thisuser->username) {
                     $uservalidation = request()->validate([
                         //'username'=>'required|unique:users,',
-                        'firstname'=>'nullable|regex:/^[a-zA-Z]+$/',
-                        'lastname'=>'nullable|string|regex:/^[a-zA-Z]+$/',
+                        'firstname'=>'nullable|regex:/^[a-zA-Z]+$/|max:30',
+                        'lastname'=>'nullable|string|regex:/^[a-zA-Z]+$/|max:30',
                         // 'username'=>'unique:users',
-                        'email'=>'unique:users'
+                        'email'=>'unique:users|max:70'
             
                     ]);
                 }
                 if($request->email == $thisuser->email) {
                     $uservalidation = request()->validate([
                         //'username'=>'required|unique:users,',
-                        'firstname'=>'nullable|regex:/^[a-zA-Z]+$/',
-                        'lastname'=>'nullable|string|regex:/^[a-zA-Z]+$/',
-                        'username'=>'unique:users',
+                        'firstname'=>'nullable|regex:/^[a-zA-Z]+$/|max:30',
+                        'lastname'=>'nullable|string|regex:/^[a-zA-Z]+$/|max:30',
+                        'username'=>'unique:users|max:30',
                         //'email'=>'unique:users'
             
                     ]);
@@ -110,10 +110,10 @@ class UserController extends Controller
             } else {
                 $uservalidation = request()->validate([
                     //'username'=>'required|unique:users,',
-                    'firstname'=>'nullable|regex:/^[a-zA-Z]+$/',
-                    'lastname'=>'nullable|string|regex:/^[a-zA-Z]+$/',
-                    'username'=>'unique:users',
-                    'email'=>'unique:users'
+                    'firstname'=>'nullable|regex:/^[a-zA-Z]+$/|max:30',
+                    'lastname'=>'nullable|string|regex:/^[a-zA-Z]+$/|max:30',
+                    'username'=>'unique:users|max:30',
+                    'email'=>'unique:users|max:70'
         
                 ]);
             }

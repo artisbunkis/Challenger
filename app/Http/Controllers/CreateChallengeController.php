@@ -68,10 +68,16 @@ class CreateChallengeController extends Controller
         $endDate = $request->endDate;
         $isPublic = $request->isPublic;
         
+       // $dateverification = array(
+       //     'start_date'=>'2000-01-01',
+       //     'end_date'=>'date("Y-m-d")'
+//
+     //   );
+
         $challengevalidation = request()->validate([
-            'challengeName'=>'required',
-            'beginDate'=>'required',
-            'endDate'=>'required'
+            'challengeName'=>'required|max:100',
+            'beginDate'=>'required|after:today',
+            'endDate'=>'required|after:today'
         ]);
         $challenge = new Challenge();
         $challengeID = $challenge->id;
