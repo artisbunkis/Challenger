@@ -57,9 +57,7 @@ class User extends Authenticable
         return $this->HasMany(Activity::class);
     }
 
-    public function genders(){//FK
-        return $this->belongsTo(Gender::class);
-    }
+   
 
 
 
