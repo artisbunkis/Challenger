@@ -149,6 +149,7 @@ return [
             'max'=>'Your last name exceeds the maximum lenght'
         ],
         'username'=>[
+            'required'=>'Username field cannot be empty.',
             'max'=>'Your username cannot exceed 30 characters'
 
         ],
