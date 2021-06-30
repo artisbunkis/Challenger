@@ -304,6 +304,7 @@
         y.setAttribute("placeholder", "Goal value");
         y.setAttribute("id", "Measurement1");
         y.setAttribute("class", "form-control");
+        y.setAttribute("step", "0.01");
         y.required = true;
 
         console.log(comparison);
