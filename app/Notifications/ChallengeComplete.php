@@ -44,6 +44,7 @@ class ChallengeComplete extends Notification
     {
 
         return (new MailMessage)
+            ->subject("New challenge on the way!")
             ->greeting('You have created a new challenge!')
             ->line('Congradulations, you just created a new challenge with name "'.$this->challenge->challengeName.'"')
             ->line('We hope you will finish the challenge till '.$this->challenge->endDate)
