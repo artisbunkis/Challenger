@@ -11,7 +11,5 @@ class Gender extends Model
     protected $table = "gender";
     use HasFactory;
     
-    public function users(){//FK
-        return $this->hasMany(User::class);
-    }
+    
 }
