@@ -33,156 +33,166 @@
     </div>
     <br>
 
-    <div class="container">
-        <div class="row" >
-            @isset($challenges)
-            @foreach($challenges as $challenge)
-                @isset($sportsTypes)
-                    @foreach($sportsTypes as $sportsType)
-                        @if($sportsType->sportsType_ID == $challenge->sportsType_ID)  
-                                                    
-                        <div class="col-md-4 filterDiv {{$sportsType->sportsTypeName}}">
-                            
-                            
     
+    @isset($challenges)
+        @if(count($challenges) == 0)
+        <br>
+            <p style="text-align: center">No Challenges</p>
+        @else
+        <div class="container">
+            <div class="row" >
+                @isset($challenges)            
+                @foreach($challenges as $challenge)
+                    @isset($sportsTypes)
+                        @foreach($sportsTypes as $sportsType)
+                            @if($sportsType->sportsType_ID == $challenge->sportsType_ID)  
+                                                        
+                            <div class="col-md-4 filterDiv {{$sportsType->sportsTypeName}}">
                                 
-                            
-                            <div class="card mb-3 filterDiv {{$sportsType->sportsTypeName}}">
-                            <div class="card-header text-center ">
-                                <div class="row justify-content">
-                                    <div class="" style="padding-left: 5px; margin-bottom: auto; margin-top: auto">
-                                        <img src="{{asset('/uploadimages/sportsicons/'.$sportsType->sportsTypeName.'.svg')}}" width="50" height="50" class="d-inline-block align-center" alt="" style="">
-                                    </div>
-                                    <div class="" style="margin: auto">
-                                        <h2>{{$challenge->challengeName}}</h2>
-                                    </div>
+                                
+        
                                     
-                                   
-                                </div>
-                               </div>
-                                <div class="card-body text-md-left">
-                                    @isset($sportsTypes)
-                                    @foreach($sportsTypes as $sportsType)
-                                    @if($sportsType->sportsType_ID == $challenge->sportsType_ID)                                
-                                        <div  id="sportsBox">
-                                            <p><b>{{ __("Sports Type")}}:</b> {{$sportsType->sportsTypeName}}</p>   
+                                
+                                <div class="card mb-3 filterDiv {{$sportsType->sportsTypeName}}">
+                                <div class="card-header text-center ">
+                                    <div class="row justify-content">
+                                        <div class="" style="padding-left: 5px; margin-bottom: auto; margin-top: auto">
+                                            <img src="{{asset('/uploadimages/sportsicons/'.$sportsType->sportsTypeName.'.svg')}}" width="50" height="50" class="d-inline-block align-center" alt="" style="">
                                         </div>
-                                    @endif
-                                    @endforeach
-                                    @endisset
-        
-                                    <p><b>{{ __("Subscriber Count")}}: </b>
-                                        @isset($subscribedCountArray)
-                                            @foreach ($subscribedCountArray as $s)
-                                                @if($s[0] == $challenge->challenge_ID)
-                                                    {{$s[1]}}
-                                                @endif
-                                            @endforeach
+                                        <div class="" style="margin: auto">
+                                            <h2>{{$challenge->challengeName}}</h2>
+                                        </div>
+                                        
+                                       
+                                    </div>
+                                   </div>
+                                    <div class="card-body text-md-left">
+                                        @isset($sportsTypes)
+                                        @foreach($sportsTypes as $sportsType)
+                                        @if($sportsType->sportsType_ID == $challenge->sportsType_ID)                                
+                                            <div  id="sportsBox">
+                                                <p><b>{{ __("Sports Type")}}:</b> {{$sportsType->sportsTypeName}}</p>   
+                                            </div>
+                                        @endif
+                                        @endforeach
                                         @endisset
-                                    </p>
-        
-                                    @isset($measurements)
-                                    <p><b>{{ __("Goals")}}:</b></p>
-                                    @foreach($measurements as $measurement)
-                                    @if($challenge->challenge_ID == $measurement->challenge_ID)
-                                    
-                                    <div class="card mb-2" style="">
-                                        <div class="card-body" style="padding: 5px;">
-                                            <div class="justify-content-center">
-                                                
-                                                @foreach ($units as $unit)
-                                                        @if($unit->unit_ID == $measurement->unit_ID)
-                                                            @foreach ($comparisons as $comparison)
-                                                                @if ($measurement->comparison_ID == $comparison->comparison_ID)
-                                                                <div class="row">
-                                                                    <div class="col" style="background-color:">
-                                                                        <h6>{{ $unit->unitName }} </h6> 
-                                                                       
-                                                                    </div>
-                                                                    <div class="col" style="background-color:; text-align: right">
-                                                                        @if ($comparison->comparison_ID == 3)
-                                                                            <h1><span style="font-size: 20px">{{ $comparison->comparisonSign }}</span>{{$measurement->goalValue}}<span style="font-size: 12px">{{ $unit->unitCode }}</span></h1>
-                                                                        @else
-                                                                            <h1>{{$measurement->goalValue}}<span style="font-size: 12px"> {{ $unit->unitCode }}</span></h1>
-                                                                        @endif
-                                                                        
-                                                                    </div>
-                                                                  </div>
-                                                                 
-                                                                @endif
-                                                            @endforeach
-                                                            
-                                                        @endif
-                                                    @endforeach
+            
+                                        <p><b>{{ __("Subscriber Count")}}: </b>
+                                            @isset($subscribedCountArray)
+                                                @foreach ($subscribedCountArray as $s)
+                                                    @if($s[0] == $challenge->challenge_ID)
+                                                        {{$s[1]}}
+                                                    @endif
+                                                @endforeach
+                                            @endisset
+                                        </p>
+            
+                                        @isset($measurements)
+                                        <p><b>{{ __("Goals")}}:</b></p>
+                                        @foreach($measurements as $measurement)
+                                        @if($challenge->challenge_ID == $measurement->challenge_ID)
+                                        
+                                        <div class="card mb-2" style="">
+                                            <div class="card-body" style="padding: 5px;">
+                                                <div class="justify-content-center">
+                                                    
+                                                    @foreach ($units as $unit)
+                                                            @if($unit->unit_ID == $measurement->unit_ID)
+                                                                @foreach ($comparisons as $comparison)
+                                                                    @if ($measurement->comparison_ID == $comparison->comparison_ID)
+                                                                    <div class="row">
+                                                                        <div class="col" style="background-color:">
+                                                                            <h6>{{ $unit->unitName }} </h6> 
+                                                                           
+                                                                        </div>
+                                                                        <div class="col" style="background-color:; text-align: right">
+                                                                            @if ($comparison->comparison_ID == 3)
+                                                                                <h1><span style="font-size: 20px">{{ $comparison->comparisonSign }}</span>{{$measurement->goalValue}}<span style="font-size: 12px">{{ $unit->unitCode }}</span></h1>
+                                                                            @else
+                                                                                <h1>{{$measurement->goalValue}}<span style="font-size: 12px"> {{ $unit->unitCode }}</span></h1>
+                                                                            @endif
+                                                                            
+                                                                        </div>
+                                                                      </div>
+                                                                     
+                                                                    @endif
+                                                                @endforeach
+                                                                
+                                                            @endif
+                                                        @endforeach
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <div class="row">
-
-                                    </div>
-                                        
-                                    @endif
-                                    @endforeach
-                                    @endisset
-        
-                                    
-                                    <p><b>{{ __("Ends in")}}:</b> {{$challenge->endDate}}</p>
-        
-                                    @isset($user_ids)
-                                    @foreach($user_ids as $user_id)
-                                    @if($user_id->user_ID == $challenge->creatorUser_ID)
-                                        <p><b>{{ __("Creator")}}:</b> {{$user_id->username}}</p>
-                                    @endif
-                                    @endforeach
-                                    @endisset
-                                    
-                                    <?php $irSaraksta = false ?>
-                                    
-                                    @isset($subscrChal)
-                                        @foreach ($subscrChal as $sc)
-                                            @if($sc->challenge_ID == $challenge->challenge_ID)
-                                                @php $irSaraksta = true @endphp
-                                                @break
-                                            @endif
-                                        
+    
+                                        <div class="row">
+    
+                                        </div>
+                                            
+                                        @endif
                                         @endforeach
-                                        @isset($irSaraksta)
-                                            @if ($irSaraksta)
-                                            <form method="POST" id="forma" action="{{ action([App\Http\Controllers\FindChallengesController::class, 'unsubscribe'], $challenge->challenge_ID)}}"> @csrf @method('POST')
-                                                            
-                                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                                <input type="hidden" name="id" value="{{ $challenge->challenge_ID }}">
-                                                
-                                            
-                                                 <button class="btn btn-block btn-danger btn-lg" style="font-size: 14px;" type="submit">{{ __("Unsubscribe")}}</button>
-                                            </form>
-                                            @else
-                                            <form method="POST" id="forma" action="{{ action([App\Http\Controllers\FindChallengesController::class, 'subscribe'], $challenge->challenge_ID)}}"> @csrf @method('POST')
-                                                            
-                                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                                <input type="hidden" name="id" value="{{ $challenge->challenge_ID }}">
-                                                
-                                            
-                                                 <button class="btn btn-block btn-success btn-lg" style="font-size: 14px;" type="submit">{{ __("Subscribe")}}</button>
-                                            </form>
-                                            @endif
                                         @endisset
-                                    @endisset
-                                    
+            
+                                        
+                                        <p><b>{{ __("Ends in")}}:</b> {{$challenge->endDate}}</p>
+            
+                                        @isset($user_ids)
+                                        @foreach($user_ids as $user_id)
+                                        @if($user_id->user_ID == $challenge->creatorUser_ID)
+                                            <p><b>{{ __("Creator")}}:</b> {{$user_id->username}}</p>
+                                        @endif
+                                        @endforeach
+                                        @endisset
+                                        
+                                        <?php $irSaraksta = false ?>
+                                        
+                                        @isset($subscrChal)
+                                            @foreach ($subscrChal as $sc)
+                                                @if($sc->challenge_ID == $challenge->challenge_ID)
+                                                    @php $irSaraksta = true @endphp
+                                                    @break
+                                                @endif
+                                            
+                                            @endforeach
+                                            @isset($irSaraksta)
+                                                @if ($irSaraksta)
+                                                <form method="POST" id="forma" action="{{ action([App\Http\Controllers\FindChallengesController::class, 'unsubscribe'], $challenge->challenge_ID)}}"> @csrf @method('POST')
+                                                                
+                                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                                    <input type="hidden" name="id" value="{{ $challenge->challenge_ID }}">
+                                                    
+                                                
+                                                     <button class="btn btn-block btn-danger btn-lg" style="font-size: 14px;" type="submit">{{ __("Unsubscribe")}}</button>
+                                                </form>
+                                                @else
+                                                <form method="POST" id="forma" action="{{ action([App\Http\Controllers\FindChallengesController::class, 'subscribe'], $challenge->challenge_ID)}}"> @csrf @method('POST')
+                                                                
+                                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                                    <input type="hidden" name="id" value="{{ $challenge->challenge_ID }}">
+                                                    
+                                                
+                                                     <button class="btn btn-block btn-success btn-lg" style="font-size: 14px;" type="submit">{{ __("Subscribe")}}</button>
+                                                </form>
+                                                @endif
+                                            @endisset
+                                        @endisset
+                                        
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-        
-                        
-                        @endif
-                    @endforeach
-                 @endisset
-            @endforeach
-            @endisset
+            
+                            
+                            @endif
+                        @endforeach
+                     @endisset
+                @endforeach
+                @endisset
+            </div>
         </div>
-    </div>
+    
+        @endif
+    @endisset
 
+    
     
 <script>
     filterSelection("all")
