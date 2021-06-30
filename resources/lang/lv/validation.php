@@ -141,7 +141,7 @@ return [
             'required'=>'Sākuma laiks nedrīkst būt tukšs.'
         ],
         'firstname'=>[
-            'regex'=>'First name cannot have numbers in it.',
+            'regex'=>'Vārdā nedrīkst būt skaitļi.',
             'max'=>'Jūsu izvēlētais vārds ir pārāk garšs.'
         ],
         'lastname'=>[
