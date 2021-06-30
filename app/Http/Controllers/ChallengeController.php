@@ -40,7 +40,7 @@ class ChallengeController extends Controller
      */
     public function store(Request $request)
     {
-        $id = Auth::id(); //authorized user id
+        $id = Auth::id();
         if(is_null($id)){
             return redirect('login');
         }
@@ -53,7 +53,7 @@ class ChallengeController extends Controller
             $challenge->beginDate = $request->beginDate;
             $challenge->endDate = $request->endDate;
             $challenge->save();
-            return redirect('home'); //redirects pectam janomaina
+            return redirect('home'); 
 
         }
     }

@@ -36,9 +36,7 @@ class CreateChallengeController extends Controller
         $challenges = Challenge::all()->where('creatorUser_ID', '=', Auth::id());
         $measurements = Challenge_Measurements::all();
         $subscriptions = Subscription::all()->where('user_ID', '=', Auth::id());
-        // foreach($comparisons as $c) {
-        //     echo($c);
-        // }
+
         return view('createchallenge', compact('units', 'sportsType', 'comparisons', 'measurements', 'challenges', 'subscriptions'));
     }
 
@@ -68,11 +66,6 @@ class CreateChallengeController extends Controller
         $endDate = $request->endDate;
         $isPublic = $request->isPublic;
         
-       // $dateverification = array(
-       //     'start_date'=>'2000-01-01',
-       //     'end_date'=>'date("Y-m-d")'
-//
-     //   );
 
         $challengevalidation = request()->validate([
             'challengeName'=>'required|max:100',
@@ -96,8 +89,7 @@ class CreateChallengeController extends Controller
 
         $arr = ($request->arrayOfUnits);
         for($i = 0; $i< count(json_decode($arr)); $i+=1) {
-            //echo (json_decode($arr)[$i]->unit);
-            //echo (json_decode($arr)[$i]->measurement);
+
 
             $unitID = Unit::where('unitName', '=', json_decode($arr)[$i]->unit)->value('unit_ID');
             $comparisonID = Comparison::where('comparisonSign', '=', json_decode($arr)[$i]->comparison)->value('comparison_ID');
