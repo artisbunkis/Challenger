@@ -342,13 +342,19 @@
                 <div class="card-header text-center "><h2>{{ __("List of all challenges")}}</h2></div>
                     <div class="card-body text-md-left">
                         <table>
+                            @forelse ($challenges as $challenge)
                             <tr>
                                 <th>{{ __("Challenge Title")}}</th>
                                 <th>{{ __("Delete")}}</th>
                                 
                             </tr>
+                            @break
+                            @empty
+                                
+                            @endforelse
+                            
                         @isset($challenges)
-                        @foreach($challenges as $challenge)
+                        @forelse($challenges as $challenge)
                             <tr>
                                 <td>{{$challenge->challengeName}}</td>
                                                 
@@ -366,8 +372,9 @@
                                 </td>
                                 
                             </tr>
-                            
-                        @endforeach
+                        @empty
+                            <p>No challenges!</p>
+                        @endforelse
                         @endisset
                         </table>
                     </div>
