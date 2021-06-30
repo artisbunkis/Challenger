@@ -149,6 +149,7 @@ return [
             'max'=>'Jūsu izvēlētais uzvārds ir pārāk garšs.'
         ],
         'username'=>[
+            'required'=>'Lietotājvārds nedrīkst būt tukšs.',
             'max'=>'Jūsu lietotājvārds nedrīkst būt garāks par 30 simboliem.'
 
         ],
