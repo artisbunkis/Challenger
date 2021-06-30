@@ -72,7 +72,7 @@
                                         <div class="alert-danger" style="font-weight: bold;">@error('lastname') {{$message}} @enderror</div>
 
                                         <label for="birthday">{{ __("Birthday")}}:</label>
-                                        <input type="date" class="form-control" name="birthday" id="birthday" placeholder="Birthday" value="{{$thisuser->birthdate}}">
+                                        <input type="date" class="form-control" name="birthday" id="birthday" placeholder="Birthday" value="{{$thisuser->birthDate}}">
                                         <div class="alert-danger" style="font-weight: bold;">@error('birthday') {{$message}} @enderror</div>
 
                                         <label for="gender">{{ __("Gender")}}:</label>
