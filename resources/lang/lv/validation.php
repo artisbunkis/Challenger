@@ -138,41 +138,41 @@ return [
             'rule-name' => 'custom-message',
         ],
         'startTime'=>[
-            'required'=>'The start time field cannot be empty'
+            'required'=>'Sākuma laiks nedrīkst būt tukšs.'
         ],
         'firstname'=>[
             'regex'=>'First name cannot have numbers in it.',
-            'max'=>'Your name exceeds the maximum lenght'
+            'max'=>'Jūsu izvēlētais vārds ir pārāk garšs.'
         ],
         'lastname'=>[
-            'regex'=>'Last name cannot have numbers in it.',
-            'max'=>'Your last name exceeds the maximum lenght'
+            'regex'=>'Vārdā nedrīkst būt skaitļi.',
+            'max'=>'Jūsu izvēlētais uzvārds ir pārāk garšs.'
         ],
         'username'=>[
-            'max'=>'Your username cannot exceed 30 characters'
+            'max'=>'Jūsu lietotājvārds nedrīkst būt garāks par 30 simboliem.'
 
         ],
         'email'=>[
-            'max'=>'Your email cannot be longer than 70 characters'
+            'max'=>'Jūsu e-pasts nedrīkst būt garāks par 70 simboliem.'
 
         ],
         'challengeName'=>[
-            'required'=>'Challenge name field cannot be empty',
-            'max'=>'Challenge name exceeds the maximum lenght of 100 characters'
+            'required'=>'Izaicinājuma nosaukuma lauciņš nedrīkst būt tukšs.',
+            'max'=>'Izaicinājuma nosaukums nedrīkst būt garāks par 100 simboliem.'
         ],
         'beginDate'=>[
-            'required'=>'Challenge beginning date field cannot be empty',
-            'after_or_equal'=>'The challenge cannot be started on this date.'
+            'required'=>'Sākuma datums nedrīkst būt tukšs.',
+            'after_or_equal'=>'Izaicinājums nevar sākties izvēlētajā datumā.'
         ],
         'endDate'=>[
-            'required'=>'Challenge ending date field cannot be empty',
-            'after_or_equal'=>'The challenge cannot end on this date.'
+            'required'=>'Beigu datums nedrīkst būt tukšs.',
+            'after_or_equal'=>'Izaicinājums nevar beigties izvēlētajā datumā.'
         ],
         'birthday'=>[
-            'before_or_equal'=>'Invalid birth date.'
+            'before_or_equal'=>'Nepareizs dzimšanas datums.'
         ],
         'photo'=>[
-            'mimes'=>'Invalid file format.'
+            'mimes'=>'Nepareizs faila formāts.'
         ],
     ],
 
