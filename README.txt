@@ -1,1 +1,0 @@
-This is the main repository for TT2 Project - Challenger.
